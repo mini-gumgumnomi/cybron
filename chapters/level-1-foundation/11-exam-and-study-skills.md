@@ -41,7 +41,7 @@ This chapter is your training plan.
  └──────────────────────────────────────────────────────────────────────┘
 ```
 
-> 📅 **Version note:** SY0-701 launched in November 2023. The next version, **SY0-801**, is expected to appear around late 2026, with SY0-701 retiring later (likely 2027). Whichever version you take, check the **official exam objectives** PDF on comptia.org before you book. This book covers SY0-701 fully, and Appendix A covers the new AI topics expected in SY0-801.
+> 📅 **Version note:** SY0-701 launched in November 2023. The next version, **SY0-801**, is reported by training providers to launch on **17 November 2026**, with the English SY0-701 exam retiring on **11 June 2027** (see Appendix A). Whichever version you take, check the **official exam objectives** PDF on comptia.org before you book. This book covers SY0-701 fully, and Appendix A covers the new AI topics expected in SY0-801.
 
 ### The Five Domains (what the questions are about)
 

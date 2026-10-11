@@ -10,6 +10,7 @@ A beginner-first, figure-heavy book for passing the **CompTIA Security+ (SY0-701
 | 🌱 2 | Beginner for Exam | 12–22 + Gate Test | ✅ Written |
 | 📈 3 | Can Score ~40% in Exam | 23–33 + Gate Test | ✅ Written |
 | 🏆 4 | Advanced Knowledge — 100% Exam Pass | 34–51 + 3 Mock Exams | ✅ Written |
+| 📎 | Appendices | A–G | ✅ Written |
 
 📘 **[Full Book Plan](BOOK_PLAN.md)**: every chapter, topic, figure, study schedule, and a map from each exam objective to its chapter.
 
@@ -87,6 +88,18 @@ A beginner-first, figure-heavy book for passing the **CompTIA Security+ (SY0-701
 | 50 | [PBQ Mastery & Memory Drills](chapters/level-4-advanced/50-pbq-mastery-and-drills.md) | 6 worked PBQs, one-page brain dump, drill tables |
 | 51 | [Mock Exams & the Final Two Weeks](chapters/level-4-advanced/51-mock-exams-and-final-two-weeks.md) | Score tracking, 14-day plan, exam-day checklist |
 | 📝 | [Mock Exam 1](chapters/level-4-advanced/mock-exam-1.md) · [Mock Exam 2](chapters/level-4-advanced/mock-exam-2.md) · [Mock Exam 3](chapters/level-4-advanced/mock-exam-3.md) | 3 × 90 questions, weighted like the real exam |
+
+## 📎 Appendices
+
+| | Appendix | What's inside |
+|---|---|---|
+| A | [AI & LLM Security (SY0-801 ready)](chapters/appendices/A-ai-and-llm-security.md) | How LLMs work, prompt injection, poisoning, model theft, hallucinations, shadow AI, AI controls & frameworks, 10 practice questions |
+| B | [Acronym Dictionary](chapters/appendices/B-acronym-dictionary.md) | About 380 acronyms in plain English, with the chapter that teaches each |
+| C | [Master Port & Protocol Table](chapters/appendices/C-ports-and-protocols.md) | Must-know ports, extra ports, secure replacements, port drills |
+| D | [Attack ↔ Control Matrix](chapters/appendices/D-attack-control-matrix.md) | Prevent / detect / respond controls for every major attack family |
+| E | [Home Lab Guide](chapters/appendices/E-home-lab-guide.md) | Safe lab setup, network diagram, 16 exercises mapped to chapters, free online labs |
+| F | [Illustrated Glossary](chapters/appendices/F-glossary.md) | About 220 key terms with picture-icons and chapter references |
+| G | [Practice Question Bank](chapters/appendices/G-practice-question-bank.md) | Every question in the book indexed by exam objective, plus 84 bonus questions |
 
 ## How each chapter works
 

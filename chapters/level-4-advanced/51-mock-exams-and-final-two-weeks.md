@@ -181,7 +181,7 @@ If not: **move the exam date** (CompTIA/Pearson usually allow rescheduling in ad
    Plus: keep building your home lab, join CTF competitions, and contribute to the community.
 ```
 
-> 🆕 **Note on SY0-801:** if you're taking the exam after the new version launches, check the new objectives and read **Appendix A (AI & LLM security)**. Most of this book still applies.
+> 🆕 **Note on SY0-801:** training providers report that SY0-801 launches on **17 November 2026** and the English SY0-701 exam retires on **11 June 2027** (confirm on comptia.org). If you're taking the exam after the new version launches, check the new objectives and read **Appendix A (AI & LLM security)**. Most of this book still applies.
 
 ---
 

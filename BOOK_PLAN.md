@@ -9,7 +9,7 @@
 **The reader:** You have never studied computers. You may not know what a CPU, an IP address, or a password hash is. That's fine — this book starts at **"this is a computer"** and finishes at **"I can pass Security+ with confidence."**
 
 **The exam it targets:** CompTIA Security+ **SY0-701**, which is the live exam right now.
-CompTIA is preparing the next version, **SY0-801** (preview expected around late 2026; SY0-701 is expected to retire around mid-2027). Most of the content stays the same. The big addition is **AI / Large Language Model security**, which this book covers in **Appendix A**. That way the book works for both versions.
+CompTIA is preparing the next version, **SY0-801** (reported by training providers to launch on 17 November 2026; the English SY0-701 exam retires on 11 June 2027). Most of the content stays the same. The big addition is **AI / Large Language Model security**, which this book covers in **Appendix A**. That way the book works for both versions.
 
 ### Exam facts (SY0-701)
 
@@ -349,12 +349,12 @@ A **fully written sample chapter** that shows this style is here: [`chapters/lev
 | Appendix | Content |
 |---|---|
 | **A — AI & LLM Security (SY0-801 ready)** | How AI/LLMs work (simply). Prompt injection, data poisoning, model theft, hallucination risks, AI-powered phishing and deepfakes, shadow AI, AI in defense (SOC automation), governance of AI use. |
-| **B — Acronym Dictionary** | Every acronym from the official CompTIA list, in plain English, with a one-line example. |
+| **B — Acronym Dictionary** | About 380 acronyms used in the book (and the most important from the official CompTIA list), in plain English, with the chapter that teaches each. |
 | **C — Master Port & Protocol Table** | Port, protocol, secure alternative, what it does. |
 | **D — Attack ↔ Control Matrix** | Each attack mapped to the controls that stop, detect or recover from it. |
 | **E — Home Lab Guide** | VirtualBox, Kali Linux, a Windows VM, Wireshark, Nmap, pfSense, Security Onion, plus free online labs. Safe and legal practice rules. |
-| **F — Glossary with Pictures** | 300+ terms, each with an icon/mini-figure. |
-| **G — Practice Question Bank** | 500+ questions sorted by level and objective. |
+| **F — Glossary with Pictures** | About 220 key terms, each with a picture-icon and chapter reference. |
+| **G — Practice Question Bank** | Index of the book's 1,000+ questions by exam objective, plus 84 bonus questions for the least-practised objectives. |
 
 ---
 
@@ -434,7 +434,7 @@ gantt
 | 4 | Level 2 chapters 12–22 + Level 2 Gate Test (75 questions) | ✅ Done (verified) |
 | 5 | Level 3 chapters 23–33 + Level 3 Gate Test (90 questions) | ✅ Done (verified; 326/326 Domain 1–3 objective terms covered) |
 | 6 | Level 4 chapters 34–51 + 3 full mock exams (270 questions) | ✅ Done (verified; 351/351 Domain 4–5 objective terms covered) |
-| 7 | Appendices A–G (AI/LLM security, acronyms, ports, attack↔control matrix, lab guide, glossary, question bank) | ⏳ Next |
-| 8 | Review against latest CompTIA objectives (update for SY0-801 once it is final) | ⏳ |
+| 7 | Appendices A–G (AI/LLM security, acronyms, ports, attack↔control matrix, lab guide, glossary, question bank) | ✅ Done (verified; answer keys rebalanced, chapter references checked) |
+| 8 | Review against latest CompTIA objectives (update for SY0-801 once it is final) | ⏳ Next |
 
 Chapters are stored as Markdown under `chapters/level-N-…/NN-title.md`. Figures are drawn as Mermaid diagrams or text drawings so they render directly on GitHub.
