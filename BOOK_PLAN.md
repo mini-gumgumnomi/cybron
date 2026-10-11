@@ -61,19 +61,17 @@ flowchart LR
 
 Each chapter follows the same 8-part recipe, so a beginner always knows what comes next:
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│ 1. 🎯 GOAL           – one sentence: what you will learn     │
-│ 2. 🏠 REAL-LIFE STORY – an everyday analogy (house, post     │
-│                         office, bank, school…)               │
-│ 3. 🖼️  FIGURE         – a diagram BEFORE the technical words  │
-│ 4. 📖 EXPLANATION    – short paragraphs, one idea each       │
-│ 5. 🧠 MEMORY TRICK   – mnemonic / acronym / rhyme            │
-│ 6. ⚠️  EXAM TIP       – how CompTIA asks about this topic     │
-│ 7. 🧪 TRY IT         – a tiny hands-on lab (free tools)      │
-│ 8. ✅ CHECKPOINT     – 5–10 practice questions + answers     │
-└─────────────────────────────────────────────────────────────┘
-```
+| # | Part | What it contains |
+|---|---|---|
+| 1 | 🎯 **Goal** | One sentence: what you will learn |
+| 2 | 🏠 **Real-life story** | An everyday analogy (house, post office, bank, school…) |
+| 3 | 🖼️ **Figure** | A diagram shown *before* the technical words |
+| 4 | 📖 **Explanation** | Short paragraphs, one idea each |
+| 5 | 🧠 **Memory trick** | Mnemonic / acronym / rhyme |
+| 6 | ⚠️ **Exam tip** | How CompTIA asks about this topic |
+| 7 | 🧪 **Try it** | A tiny hands-on lab (free tools) |
+| 8 | ✅ **Checkpoint** | Practice questions with hidden answers |
+| + | 📌 **Summary** | One table that recaps the chapter |
 
 **Figure types used in the book:**
 
@@ -403,7 +401,7 @@ This table proves the book covers **100% of the exam objectives**.
 gantt
     title Zero to Security+ (about 18 weeks)
     dateFormat  YYYY-MM-DD
-    axisFormat  Wk %W
+    axisFormat  %d %b
     section Level 1 Foundation
     Ch 1-11 + home lab          :l1, 2026-11-02, 28d
     section Level 2 Beginner
@@ -432,8 +430,8 @@ gantt
 |---|---|---|
 | 1 | Book plan (this document) | ✅ Done |
 | 2 | Sample chapter to lock in style (Ch 1) | ✅ Done |
-| 3 | Level 1 chapters 2–11 | ⏳ Next |
-| 4 | Level 2 chapters 12–22 | ⏳ |
+| 3 | Level 1 chapters 2–11 + Level 1 Gate Test (50 questions) | ✅ Done (verified) |
+| 4 | Level 2 chapters 12–22 | ⏳ Next |
 | 5 | Level 3 chapters 23–33 | ⏳ |
 | 6 | Level 4 chapters 34–51 | ⏳ |
 | 7 | Appendices A–G, question bank, mock exams | ⏳ |
