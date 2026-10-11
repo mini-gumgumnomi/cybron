@@ -8,7 +8,7 @@ A beginner-first, figure-heavy book for passing the **CompTIA Security+ (SY0-701
 |---|---|---|---|
 | 🧱 1 | Basic Foundation to Understand to Start | 1–11 + Gate Test | ✅ Written |
 | 🌱 2 | Beginner for Exam | 12–22 + Gate Test | ✅ Written |
-| 📈 3 | Can Score ~40% in Exam | 23–33 | ⏳ Planned |
+| 📈 3 | Can Score ~40% in Exam | 23–33 + Gate Test | ✅ Written |
 | 🏆 4 | Advanced Knowledge — 100% Exam Pass | 34–51 | ⏳ Planned |
 
 📘 **[Full Book Plan](BOOK_PLAN.md)**: every chapter, topic, figure, study schedule, and a map from each exam objective to its chapter.
@@ -46,6 +46,23 @@ A beginner-first, figure-heavy book for passing the **CompTIA Security+ (SY0-701
 | 21 | [Data Basics](chapters/level-2-beginner/21-data-basics.md) | Data types, classification, at rest / in transit / in use, sovereignty |
 | 22 | [Policies, Risk & Compliance](chapters/level-2-beginner/22-policies-risk-compliance-intro.md) | Policy vs standard vs procedure; accept/avoid/transfer/mitigate; GDPR, HIPAA, PCI DSS |
 | ✅ | [Level 2 Gate Test](chapters/level-2-beginner/level-2-gate-test.md) | 75 questions: score 75% to move on |
+
+## 📈 Level 3 — Can Score ~40% in Exam
+
+| # | Chapter | You will learn |
+|---|---|---|
+| 23 | [Threat Vectors & Attack Surfaces](chapters/level-3-intermediate/23-threat-vectors-attack-surfaces.md) | Every path in: messages, files, USB, open ports, default credentials, supply chain |
+| 24 | [Vulnerability Types](chapters/level-3-intermediate/24-vulnerability-types.md) | Buffer overflow, race conditions, SQLi, XSS, VM escape, misconfiguration, zero-day |
+| 25 | [Network Attacks & Indicators](chapters/level-3-intermediate/25-network-attacks-indicators.md) | Reflected/amplified DDoS, DNS attacks, evil twin, on-path, replay |
+| 26 | [Application, Password & Crypto Attacks + Indicators](chapters/level-3-intermediate/26-application-password-crypto-attacks-indicators.md) | CSRF/SSRF, traversal, spraying, downgrade, birthday; the 9 indicators |
+| 27 | [Mitigation & Hardening](chapters/level-3-intermediate/27-mitigation-hardening.md) | Segmentation, isolation, allow lists, configuration enforcement, hardening |
+| 28 | [PKI, Certificates & Applied Crypto](chapters/level-3-intermediate/28-pki-certificates-applied-crypto.md) | CAs, CSR, CRL/OCSP, wildcard, TPM/HSM/enclave, salting, tokenization, blockchain |
+| 29 | [Architecture Models](chapters/level-3-intermediate/29-architecture-models.md) | Cloud responsibility, IaC, serverless, SDN, containers, IoT, ICS/SCADA, RTOS |
+| 30 | [Securing Enterprise Infrastructure](chapters/level-3-intermediate/30-securing-enterprise-infrastructure.md) | Zones, fail-open/closed, jump server, 802.1X/EAP, NGFW/UTM/WAF, IPsec, SASE |
+| 31 | [Protecting Data](chapters/level-3-intermediate/31-protecting-data.md) | Encryption vs hashing vs masking vs tokenization; sovereignty; DLP |
+| 32 | [Resilience & Recovery](chapters/level-3-intermediate/32-resilience-and-recovery.md) | Hot/warm/cold sites, backup types, replication ≠ backup, UPS & generators, testing |
+| 33 | [Change Management, Zero Trust & Deception](chapters/level-3-intermediate/33-change-management-zero-trust-deception.md) | CAB & backout plans, gap analysis, PE/PA/PEP, honeypots & honeytokens |
+| ✅ | [Level 3 Gate Test](chapters/level-3-intermediate/level-3-gate-test.md) | 90-question half-length exam: score 70% to move on |
 
 ## How each chapter works
 
