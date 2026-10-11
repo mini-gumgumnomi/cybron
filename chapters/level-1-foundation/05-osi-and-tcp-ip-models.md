@@ -191,12 +191,12 @@ An IP address gets data to the right **computer**. A **port number** gets it to 
 
 ```
                       🏢 Server 203.0.113.10
-              ┌───────────────────────────────────┐
-   Packet ──► │  Apt 22   🔑 SSH (remote admin)   │
-   to port    │  Apt 25   ✉️ SMTP (email)          │
-   443 ─────► │  Apt 443  🔒 HTTPS (website)  ◄── │  delivered here
-              │  Apt 3389 🖥️ RDP (remote desktop) │
-              └───────────────────────────────────┘
+              ┌─────────────────────────────────────┐
+   Packet ──► │  Apt 22    SSH   (remote admin)     │
+   to port    │  Apt 25    SMTP  (email)            │
+   443 ─────► │  Apt 443   HTTPS (website)  ◄──     │  delivered here
+              │  Apt 3389  RDP   (remote desktop)   │
+              └─────────────────────────────────────┘
 
    IP address + port = a SOCKET, written 203.0.113.10:443
 ```

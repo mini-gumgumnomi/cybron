@@ -9,7 +9,7 @@ A beginner-first, figure-heavy book for passing the **CompTIA Security+ (SY0-701
 | 🧱 1 | Basic Foundation to Understand to Start | 1–11 + Gate Test | ✅ Written |
 | 🌱 2 | Beginner for Exam | 12–22 + Gate Test | ✅ Written |
 | 📈 3 | Can Score ~40% in Exam | 23–33 + Gate Test | ✅ Written |
-| 🏆 4 | Advanced Knowledge — 100% Exam Pass | 34–51 | ⏳ Planned |
+| 🏆 4 | Advanced Knowledge — 100% Exam Pass | 34–51 + 3 Mock Exams | ✅ Written |
 
 📘 **[Full Book Plan](BOOK_PLAN.md)**: every chapter, topic, figure, study schedule, and a map from each exam objective to its chapter.
 
@@ -63,6 +63,30 @@ A beginner-first, figure-heavy book for passing the **CompTIA Security+ (SY0-701
 | 32 | [Resilience & Recovery](chapters/level-3-intermediate/32-resilience-and-recovery.md) | Hot/warm/cold sites, backup types, replication ≠ backup, UPS & generators, testing |
 | 33 | [Change Management, Zero Trust & Deception](chapters/level-3-intermediate/33-change-management-zero-trust-deception.md) | CAB & backout plans, gap analysis, PE/PA/PEP, honeypots & honeytokens |
 | ✅ | [Level 3 Gate Test](chapters/level-3-intermediate/level-3-gate-test.md) | 90-question half-length exam: score 70% to move on |
+
+## 🏆 Level 4 — Advanced Knowledge, 100% Exam Pass
+
+| # | Chapter | You will learn |
+|---|---|---|
+| 34 | [Secure Baselines, Hardening, Wireless & Mobile](chapters/level-4-advanced/34-secure-baselines-hardening-wireless-mobile.md) | Baselines, hardening targets, heat maps, MDM, BYOD/COPE/CYOD, secure cookies, code signing |
+| 35 | [Asset Management](chapters/level-4-advanced/35-asset-management.md) | Procurement → tracking → disposal; NIST 800-88; certificates of destruction |
+| 36 | [Vulnerability Management](chapters/level-4-advanced/36-vulnerability-management.md) | Scans, threat feeds, CVE/CVSS, prioritization, remediation, validation |
+| 37 | [Alerting & Monitoring](chapters/level-4-advanced/37-alerting-and-monitoring.md) | SIEM, SCAP, benchmarks, SNMP traps, NetFlow, alert tuning |
+| 38 | [Enhancing Enterprise Capabilities](chapters/level-4-advanced/38-enhancing-enterprise-capabilities.md) | Firewall rules, IDS/IPS, web/DNS filtering, SPF/DKIM/DMARC, NAC, EDR/XDR, UBA |
+| 39 | [Identity & Access Management](chapters/level-4-advanced/39-identity-and-access-management.md) | Provisioning, SAML/OAuth/OIDC/Kerberos/LDAP, access models, PAM |
+| 40 | [Automation & Orchestration](chapters/level-4-advanced/40-automation-and-orchestration.md) | SOAR, playbooks, guard rails, CI/CD security, benefits vs risks |
+| 41 | [Incident Response & Forensics](chapters/level-4-advanced/41-incident-response-and-forensics.md) | 7-step IR process, order of volatility, chain of custody, legal hold |
+| 42 | [Investigations: Data Sources](chapters/level-4-advanced/42-investigations-data-sources.md) | Reading firewall, web, EDR, Windows/Linux, IDS, DNS logs; NetFlow vs PCAP |
+| 43 | [Security Governance](chapters/level-4-advanced/43-security-governance.md) | Policies/standards/procedures, external considerations, data roles |
+| 44 | [Risk Management (with the Math)](chapters/level-4-advanced/44-risk-management-math.md) | SLE/ALE/ARO, risk register & KRIs, appetite, RPO/RTO/MTBF/MTTR |
+| 45 | [Third-Party Risk Management](chapters/level-4-advanced/45-third-party-risk-management.md) | Vendor assessments, SOC 2, SLA/MOU/MOA/MSA/SOW/NDA/BPA |
+| 46 | [Compliance & Privacy](chapters/level-4-advanced/46-compliance-and-privacy.md) | Consequences, attestation, controller vs processor, right to be forgotten |
+| 47 | [Audits, Assessments & Pen Testing](chapters/level-4-advanced/47-audits-assessments-pentesting.md) | Internal/external audits, known/partially known/unknown, passive/active recon |
+| 48 | [Security Awareness](chapters/level-4-advanced/48-security-awareness.md) | Phishing campaigns, anomalous behavior, training topics, metrics |
+| 49 | [Cryptography Deep Dive](chapters/level-4-advanced/49-cryptography-deep-dive.md) | AES/ChaCha20, modes, RSA/ECC/DH, PFS, HMAC, TLS 1.3, post-quantum |
+| 50 | [PBQ Mastery & Memory Drills](chapters/level-4-advanced/50-pbq-mastery-and-drills.md) | 6 worked PBQs, one-page brain dump, drill tables |
+| 51 | [Mock Exams & the Final Two Weeks](chapters/level-4-advanced/51-mock-exams-and-final-two-weeks.md) | Score tracking, 14-day plan, exam-day checklist |
+| 📝 | [Mock Exam 1](chapters/level-4-advanced/mock-exam-1.md) · [Mock Exam 2](chapters/level-4-advanced/mock-exam-2.md) · [Mock Exam 3](chapters/level-4-advanced/mock-exam-3.md) | 3 × 90 questions, weighted like the real exam |
 
 ## How each chapter works
 

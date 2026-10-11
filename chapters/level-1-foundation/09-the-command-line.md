@@ -243,12 +243,12 @@ PORT     STATE   SERVICE   VERSION
 ## 🖼️ Figure 9.6 — Wireshark Showing a Plaintext Password
 
 ```
- ┌─ Filter: ftp ───────────────────────────────────────────────────────────┐
- │ No.  Source          Destination     Protocol  Info                     │
- │ 14   192.168.56.10   192.168.56.101  FTP       Request: USER alice      │
- │ 16   192.168.56.10   192.168.56.101  FTP       Request: PASS Summer2024! │ ◄── 🚩 password visible!
- │ 18   192.168.56.101  192.168.56.10   FTP       Response: 230 Logged in  │
- └─────────────────────────────────────────────────────────────────────────┘
+ ┌─ Filter: ftp ─────────────────────────────────────────────────────────────┐
+ │ No.  Source          Destination     Protocol  Info                       │
+ │ 14   192.168.56.10   192.168.56.101  FTP       Request: USER alice        │
+ │ 16   192.168.56.10   192.168.56.101  FTP       Request: PASS Summer2024!  │ ◄── 🚩 password visible!
+ │ 18   192.168.56.101  192.168.56.10   FTP       Response: 230 Logged in    │
+ └───────────────────────────────────────────────────────────────────────────┘
    This is WHY insecure protocols (FTP, Telnet, HTTP) must be replaced (Chapter 6).
 ```
 

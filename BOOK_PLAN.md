@@ -433,8 +433,8 @@ gantt
 | 3 | Level 1 chapters 2–11 + Level 1 Gate Test (50 questions) | ✅ Done (verified) |
 | 4 | Level 2 chapters 12–22 + Level 2 Gate Test (75 questions) | ✅ Done (verified) |
 | 5 | Level 3 chapters 23–33 + Level 3 Gate Test (90 questions) | ✅ Done (verified; 326/326 Domain 1–3 objective terms covered) |
-| 6 | Level 4 chapters 34–51 | ⏳ Next |
-| 7 | Appendices A–G, question bank, mock exams | ⏳ |
+| 6 | Level 4 chapters 34–51 + 3 full mock exams (270 questions) | ✅ Done (verified; 351/351 Domain 4–5 objective terms covered) |
+| 7 | Appendices A–G (AI/LLM security, acronyms, ports, attack↔control matrix, lab guide, glossary, question bank) | ⏳ Next |
 | 8 | Review against latest CompTIA objectives (update for SY0-801 once it is final) | ⏳ |
 
 Chapters are stored as Markdown under `chapters/level-N-…/NN-title.md`. Figures are drawn as Mermaid diagrams or text drawings so they render directly on GitHub.
