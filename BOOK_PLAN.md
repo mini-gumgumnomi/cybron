@@ -431,8 +431,8 @@ gantt
 | 1 | Book plan (this document) | ✅ Done |
 | 2 | Sample chapter to lock in style (Ch 1) | ✅ Done |
 | 3 | Level 1 chapters 2–11 + Level 1 Gate Test (50 questions) | ✅ Done (verified) |
-| 4 | Level 2 chapters 12–22 | ⏳ Next |
-| 5 | Level 3 chapters 23–33 | ⏳ |
+| 4 | Level 2 chapters 12–22 + Level 2 Gate Test (75 questions) | ✅ Done (verified) |
+| 5 | Level 3 chapters 23–33 | ⏳ Next |
 | 6 | Level 4 chapters 34–51 | ⏳ |
 | 7 | Appendices A–G, question bank, mock exams | ⏳ |
 | 8 | Review against latest CompTIA objectives (update for SY0-801 once it is final) | ⏳ |
