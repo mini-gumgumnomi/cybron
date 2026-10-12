@@ -293,6 +293,41 @@ This lab is the foundation for all later hands-on work.
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** A developer uploads code to a cloud platform. The provider runs the operating system and the runtime; the developer only manages the app and its data. Who is responsible for patching the operating system?
+A. The developer's company  B. The cloud service provider  C. The end users of the app  D. Nobody, because cloud servers never need patches
+
+**MC2.** A hosting company must run applications for two competing customers on the same physical server and wants the STRONGEST isolation between them. Which option is BEST?
+A. Put each customer's app in its own virtual machine  B. Put both apps in containers on one shared kernel  C. Run both apps in the same VM under different folders  D. Use a Type 2 hypervisor on a shared laptop
+
+**MC3.** An audit finds 140 virtual machines, 60 of which have no known owner and have not been patched in a year. What problem does this describe?
+A. VM escape  B. Resource pooling  C. VM sprawl  D. Rapid elasticity
+
+**MC4.** A cloud customer deletes a virtual machine, and its old disk space is given to another customer without being wiped first. What is the MAIN risk?
+A. The second customer's VM will start more slowly  B. Leftover data from the first customer could leak to the second (resource reuse)  C. The hypervisor will turn into Type 2  D. The first customer will be billed twice
+
+**MC5.** A ticket-selling website needs 10 servers most days but 200 servers for the two hours a big concert goes on sale, then back to 10. Which cloud characteristic makes this practical?
+A. Broad network access  B. Multi-tenancy  C. Measured service only  D. Rapid elasticity
+
+**MC6.** An administrator is about to install a risky update on a production VM. What should they do FIRST so they can roll back within minutes if the update breaks something?
+A. Take a snapshot of the VM  B. Convert the VM into a container  C. Move the VM to a community cloud  D. Turn off the hypervisor
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | B | This is PaaS: the provider manages the OS and runtime, while the customer manages the app, data and access. |
+| MC2 | A | Each VM has its own full OS, giving strong isolation; containers share one kernel, so a kernel flaw affects them all. |
+| MC3 | C | VM sprawl is having so many forgotten, untracked VMs that they go unpatched; VM escape is breaking out of a VM. |
+| MC4 | B | Resource reuse without wiping can leak one tenant's data to another tenant on the same hardware. |
+| MC5 | D | Rapid elasticity means growing and shrinking resources quickly as demand changes; measured service is about paying for use. |
+| MC6 | A | A snapshot saves the VM's current state so it can be restored quickly if the update fails. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

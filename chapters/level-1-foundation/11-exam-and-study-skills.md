@@ -368,6 +368,41 @@ At ~1–1.5 hours per day (see the book plan for the full 18-week schedule):
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** A candidate has 2 minutes left and 5 questions they have not answered and cannot work out. What is the BEST action?
+A. Leave them blank to avoid losing points  B. Spend the 2 minutes on one question only  C. Pick an answer for every question, because wrong answers carry no penalty  D. End the exam early to save the attempt
+
+**MC2.** Using the 6-step method from this chapter, what should a candidate do FIRST when facing a long scenario question?
+A. Eliminate the two obvious wrong answers  B. Predict the answer before reading anything  C. Flag the question and move on  D. Read the last sentence to see what is actually being asked
+
+**MC3.** A learner has two weeks left and wants to spend the most time on the domain with the largest share of exam questions. Which domain should they focus on?
+A. General Security Concepts  B. Security Program Management and Oversight  C. Security Operations  D. Security Architecture
+
+**MC4.** A student scores 78% and 81% on two full practice exams, with one domain at 60% both times. What is the BEST next step?
+A. Use the mistake journal to study the weak domain, then take another full practice exam before booking  B. Book the real exam now, because 81% is above 750  C. Re-read the whole book from Chapter 1 without testing  D. Memorize a brain dump of real exam questions
+
+**MC5.** A student has re-read and highlighted the port table three times but still forgets the ports a few days later. Which change is MOST likely to help?
+A. Highlighting with more colours  B. Reading the table out loud once more  C. Skipping ports, because they are never tested  D. Making flashcards and testing themselves on a spaced-repetition schedule
+
+**MC6.** On a practice question, two options look correct: "MFA completely eliminates account takeover" and "MFA greatly reduces the risk of account takeover." Which should the candidate choose?
+A. The first, because stronger statements are usually right  B. The second, because security controls reduce risk and absolute words are often wrong  C. Neither, and leave the question blank  D. Whichever appears first in the list
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | C | There is no penalty for wrong answers, so a guess (25% chance) always beats a blank (0%). |
+| MC2 | D | Reading the last sentence first tells you what is being asked, so you know which clues in the scenario matter. |
+| MC3 | C | Security Operations carries 28% of the exam, the largest share. |
+| MC4 | A | The target is 85%+ on two different practice exams; a weak domain should be fixed from the mistake journal before booking. |
+| MC5 | D | Active recall with spaced repetition beats re-reading and highlighting, which create only a feeling of knowing. |
+| MC6 | B | Absolute words like "completely" and "always" are often wrong because security reduces risk rather than eliminating it. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

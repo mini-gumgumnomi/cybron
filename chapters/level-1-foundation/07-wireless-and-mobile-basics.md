@@ -283,6 +283,41 @@ These come back in Chapter 34.
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** A 40-person office uses WPA2-Personal with one shared passphrase. An employee who knew it was just fired, and the manager also wants to know which person each connection belongs to. What is the BEST long-term fix?
+A. Hide the SSID  B. Switch the AP to the 6 GHz band  C. Move to WPA2/WPA3-Enterprise (802.1X with RADIUS) so each user has their own login  D. Enable WPS so new users can join with a PIN
+
+**MC2.** At an airport, a traveler's laptop keeps getting kicked off the Wi-Fi. Each time, it reconnects to a network with the same name but a stronger signal. Which attack is MOST likely causing the disconnections?
+A. Bluejacking  B. Jamming the whole band  C. SIM swapping  D. A deauthentication attack
+
+**MC3.** An employee's door badge was copied by someone who stood about a meter behind them in a coffee queue holding a hidden reader. Which technology was MOST likely abused?
+A. RFID  B. NFC  C. Infrared  D. GPS
+
+**MC4.** From the parking lot, an attacker captures the handshake of a laptop joining a WPA2-Personal network. What is the attacker MOST likely to do next?
+A. Read the traffic immediately, because WPA2 uses no encryption  B. Use the handshake to clone the AP's BSSID  C. Try to guess the passphrase offline, which works well if the passphrase is weak  D. Nothing, because WPA2 handshakes cannot be captured
+
+**MC5.** An employee connects their work laptop to their phone's hotspot to reach websites the office blocks. What is the MAIN security risk?
+A. The phone's battery may run out  B. The laptop will switch to WEP  C. The phone becomes jailbroken  D. The laptop's traffic bypasses the company's network security controls
+
+**MC6.** An administrator is installing three access points on the 2.4 GHz band and wants them not to interfere with each other. Which channels should be used?
+A. 1, 2 and 3  B. 1, 6 and 11  C. 2, 4 and 6  D. 6, 7 and 8
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | C | Enterprise mode gives each person their own credentials, so one account can be disabled and connections are tied to a user; a hidden SSID is still found easily. |
+| MC2 | D | Deauthentication attacks send fake "disconnect" messages, often to push victims onto an evil twin; jamming would block all connections. |
+| MC3 | A | Badges use RFID, which can be read from several centimeters up to about 100 m; NFC only works within about 4 cm. |
+| MC4 | C | A captured WPA2-Personal handshake can be attacked offline by guessing passphrases; WPA3's SAE was designed to stop exactly this. |
+| MC5 | D | A hotspot gives the laptop a separate path to the internet that skips the company's firewall and web filtering. |
+| MC6 | B | The 2.4 GHz band has only three non-overlapping channels: 1, 6 and 11. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

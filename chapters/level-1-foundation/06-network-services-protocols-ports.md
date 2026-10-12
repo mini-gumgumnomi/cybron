@@ -318,6 +318,41 @@ Email uses **different protocols to send and to receive**.
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** An employee receives a password-reset link: `https://example.com.login-check.net/reset`. Which domain actually controls this page?
+A. example.com  B. reset  C. com.login-check  D. login-check.net
+
+**MC2.** A web-server log shows hundreds of `401` responses to login requests from `203.0.113.45` within five minutes. What is this MOST likely?
+A. Someone scanning for hidden pages  B. Someone guessing passwords  C. A server software error  D. Normal redirects to the HTTPS site
+
+**MC3.** Staff read company email on a phone, a laptop and a tablet, and every device must show the same folders and read/unread status over an encrypted connection. Which protocol and port BEST fit?
+A. POP3S on 995  B. IMAPS on 993  C. SMTPS on 465  D. LDAPS on 636
+
+**MC4.** A user says, "This shopping site must be safe, it has the padlock icon." What is the BEST response?
+A. The padlock shows the connection is encrypted and the certificate is valid, but phishing sites can have padlocks too  B. The padlock proves the company behind the site has been checked by police  C. The padlock means the site uses port 80  D. The padlock only appears on government websites
+
+**MC5.** A company wants to make sure the DNS answers its users receive cannot be faked by an attacker. Which technology adds digital signatures to DNS answers?
+A. DHCP snooping  B. DNS over TLS on port 853  C. A CNAME record  D. DNSSEC
+
+**MC6.** An analyst sees a large TCP transfer on port 53 from the company's DNS server to an unknown external IP. Which DNS activity normally uses TCP and could leak the company's whole list of DNS records?
+A. A normal A-record lookup  B. A reverse PTR lookup  C. A zone transfer  D. A DHCP lease renewal
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | D | The real domain is the part just before the last dot (`login-check.net`); `example.com` is only a subdomain label used as a disguise. |
+| MC2 | B | Many 401 "Unauthorized" responses from one IP point to password guessing; lots of 404s would point to scanning for hidden pages. |
+| MC3 | B | IMAP keeps mail on the server so every device stays in sync, and IMAPS (993) encrypts it; POP3 usually downloads and deletes. |
+| MC4 | A | The padlock only means TLS encryption and a valid certificate; it says nothing about whether the site owner is honest. |
+| MC5 | D | DNSSEC digitally signs DNS answers so they cannot be forged; DoT encrypts lookups for privacy but does not sign the records. |
+| MC6 | C | Zone transfers copy DNS data between servers over TCP 53; an unexpected transfer to an outsider leaks the whole zone. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

@@ -232,6 +232,41 @@ Write down:
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** A sales manager's laptop is stolen from a parked car. Which control would BEST keep the files on its drive from being read by the thief?
+A. A faster SSD  B. Full-disk encryption  C. More RAM  D. A UPS battery
+
+**MC2.** A user's internet plan is 100 Mbps. About how many megabytes (MB) of a download can arrive each second?
+A. 100 MB  B. 800 MB  C. 12.5 MB  D. 1 MB
+
+**MC3.** A company is throwing away old hard drives. An employee says, "It's fine, we deleted all the files." What is the BEST response?
+A. Agree, because deleted files cannot be recovered  B. Reformat the drives once and reuse them  C. Keep the drives because they hold the operating system  D. Sanitize or destroy the drives, because deleted files can often be recovered
+
+**MC4.** An analyst finds malware that left no files on the disk and vanished after the computer was restarted. Where did the malware MOST likely live?
+A. In RAM  B. On the SSD  C. In the power supply  D. In the TPM
+
+**MC5.** During a walk-through, a technician finds a small unknown device plugged in between a keyboard cable and the PC's USB port. What is it MOST likely?
+A. A network card  B. A TPM  C. A UPS  D. A hardware keylogger
+
+**MC6.** A small office's server crashes several times a month when the power flickers for a few seconds. Which option BEST protects the server's availability?
+A. Full-disk encryption  B. Secure Boot  C. A UPS (uninterruptible power supply)  D. A faster CPU
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | B | Full-disk encryption makes the disk unreadable without the key; a faster disk or more RAM does nothing for confidentiality. |
+| MC2 | C | Network speed is in bits and 8 bits make a byte, so 100 ÷ 8 = 12.5 MB per second; 800 multiplies instead of dividing. |
+| MC3 | D | "Deleted" data can often be recovered, so old disks must be sanitized or physically destroyed; one quick reformat is not enough. |
+| MC4 | A | Fileless malware lives only in volatile RAM, which is why it leaves no trace on the disk and disappears at reboot. |
+| MC5 | D | A device sitting between the keyboard and the PC is a classic hardware keylogger that records every key pressed. |
+| MC6 | C | A UPS gives battery power through short outages, protecting availability; encryption and Secure Boot protect other things. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

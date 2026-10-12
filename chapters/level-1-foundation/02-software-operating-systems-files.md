@@ -350,6 +350,41 @@ CompTIA loves these OS-related ideas:
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** An analyst opens Task Manager on a slow PC and sees a process named `svch0st.exe` (with a zero) using a lot of CPU. What is this MOST likely?
+A. Malware disguised as the normal `svchost.exe` process  B. A required Windows service  C. A driver for the network card  D. A Patch Tuesday update being installed
+
+**MC2.** An administrator is preparing a new Linux web server. Which action BEST reduces the number of ways an attacker could get in?
+A. Enabling the guest account for testing  B. Disabling every service and daemon the server does not need  C. Hiding file extensions  D. Formatting the data disk as FAT32
+
+**MC3.** A report file should be readable and writable by its owner, readable by its group, and closed to everyone else. Which command sets this?
+A. `chmod 777 report.txt`  B. `chmod 750 report.txt`  C. `chmod 604 report.txt`  D. `chmod 640 report.txt`
+
+**MC4.** An HR employee copies salary spreadsheets to a FAT32 USB stick and then loses it. Why do the NTFS permissions on the original files NOT protect the copies?
+A. FAT32 has no permission system, so anyone who finds the stick can read the files  B. FAT32 automatically encrypts files, so the permissions are removed  C. USB sticks only store programs, not documents  D. Permissions only apply to `.exe` files
+
+**MC5.** A vendor released a patch for a critical vulnerability last week. A manager wants to wait three months before installing it. What is the MAIN risk of waiting?
+A. The patch will expire and stop working  B. The system will automatically become end-of-life  C. Attackers study new patches to learn the weakness and then attack systems that are still unpatched  D. Patches can only be installed on Patch Tuesday
+
+**MC6.** Why is a rootkit that has reached the kernel so hard for antivirus software to detect?
+A. It only exists on the disk, which antivirus never scans  B. The kernel controls what other programs, including antivirus, are allowed to see  C. It deletes the TPM chip  D. Kernel code cannot be scanned while the screen is on
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | A | Malware often imitates a real process name with a small spelling change; `svchost.exe` is real, `svch0st.exe` is not. |
+| MC2 | B | Every running service is a possible door, so turning off unneeded ones (hardening) shrinks the attack surface; enabling guest does the opposite. |
+| MC3 | D | Owner rw- = 4+2 = 6, group r-- = 4, others --- = 0, so 640; 750 would also let the owner and group execute. |
+| MC4 | A | Permissions are a feature of the file system; FAT32/exFAT has none, so the copied files are open to anyone. |
+| MC5 | C | Once a patch is public, attackers reverse-engineer it and target unpatched systems; patches do not expire. |
+| MC6 | B | The kernel is the most powerful part of the OS, so a kernel rootkit can lie to antivirus about what is running. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

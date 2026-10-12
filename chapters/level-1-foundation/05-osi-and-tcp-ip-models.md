@@ -303,6 +303,41 @@ You don't need to understand all these attacks yet. Most of them come back in Le
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** During an authorized scan, an analyst sends a SYN packet to port 3389 on a server and receives an RST in reply. What does this MOST likely mean?
+A. The port is open and RDP is listening  B. The three-way handshake completed  C. The port is closed  D. The server is under a SYN flood
+
+**MC2.** An attacker plugs a laptop into an office switch and floods it with thousands of fake MAC addresses. At which OSI layer is this attack happening?
+A. Layer 2 (Data Link)  B. Layer 3 (Network)  C. Layer 4 (Transport)  D. Layer 7 (Application)
+
+**MC3.** A connection log shows `192.168.1.20:51544 → 203.0.113.10:443`. What is port 51544 MOST likely?
+A. A well-known port for a secure web service  B. A registered port for remote desktop  C. A port opened by malware on the server  D. A temporary (ephemeral) port the client picked for its side of the conversation
+
+**MC4.** A developer wants to move a live video-call app from UDP to TCP "so no frames are ever lost." Why could this make calls WORSE?
+A. TCP has no port numbers, so calls could not connect  B. TCP cannot carry video data  C. TCP waits to re-send lost pieces, which adds delay that real-time audio and video cannot tolerate  D. TCP is connectionless, so frames arrive out of order
+
+**MC5.** A web server answers HTTPS requests normally, but `ping` to it gets no reply. What is the MOST likely reason?
+A. A firewall in front of the server blocks ICMP  B. The server's port 443 is closed  C. The server is using UDP instead of TCP  D. The server has no MAC address
+
+**MC6.** In the four-layer TCP/IP model, which layer contains IP and ICMP?
+A. Application  B. Internet  C. Transport  D. Network Access
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | C | A closed port replies to a SYN with RST ("no such service here"); an open port would reply with SYN-ACK. |
+| MC2 | A | Switches and MAC addresses live at Layer 2, so MAC flooding is a Data Link attack. |
+| MC3 | D | Ports 49,152–65,535 are ephemeral ports picked by clients; the server side here is the well-known port 443. |
+| MC4 | C | TCP's re-sending makes delivery reliable but slow; for live video a dropped frame is better than a delayed one, which is why UDP is used. |
+| MC5 | A | Ping uses ICMP, which many firewalls block to make network mapping harder, while HTTPS (TCP 443) is still allowed. |
+| MC6 | B | OSI Layer 3 (IP, ICMP) maps to the TCP/IP Internet layer; "Network Access" covers OSI Layers 1–2. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

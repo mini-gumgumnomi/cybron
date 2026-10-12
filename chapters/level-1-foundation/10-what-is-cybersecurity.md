@@ -334,6 +334,41 @@ No single control is perfect, so defenders build **layers**. If one layer fails,
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** A company's email filter catches a phishing email with a malicious attachment before any employee sees it. Which step of the Cyber Kill Chain did the filter break?
+A. Reconnaissance  B. Delivery  C. Installation  D. Actions on Objectives
+
+**MC2.** Two servers have the same unpatched flaw. Server 1 is a public web server holding customer data. Server 2 is an internal test box with no data that cannot be reached from the internet. Which statement is MOST accurate?
+A. Server 1 has the higher risk, because both the likelihood and the impact of an attack are higher  B. Both have exactly the same risk, because the flaw is the same  C. Server 2 has the higher risk, because test boxes are ignored  D. Neither has any risk until an exploit is published
+
+**MC3.** A manager proposes spending $50,000 a year on new controls to protect a $2,000 lab laptop that holds no sensitive data. What is the BEST response?
+A. Approve it, because the goal is zero risk  B. Approve it, because any control is worth buying  C. Remove all controls from the laptop instead  D. Reject it, because a control should not cost more than the risk it reduces
+
+**MC4.** A company wants its attackers and defenders to work side by side during an exercise, sharing findings in real time to improve detections. What is this called?
+A. A red team  B. A purple team  C. A white team  D. A blue team
+
+**MC5.** An audit finds 40 VPN accounts that belong to former employees and are protected only by passwords. Which action BEST addresses the lesson of the Colonial Pipeline attack?
+A. Disable the unused accounts and require MFA on all VPN access  B. Change the VPN to a faster server  C. Ask former employees to promise not to log in  D. Move the VPN logs to a different folder
+
+**MC6.** While shopping online, a customer notices that changing a number in the URL shows other people's orders. What is the BEST ethical action?
+A. Download the orders to prove the flaw exists  B. Post the flaw on social media to warn everyone  C. Report it privately to the company or its bug bounty program and not use it further  D. Test more URLs to see how big the problem is
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | B | Email is a delivery method; stopping the email before it reaches anyone breaks the chain at Delivery. |
+| MC2 | A | Risk = likelihood × impact; the internet-facing server with customer data scores higher on both, even though the flaw is identical. |
+| MC3 | D | Risk can never reach zero; controls should cost less than the value they protect. |
+| MC4 | B | A purple team is red (attack) and blue (defense) working together; the white team referees. |
+| MC5 | A | Colonial Pipeline was breached through an unused VPN account with no MFA, so remove stale accounts and require MFA. |
+| MC6 | C | Responsible disclosure means reporting privately and not exploiting the flaw; downloading data or testing further can be illegal. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

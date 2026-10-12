@@ -280,6 +280,41 @@ Notice how there is no key and no secret. Anyone can reverse it.
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** While reading a packet capture, an analyst sees the byte `0x2A`. What is this value in decimal?
+A. 42  B. 32  C. 210  D. 24
+
+**MC2.** During an audit, a consultant finds the line `db_password=YWRtaW4xMjM=` in a configuration file. What is this value MOST likely?
+A. An AES-encrypted password that needs a key to read  B. A SHA-256 hash that cannot be reversed  C. A Base64-encoded password that anyone can decode  D. An MD5 hash of the password
+
+**MC3.** A website must check users' passwords at login, but even its own administrators should never be able to see the passwords. How should the passwords be stored?
+A. Base64-encoded  B. Compressed in a `.zip` file  C. In plain text in a protected folder  D. As salted hashes
+
+**MC4.** A software vendor publishes an MD5 value so customers can check that downloads were not tampered with. What is the BEST advice to the vendor?
+A. Switch to Base64 so the value is shorter  B. Publish a SHA-256 hash instead, because practical MD5 collisions exist  C. Stop publishing hashes, because they reveal the file contents  D. Encrypt the MD5 value with AES
+
+**MC5.** A backup tool must both compress and encrypt a large folder before sending it to the cloud. Which order is BEST?
+A. Compress first, then encrypt  B. Encrypt first, then compress  C. Compress only, because compression also hides the data  D. Encrypt twice instead of compressing
+
+**MC6.** An analyst hashes two copies of a contract. Only one comma is different, yet the two SHA-256 hashes look completely unrelated. What does this demonstrate?
+A. A hash collision  B. That SHA-256 is broken  C. The avalanche effect  D. That the contract was encrypted
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | A | 2 × 16 + A (10) = 42; 32 is what you get if you read the "A" as zero. |
+| MC2 | C | The `=` padding and letters-only look are typical of Base64, which is encoding with no key, so anyone can reverse it. |
+| MC3 | D | Hashing is one-way, so the site compares hashes at login without ever storing the password; Base64 can be decoded by anyone. |
+| MC4 | B | MD5 is broken because attackers can find collisions on purpose; SHA-256 is the safe choice for integrity checks. |
+| MC5 | A | Encrypted data looks random and barely compresses, so you compress first and encrypt the smaller result. |
+| MC6 | C | A tiny change in the input changes the whole hash (avalanche effect); a collision would be two different inputs with the SAME hash. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

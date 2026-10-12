@@ -321,6 +321,41 @@ The usual topology today is the **star**: every device is connected to a central
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** A laptop at `192.168.1.20/24` sends a file to a printer at `192.168.1.77`. Where does the laptop send the data FIRST?
+A. To the default gateway, so the router can forward it  B. Directly to the printer through the local switch  C. To the internet provider's DNS server  D. To the public IP address used for NAT
+
+**MC2.** An analyst finds an unknown device on the office LAN with MAC address `3C:22:FB:9A:10:7E`. Which part of the address can help identify who MADE the network card?
+A. The last 24 bits  B. The full 48 bits only together with the IP address  C. The subnet mask  D. The first 24 bits (the OUI), `3C:22:FB`
+
+**MC3.** Which of the following is a valid short form of `2001:0db8:0000:0000:0000:0000:0000:0001`?
+A. `2001:db8::1`  B. `2001:db8:1`  C. `2001::db8::1`  D. `2001:db8:0:1`
+
+**MC4.** A small-business owner says, "Our router does NAT, so we don't need a firewall." What is the BEST response?
+A. Correct, NAT blocks all attacks from the internet  B. NAT hides inside addresses as a side effect, but it is not a firewall and does not filter traffic by rules  C. NAT only works with IPv6, so it gives no protection  D. NAT encrypts all traffic, which is even better than a firewall
+
+**MC5.** A help-desk technician runs `arp -a` and sees that the default gateway `192.168.1.1` has the same MAC address as a coworker's laptop. What is MOST likely happening?
+A. DHCP has failed and the PC self-assigned an address  B. The switch has been replaced with a hub  C. The laptop is using a random private MAC address  D. ARP poisoning, so the laptop can sit on-path and intercept traffic
+
+**MC6.** A company must link two buildings 2 km apart and wants a connection that is very hard to tap without being noticed. Which medium is BEST?
+A. Cat6 copper Ethernet  B. Coaxial cable  C. Fiber optic cable  D. A hub in each building
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | B | The /24 mask shows both addresses are on the same network (192.168.1), so delivery is local through the switch; the gateway is only for other networks. |
+| MC2 | D | The first half of a MAC address is the OUI, which identifies the manufacturer; the last half identifies the individual card. |
+| MC3 | A | Leading zeros are dropped and ONE run of zero groups becomes `::`; using `::` twice (option C) is not allowed. |
+| MC4 | B | NAT's hiding of inside hosts is helpful, but it has no allow/block rules, so a firewall is still needed. |
+| MC5 | D | ARP trusts any reply, so a laptop claiming the gateway's IP is a sign of ARP poisoning, an on-path attack. |
+| MC6 | C | Fiber carries light over long distances and is very hard to tap unnoticed; copper Ethernet runs are limited to about 100 m. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary
