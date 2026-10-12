@@ -50,11 +50,11 @@ The OS sits between the apps and the hardware. Apps never talk to the hardware d
 
 ```
   ┌───────────────────────────────────────────────────────┐
-  │   👤  USER  (you)                                     │
+  │   USER  (you)                                         │
   ├───────────────────────────────────────────────────────┤
-  │   📱  APPLICATIONS   browser · email · games · Word   │
+  │   APPLICATIONS   browser · email · games · Word       │
   ├───────────────────────────────────────────────────────┤
-  │   🧑‍💼 OPERATING SYSTEM                                 │
+  │   OPERATING SYSTEM                                    │
   │       ┌──────────── user space ────────────┐          │
   │       │ services · settings · user accounts│          │
   │       ├──────────── KERNEL (core) ─────────┤          │
@@ -62,9 +62,9 @@ The OS sits between the apps and the hardware. Apps never talk to the hardware d
   │       │ security checks · DRIVERS          │          │
   │       └────────────────────────────────────┘          │
   ├───────────────────────────────────────────────────────┤
-  │   🔩  FIRMWARE  (UEFI / BIOS)                         │
+  │   FIRMWARE  (UEFI / BIOS)                             │
   ├───────────────────────────────────────────────────────┤
-  │   🖥️  HARDWARE   CPU · RAM · storage · network card   │
+  │   HARDWARE   CPU · RAM · storage · network card       │
   └───────────────────────────────────────────────────────┘
 ```
 
@@ -175,17 +175,17 @@ Every person (and many programs) gets a **user account**: a username plus a way 
 
 ```
    ┌───────────────────────────────┐
-   │ 👑 ADMINISTRATOR / ROOT        │  Can do ANYTHING: install software,
+   │ ADMINISTRATOR / ROOT          │  Can do ANYTHING: install software,
    │    (Windows "Administrator",  │  change any setting, read any file,
    │     Linux "root", UID 0)      │  delete the whole system.
    ├───────────────────────────────┤
-   │ 👤 STANDARD USER               │  Can use apps and their OWN files.
+   │ STANDARD USER                 │  Can use apps and their OWN files.
    │                               │  Cannot change system settings.
    ├───────────────────────────────┤
-   │ 🙈 GUEST                       │  Very limited, temporary.
+   │ GUEST                         │  Very limited, temporary.
    │                               │  Should usually be DISABLED.
    ├───────────────────────────────┤
-   │ ⚙️ SERVICE ACCOUNT             │  Used by programs (e.g. the web
+   │ SERVICE ACCOUNT               │  Used by programs (e.g. the web
    │                               │  server), not by people.
    └───────────────────────────────┘
 ```
@@ -210,9 +210,9 @@ Every Linux file has three permission sets: for the **owner (u)**, the **group (
 
 ```
    -rwxr-x---  1  alice  staff  4096  Jan 10  backup.sh
-   │└┬┘└┬┘└┬┘      └─┬─┘  └─┬─┘
-   │ │  │  │         │      └── group that owns the file
-   │ │  │  │         └───────── user that owns the file
+   │└┬┘└┬┘└┬┘     └─┬─┘  └─┬─┘
+   │ │  │  │        │      └── group that owns the file
+   │ │  │  │        └───────── user that owns the file
    │ │  │  └── OTHERS:  ---   no access at all
    │ │  └───── GROUP:   r-x   can read and run, NOT change
    │ └──────── OWNER:   rwx   can read, write (change) and execute (run)

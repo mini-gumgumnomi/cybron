@@ -77,7 +77,7 @@ For every attack in this book: how to **prevent** it, how to **detect** it, and 
 | DNS tunneling | DNS filtering, restrict outbound DNS | Long random subdomains, high TXT volume | Block domain, isolate host |
 | ARP poisoning / on-path | **Encryption (TLS/VPN)**, Dynamic ARP Inspection, 802.1X | Duplicate MACs, certificate warnings | Isolate attacker port, rotate credentials |
 | SSL stripping / downgrade | **HSTS**, disable old protocols, TLS 1.3 | HTTP where HTTPS expected | Fix configs, reset exposed credentials |
-| Credential replay / pass-the-hash | MFA, Kerberos hardening, least privilege | Logins without password events; concurrent sessions | Reset credentials, revoke sessions |
+| Credential replay / pass-the-hash | MFA, Kerberos hardening, least privilege, no shared local admin passwords | NTLM logons (Event 4624) from unusual hosts; concurrent sessions | Reset credentials, revoke sessions |
 | Rogue AP | **802.1X/NAC** on ports, wireless scans | WIDS, site surveys | Remove the device |
 | Evil twin | **WPA3-Enterprise** with certificate validation, VPN | WIDS (duplicate SSIDs) | Locate and remove, reset exposed credentials |
 | Deauthentication | **802.11w / WPA3** (protected management frames) | WIDS | Locate source |
@@ -134,7 +134,9 @@ For every attack in this book: how to **prevent** it, how to **detect** it, and 
 |---|---|---|---|
 | Prompt injection | **Least privilege for AI**, human approval, input/output filtering | Prompt/output logging | Revoke tokens, review actions |
 | Data poisoning | **Data provenance**, vetted sources | Model testing, drift monitoring | Retrain from clean data |
-| Insecure output handling | **Validate/encode output** | WAF, app logs | Fix integration |
+| Insecure (improper) output handling | **Validate/encode output** | WAF, app logs | Fix integration |
+| Excessive agency | **Least privilege for AI agents**, human approval for risky actions | Action/audit logs | Revoke the agent's credentials, reverse actions |
+| Model theft / tampering | **Access control on model files**, signed models from trusted sources, rate limiting | Unusual query volumes | Revoke API keys, restore a verified model |
 | Sensitive data leakage / shadow AI | **AI policy, approved tools, DLP** | CASB/DLP alerts | Contain, notify if required |
 
 ---

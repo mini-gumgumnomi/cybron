@@ -102,7 +102,7 @@ When you join a network, your device needs an IP address, subnet mask, default g
 
 ```
    https://  shop.example.com  :443  /products/view.php  ?id=42      #reviews
-   └──┬───┘  └──────┬───────┘ └─┬─┘ └────────┬────────┘ └──┬───┘   └───┬───┘
+   └───┬──┘  └───────┬──────┘  └─┬┘  └────────┬───────┘  └──┬─┘      └───┬──┘
    protocol   hostname/domain   port         path        query       fragment
    (scheme)   (→ DNS lookup)  (optional;               (data sent    (place on
                                443 assumed              to server)    the page)

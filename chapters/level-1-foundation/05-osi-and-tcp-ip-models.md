@@ -78,15 +78,15 @@ As data moves **down** the layers on the sender's side, each layer adds a **head
  Layer 7-5  │                              [   DATA   ]                              │  "Data"
             │                                                                        │
  Layer 4    │                    [TCP/UDP hdr][   DATA   ]                           │  "Segment" (TCP)
-            │                    ports: from 51544 to 443                           │  "Datagram" (UDP)
+            │                    ports: from 51544 to 443                            │  "Datagram" (UDP)
             │                                                                        │
  Layer 3    │            [IP hdr][TCP/UDP hdr][   DATA   ]                           │  "Packet"
-            │            IPs: from 192.168.1.20 to 203.0.113.10                     │
+            │            IPs: from 192.168.1.20 to 203.0.113.10                      │
             │                                                                        │
- Layer 2    │   [Eth hdr][IP hdr][TCP/UDP hdr][   DATA   ][Eth trailer]             │  "Frame"
+ Layer 2    │   [Eth hdr][IP hdr][TCP/UDP hdr][   DATA   ][Eth trailer]              │  "Frame"
             │   MACs: from laptop's MAC to router's MAC                              │
             │                                                                        │
- Layer 1    │   0101100101010111010100101011010100101010101010101010101...          │  "Bits"
+ Layer 1    │   0101100101010111010100101011010100101010101010101010101...           │  "Bits"
 ```
 
 The name of each "package" is called its **PDU** (Protocol Data Unit). Mnemonic, from Layer 4 down to 1: **"Some People Fear Birthdays"** → **S**egment, **P**acket, **F**rame, **B**its.

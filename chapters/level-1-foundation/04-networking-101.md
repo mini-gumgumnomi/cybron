@@ -180,9 +180,9 @@ Your router has **one public IP** from your internet provider. **NAT** lets all 
 ```
      YOUR HOME (private side)                    THE INTERNET (public side)
    ┌───────────────────────────┐
-   │ 💻 Laptop  192.168.1.20   │\
-   │ 📱 Phone   192.168.1.21   │─── 📶 ROUTER ════════════════  🌍  Websites see only
-   │ 📺 TV      192.168.1.22   │/   inside: 192.168.1.1              203.0.113.50
+   │ Laptop  192.168.1.20      │\
+   │ Phone   192.168.1.21      │─── 📶 ROUTER ════════════════  🌍  Websites see only
+   │ TV      192.168.1.22      │/   inside: 192.168.1.1              203.0.113.50
    └───────────────────────────┘    outside: 203.0.113.50
                                     (NAT swaps the addresses
                                      and remembers who asked)

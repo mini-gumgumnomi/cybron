@@ -22,15 +22,15 @@ You already think like a security professional. You just don't use the jargon ye
                              │  might break in (THREAT)
                              ▼
        ┌────────────────────────────────────────────────┐
-       │  🏠 YOUR HOUSE                                 │
+       │  YOUR HOUSE                                    │
        │                                                │
-       │   🪟 window left unlocked  ◄── VULNERABILITY   │
+       │   window left unlocked  ◄── VULNERABILITY      │
        │      (a weakness)                              │
        │                                                │
-       │   💎 jewelry box           ◄── ASSET           │
+       │   jewelry box           ◄── ASSET              │
        │      (something valuable)                      │
        │                                                │
-       │   🔒 locks · 🚨 alarm · 🐕 dog · 📹 camera     │
+       │   locks · alarm · dog · camera                 │
        │                            ◄── CONTROLS        │
        │                                (protections)   │
        └────────────────────────────────────────────────┘
@@ -70,13 +70,13 @@ You already think like a security professional. You just don't use the jargon ye
                      IMPACT →
                  Low        Medium       High
              ┌──────────┬──────────┬──────────┐
-     High    │ 🟨 Medium │ 🟥 High   │ 🟥 Critical│
+     High    │  Medium  │   High   │ Critical │
  LIKELIHOOD  ├──────────┼──────────┼──────────┤
-     Medium  │ 🟩 Low    │ 🟨 Medium │ 🟥 High    │
+     Medium  │   Low    │  Medium  │   High   │
       ↑      ├──────────┼──────────┼──────────┤
-     Low     │ 🟩 Low    │ 🟩 Low    │ 🟨 Medium  │
+     Low     │   Low    │   Low    │  Medium  │
              └──────────┴──────────┴──────────┘
-   Fix the red boxes first. (Full risk math in Chapter 44.)
+   Fix the Critical and High boxes first. (Full risk math in Chapter 44.)
 ```
 
 > 💡 **You can never reach zero risk.** Security is about reducing risk to a level the organization **accepts**, at a sensible cost. Nobody spends $1 million to protect a $1,000 laptop.
@@ -265,7 +265,7 @@ No single control is perfect, so defenders build **layers**. If one layer fails,
           │  │  │  │  │   MFA, input validation)    │  │  │  │  │
           │  │  │  │  │  ┌───────────────────────┐  │  │  │  │  │
           │  │  │  │  │  │ DATA (encryption,     │  │  │  │  │  │
-          │  │  │  │  │  │   backups, DLP)  💎   │  │  │  │  │  │
+          │  │  │  │  │  │   backups, DLP)       │  │  │  │  │  │
           │  │  │  │  │  └───────────────────────┘  │  │  │  │  │
           │  │  │  │  └─────────────────────────────┘  │  │  │  │
           │  │  │  └───────────────────────────────────┘  │  │  │

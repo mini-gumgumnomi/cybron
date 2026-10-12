@@ -9,7 +9,7 @@
 **The reader:** You have never studied computers. You may not know what a CPU, an IP address, or a password hash is. That's fine — this book starts at **"this is a computer"** and finishes at **"I can pass Security+ with confidence."**
 
 **The exam it targets:** CompTIA Security+ **SY0-701**, which is the live exam right now.
-CompTIA is preparing the next version, **SY0-801** (reported by training providers to launch on 17 November 2026; the English SY0-701 exam retires on 11 June 2027). Most of the content stays the same. The big addition is **AI / Large Language Model security**, which this book covers in **Appendix A**. That way the book works for both versions.
+CompTIA is preparing the next version, **SY0-801** (reported by training providers to launch on 17 November 2026; the English SY0-701 exam retires on 11 June 2027). Training providers expect most of the content to stay the same, with **AI / Large Language Model security** as the big addition. This book covers that in **Appendix A**, giving you a head start on SY0-801 too. Always check CompTIA's official SY0-801 objectives once they are published.
 
 ### Exam facts (SY0-701)
 
@@ -18,7 +18,7 @@ CompTIA is preparing the next version, **SY0-801** (reported by training provide
 | Questions | Up to **90** (multiple choice + **Performance-Based Questions / PBQs**) |
 | Time | **90 minutes** |
 | Passing score | **750** on a scale of **100–900** |
-| Recommended experience | CompTIA A+/Network+ level knowledge (Level 1 of this book replaces that) |
+| Recommended experience | CompTIA Network+ and about two years of IT/security administration (recommended, not required; Level 1 of this book fills the knowledge gap) |
 | Validity | 3 years |
 
 ### The 5 exam domains and their weight
@@ -53,7 +53,7 @@ flowchart LR
 
 \* At about 1–1.5 hours per day. Total ≈ **4–5 months** from zero.
 
-> **About "40%":** Security+ uses a *scaled* score, and 750/900 needs roughly **80–85% correct** in practice. Level 3 is the milestone where you could answer around 40% of exam questions with confidence. It is **not** a pass yet. Level 4 is what turns that into a pass.
+> **About "40%":** Security+ uses a *scaled* score (750 on a 100–900 scale). CompTIA does **not** publish how many correct answers 750 equals; an **unofficial estimate** often quoted by trainers is around 80–85% correct, which is why this book asks for **85%+** on practice exams as a safety margin. Level 3 is the milestone where you could answer around 40% of exam questions with confidence. It is **not** a pass yet. Level 4 is what turns that into a pass.
 
 ---
 
@@ -91,7 +91,7 @@ A **fully written sample chapter** that shows this style is here: [`chapters/lev
 
 ## 2. LEVEL 1 — 🧱 Basic Foundation to Understand to Start (Chapters 1–11)
 
-> **Purpose:** Security+ assumes you already know computers and networks (A+ and Network+ level). This level gives you that background from scratch. Nothing here is "exam content" by name, but **about 30% of exam questions silently depend on it**: ports, protocols, IP addresses, OS concepts, and so on.
+> **Purpose:** Security+ assumes you already know computers and networks (A+ and Network+ level). This level gives you that background from scratch. Nothing here is "exam content" by name, but **many exam questions silently depend on it**: ports, protocols, IP addresses, OS concepts, and so on.
 
 ### Chapter 1 — What Is a Computer? *(sample chapter written)*
 - **Topics:** input → processing → storage → output. CPU, RAM, storage (HDD/SSD), motherboard, power supply, peripherals. Firmware (BIOS/UEFI). Bits and bytes. Types of computers: PC, laptop, server, phone, IoT device.
@@ -251,7 +251,7 @@ A **fully written sample chapter** that shows this style is here: [`chapters/lev
 - **Topics:** change management (approval process, ownership, stakeholders, impact analysis, test results, backout plan, maintenance window, SOP; technical implications: allow/deny lists, restricted activities, downtime, service/application restart, legacy apps, dependencies; documentation and version control). Gap analysis. **Zero trust** (control plane: adaptive identity, threat scope reduction, policy-driven access control, policy administrator, policy engine; data plane: implicit trust zones, subject/system, policy enforcement point). Deception: honeypot, honeynet, honeyfile, honeytoken.
 - **Figures:** **Change-management flowchart** (request → impact analysis → CAB approval → test → implement → backout if needed → document). **Zero-trust architecture** (subject → PEP ↔ PDP (PE + PA) → resource). Honeypot "bait" illustration.
 
-**✅ Level 3 Gate Test:** 90-question half-length practice exam focused on Domains 1–3. Target **≥ 70%** on those domains.
+**✅ Level 3 Gate Test:** 90-question practice exam focused on Domains 1–3 (about half of the exam's content). Target **≥ 70%** on those domains.
 
 ---
 
@@ -352,7 +352,7 @@ A **fully written sample chapter** that shows this style is here: [`chapters/lev
 | **B — Acronym Dictionary** | About 380 acronyms used in the book (and the most important from the official CompTIA list), in plain English, with the chapter that teaches each. |
 | **C — Master Port & Protocol Table** | Port, protocol, secure alternative, what it does. |
 | **D — Attack ↔ Control Matrix** | Each attack mapped to the controls that stop, detect or recover from it. |
-| **E — Home Lab Guide** | VirtualBox, Kali Linux, a Windows VM, Wireshark, Nmap, pfSense, Security Onion, plus free online labs. Safe and legal practice rules. |
+| **E — Home Lab Guide** | VirtualBox, Kali Linux, a Windows VM, Wireshark, Nmap, pfSense/OPNsense, Wazuh or Security Onion, plus free online labs. Safe and legal practice rules, 16 exercises mapped to chapters. |
 | **F — Glossary with Pictures** | About 220 key terms, each with a picture-icon and chapter reference. |
 | **G — Practice Question Bank** | Index of the book's 1,000+ questions by exam objective, plus 84 bonus questions for the least-practised objectives. |
 
@@ -436,5 +436,7 @@ gantt
 | 6 | Level 4 chapters 34–51 + 3 full mock exams (270 questions) | ✅ Done (verified; 351/351 Domain 4–5 objective terms covered) |
 | 7 | Appendices A–G (AI/LLM security, acronyms, ports, attack↔control matrix, lab guide, glossary, question bank) | ✅ Done (verified; answer keys rebalanced, chapter references checked) |
 | 8 | Review against latest CompTIA objectives (update for SY0-801 once it is final) | ⏳ Next |
+
+For a short beginner's guide to studying with the book (study path, gate tests, when to take mocks, how to use the appendices), see **How to use this book** in the [README](README.md).
 
 Chapters are stored as Markdown under `chapters/level-N-…/NN-title.md`. Figures are drawn as Mermaid diagrams or text drawings so they render directly on GitHub.

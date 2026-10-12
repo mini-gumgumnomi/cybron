@@ -68,7 +68,7 @@ Every port and protocol you're likely to meet in Security+ questions, firewall P
 
 | Port | Protocol | Transport | Notes |
 |---:|---|---|---|
-| 989, 990 | FTPS | TCP | FTP over TLS (implicit) |
+| 989, 990 | FTPS | TCP | FTP over TLS (implicit mode). Explicit FTPS instead upgrades the normal port 21 connection with AUTH TLS |
 | 2049 | NFS | TCP/UDP | Unix/Linux network file system |
 | 3260 | iSCSI | TCP | Block storage over IP |
 

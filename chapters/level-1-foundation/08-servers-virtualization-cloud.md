@@ -166,16 +166,16 @@ A **container** packages an application **with everything it needs** (libraries,
 ## 🖼️ Figure 8.4 — "Pizza as a Service" 🍕
 
 ```
-   ON-PREMISES          IaaS                 PaaS                 SaaS
-   Make at home         Take & bake          Pizza delivered      Dine at restaurant
-  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
-  │🟦 Dining table│    │🟦 Dining table│    │🟦 Dining table│    │🟧 Dining table│
-  │🟦 Drinks      │    │🟦 Drinks      │    │🟦 Drinks      │    │🟧 Drinks      │
-  │🟦 Oven/cook   │    │🟦 Oven/cook   │    │🟧 Oven/cook   │    │🟧 Oven/cook   │
-  │🟦 Toppings    │    │🟧 Toppings    │    │🟧 Toppings    │    │🟧 Toppings    │
-  │🟦 Dough       │    │🟧 Dough       │    │🟧 Dough       │    │🟧 Dough       │
-  └──────────────┘    └──────────────┘    └──────────────┘    └──────────────┘
-          🟦 = YOU manage            🟧 = PROVIDER manages
+   ON-PREMISES         IaaS                PaaS                SaaS
+   Make at home        Take & bake         Pizza delivered     Dine at restaurant
+  ┌────────────────┐  ┌────────────────┐  ┌────────────────┐  ┌────────────────┐
+  │ Y Dining table │  │ Y Dining table │  │ Y Dining table │  │ P Dining table │
+  │ Y Drinks       │  │ Y Drinks       │  │ Y Drinks       │  │ P Drinks       │
+  │ Y Oven/cook    │  │ Y Oven/cook    │  │ P Oven/cook    │  │ P Oven/cook    │
+  │ Y Toppings     │  │ P Toppings     │  │ P Toppings     │  │ P Toppings     │
+  │ Y Dough        │  │ P Dough        │  │ P Dough        │  │ P Dough        │
+  └────────────────┘  └────────────────┘  └────────────────┘  └────────────────┘
+   Y = YOU manage it        P = the PROVIDER manages it
 ```
 
 ## 🖼️ Figure 8.5 — The Same Idea in IT Terms

@@ -171,7 +171,7 @@ Plain-English definitions of the key **terms** in this book, each with a small p
 | 🎭 | **Masking (data)** | Hiding part of data when displayed (`****4821`) | 31 |
 | 💉 | **Memory injection** | Inserting code into a running process's memory | 24 |
 | 🧩 | **Microservices** | App built from many small services talking via APIs | 29 |
-| ⚙️ | **Misconfiguration** | Insecure settings: the most common vulnerability | 24 |
+| ⚙️ | **Misconfiguration** | Insecure settings: one of the most common vulnerabilities | 24 |
 | 📰 | **Misinformation** | False information shared without intent to deceive | 15 |
 | ☁️ | **Multi-cloud** | Using more than one cloud provider | 32 |
 | 🌊 | **NetFlow** | Records who talked to whom, when and how much (no content) | 37 |
@@ -236,7 +236,7 @@ Plain-English definitions of the key **terms** in this book, each with a small p
 | 🎣 | **Social engineering** | Manipulating people into giving access or information | 15 |
 | 🔍 | **Spear phishing / whaling** | Targeted phishing / phishing aimed at executives | 15 |
 | 🖼️ | **Steganography** | Hiding data inside other data (e.g., images) | 28 |
-| 🌊 | **Stream cipher** | Encrypts data continuously byte by byte | 49 |
+| 🌊 | **Stream cipher** | Encrypts data as a continuous stream, a bit or byte at a time (e.g., ChaCha20) | 49 |
 | 🔗 | **Supply chain attack** | Compromising a supplier to reach its customers | 23 |
 | 🌐 | **Symmetric / asymmetric encryption** | One shared key / public-private key pair | 18 |
 | 🗣️ | **Tabletop exercise** | Talking through a scenario around a table | 32, 41 |

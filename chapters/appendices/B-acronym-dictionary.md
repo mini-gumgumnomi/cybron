@@ -2,6 +2,8 @@
 
 Security+ is full of acronyms. This dictionary explains every acronym used in this book in **plain English**, with the **chapter** where it's taught. The **official CompTIA acronym list** (at the end of the exam objectives PDF) is longer. Use both.
 
+> 📎 **Ch column:** the chapter that teaches the acronym. **App. A / App. C** = that appendix. A dash (**—**) means the acronym is on CompTIA's list but this book only mentions it in passing.
+
 > 💡 **How to study:** cover the right-hand columns and test yourself. Turn the ones you miss into flashcards (Chapter 11).
 
 ---
@@ -13,7 +15,7 @@ Security+ is full of acronyms. This dictionary explains every acronym used in th
 | **AAA** | Authentication, Authorization, Accounting | Prove who you are, decide what you may do, record what you did | 12 |
 | **AAAA** | DNS record type (pronounced "quad-A") | Maps a name to an IPv6 address | 6, 26 |
 | **ABAC** | Attribute-Based Access Control | Access decided by many attributes (role, device, location, time) | 39 |
-| **ACK** | Acknowledgment (TCP flag) | "Got it": the third step of the TCP handshake | 5 |
+| **ACK** | Acknowledgment (TCP flag) | "Got it": confirms data was received; used in steps 2 (SYN-ACK) and 3 (ACK) of the TCP handshake | 5 |
 | **ACL** | Access Control List | A list of allow/deny rules for traffic or files | 27 |
 | **AD** | Active Directory | Microsoft's directory of users, groups and computers | 39 |
 | **AEAD** | Authenticated Encryption with Associated Data | Encryption that also proves integrity (e.g., AES-GCM) | 49 |
@@ -387,11 +389,11 @@ Security+ is full of acronyms. This dictionary explains every acronym used in th
 | **SDLC** | Software Development Life Cycle | Process for building software (securely) | 43 |
 | **SDN** | Software-Defined Networking | Central software control of the network | 29 |
 | **SD-WAN** | Software-Defined Wide Area Network | Smart routing between sites over many links | 30 |
-| **SED** | Self-Encrypting Drive | Drive with built-in hardware encryption (a form of FDE) | 31 |
+| **SED** | Self-Encrypting Drive | Drive with built-in hardware encryption (a form of FDE) | — |
 | **SFTP** | SSH File Transfer Protocol | Secure file transfer over SSH (port 22) | 6 |
 | **SHA** | Secure Hash Algorithm | Hash family (SHA-1 broken; SHA-256 standard) | 3, 49 |
 | **SIEM** | Security Information and Event Management | Collects and correlates logs, alerts | 20, 37 |
-| **SIG** | Standardized Information Gathering (questionnaire) | Common vendor security questionnaire | 18, 45 |
+| **SIG** | Standardized Information Gathering (questionnaire) | Common vendor security questionnaire | 45 |
 | **SIM** | Subscriber Identity Module | Phone card identifying your mobile account | 7 |
 | **SIP** | Session Initiation Protocol | Sets up VoIP calls (5060; TLS 5061) | 6 |
 | **SLA** | Service-Level Agreement | Measurable service levels + penalties | 45 |

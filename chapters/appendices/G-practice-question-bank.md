@@ -180,7 +180,7 @@ A. SASE  B. SAML  C. SCAP  D. STIX
 A. Archiving  B. Alert tuning  C. Quarantine  D. Correlation
 
 **36.** What is an advantage of agent-based monitoring?
-A. Deep visibility, even when a laptop is off the corporate network  B. Nothing to install  C. No resource use at all  D. Works without any software
+A. Deep visibility, even when a laptop is off the corporate network  B. Nothing to install on the monitored device  C. No resource use at all  D. Works on appliances where you cannot install software
 
 **37.** Which control alerts when an employee copies thousands of customer records to a USB drive?
 A. CRL  B. SNMP trap  C. Load balancer  D. Endpoint DLP

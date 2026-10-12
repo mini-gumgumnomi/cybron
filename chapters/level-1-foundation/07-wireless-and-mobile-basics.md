@@ -22,8 +22,8 @@ A wireless network is like two people **talking out loud in a crowded room**. Ra
 ```
         🏢 Office                         🚗 Parking lot
    ┌────────────────────┐
-   │   📶 Access Point   │ )))   )))   )))   )))   👂 Attacker with a laptop
-   │   💻   💻   📱      │                         can still "hear" the signal
+   │   ACCESS POINT     │ )))   )))   )))   )))   👂 Attacker with a laptop
+   │   laptops, phones  │                         can still "hear" the signal
    └────────────────────┘
         Wi-Fi does not stop at the wall!
 ```
@@ -191,7 +191,7 @@ Phones and tablets are full computers (Chapter 1) that are **always online**, **
 ```
                     ┌───────────────────────────┐
      Lost/stolen ──►│                           │◄── Malicious apps
-                    │      📱  SMARTPHONE       │
+                    │        SMARTPHONE         │
    Public Wi-Fi ───►│  email · banking · photos │◄── Smishing (SMS phishing)
                     │  company data · MFA app   │
     Bluetooth  ────►│                           │◄── Jailbreaking / rooting

@@ -77,7 +77,7 @@ Small **simulations** where you *do* something instead of just choosing:
 
 ```
  ┌───────────────────────────────┐  ┌───────────────────────────────────────┐
- │ 🔀 DRAG & DROP / MATCHING      │  │ 🧱 FIREWALL RULES                      │
+ │ DRAG & DROP / MATCHING        │  │ FIREWALL RULES                        │
  │                               │  │                                       │
  │  Phishing      ──►  [Email]   │  │  Src IP     Dst IP    Port  Action    │
  │  Vishing       ──►  [Phone]   │  │  ANY        10.0.0.5  443   [ALLOW ▾] │
@@ -85,11 +85,11 @@ Small **simulations** where you *do* something instead of just choosing:
  │  Whaling       ──►  [CEO]     │  │  ...                                  │
  └───────────────────────────────┘  └───────────────────────────────────────┘
  ┌───────────────────────────────┐  ┌───────────────────────────────────────┐
- │ 🗺️ NETWORK DIAGRAM             │  │ 📜 LOG ANALYSIS                        │
+ │ NETWORK DIAGRAM               │  │ LOG ANALYSIS                          │
  │                               │  │                                       │
- │  Place the WAF, IDS and        │  │  Read these logs. Which host is       │
- │  load balancer in the right    │  │  compromised? What attack is this?    │
- │  spots on the diagram.         │  │  Choose the right fix.                │
+ │  Place the WAF, IDS and       │  │  Read these logs. Which host is       │
+ │  load balancer in the right   │  │  compromised? What attack is this?    │
+ │  spots on the diagram.        │  │  Choose the right fix.                │
  └───────────────────────────────┘  └───────────────────────────────────────┘
 ```
 
@@ -122,7 +122,7 @@ Small **simulations** where you *do* something instead of just choosing:
  │                                                                              │    "BEST"
  │   A. Whaling           ◄── distractor: whaling TARGETS executives;           │
  │                            here the executive is being IMPERSONATED          │
- │   B. Business email compromise / impersonation  ◄── ✅ ANSWER                │
+ │   B. Business email compromise / impersonation  ◄── CORRECT ANSWER           │
  │   C. Vishing           ◄── distractor: that's by PHONE                       │
  │   D. Watering hole     ◄── distractor: that's a compromised WEBSITE          │
  └──────────────────────────────────────────────────────────────────────────────┘

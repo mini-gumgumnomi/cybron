@@ -1,6 +1,6 @@
 # Cybron — *From Zero to Security+*
 
-A beginner-first, figure-heavy book for passing the **CompTIA Security+ (SY0-701)** exam. It starts from "what is a computer?" and finishes at full exam readiness. AI/LLM security is covered in an appendix, so the book is also ready for the coming **SY0-801** update.
+A beginner-first, figure-heavy book for passing the **CompTIA Security+ (SY0-701)** exam. It starts from "what is a computer?" and finishes at full exam readiness. AI/LLM security is covered in Appendix A, which gives you a head start on the AI content expected in the coming **SY0-801** version (always check CompTIA's official SY0-801 objectives once they are published).
 
 ## The four levels
 
@@ -13,6 +13,30 @@ A beginner-first, figure-heavy book for passing the **CompTIA Security+ (SY0-701
 | 📎 | Appendices | A–G | ✅ Written |
 
 📘 **[Full Book Plan](BOOK_PLAN.md)**: every chapter, topic, figure, study schedule, and a map from each exam objective to its chapter.
+
+## 🧭 How to use this book
+
+**1. Read the levels in order.** Each level builds on the one before. Read one chapter at a time, top to bottom: story → figure → explanation → memory trick → exam tip → try it → checkpoint questions (answers are hidden under "Show answers"; try first, then check).
+- *Already have A+ or Network+ knowledge?* Skim Level 1, but still take the **Level 1 Gate Test**. If you score 80%+, go straight to Level 2.
+
+**2. Plan about 4–5 months from zero** at 1–1.5 hours a day (Level 1: 3–4 weeks · Level 2: 3 weeks · Level 3: 4–5 weeks · Level 4: 5–6 weeks). A simple daily routine: 10 min flashcard review → 40 min reading (redraw the figure from memory) → 15 min "Try it" lab → 10 min checkpoint questions, writing every wrong answer in a mistake journal. See section 8 of the [Book Plan](BOOK_PLAN.md) for a week-by-week schedule.
+
+**3. Use the gate tests as checkpoints.** At the end of each level, take its gate test without notes. Move on only at the target score (**80%** for Level 1, **75%** for Level 2, **70%** for Level 3). If you miss it, re-read the chapters behind the questions you got wrong and retake the test a few days later.
+
+**4. Save the mock exams for the end.** Don't take the mock exams early: they are your final dress rehearsal. Finish Chapters 34–50 first, then follow the **14-day plan in Chapter 51**: Mock 1 on day 1, Mock 2 on day 7, Mock 3 on day 12, each timed (90 minutes) and followed by a careful mistake review. **Book the real exam when you score 85%+ on two different mocks with no domain below 75%.**
+
+**5. Use the appendices alongside the chapters, not after them.**
+
+| Appendix | When to use it |
+|---|---|
+| B (Acronyms) and F (Glossary) | From Level 2 onward: turn the terms you miss into daily flashcards |
+| C (Ports) | Start memorizing the ⭐ ports after Chapter 6; drill them weekly until exam day |
+| D (Attack ↔ Control) | From Level 3 onward, for "Which control is BEST?" questions |
+| E (Home Lab) | Set up the lab after Chapter 9 and do each exercise when you reach its chapter |
+| G (Question Bank) | Whenever a gate test or mock shows a weak exam objective: it lists every question for that objective, plus 84 bonus questions |
+| A (AI & LLM Security) | Not needed for SY0-701. Read it after Level 4 if you are taking SY0-801 or want the background |
+
+**6. Practise performance-based questions (PBQs).** The real exam mixes multiple-choice questions with hands-on PBQs. The mock exams are multiple-choice only, so do the PBQs in **Chapter 50** and the labs in **Appendix E** as well.
 
 ## 🧱 Level 1 — Basic Foundation to Understand to Start
 
@@ -63,7 +87,7 @@ A beginner-first, figure-heavy book for passing the **CompTIA Security+ (SY0-701
 | 31 | [Protecting Data](chapters/level-3-intermediate/31-protecting-data.md) | Encryption vs hashing vs masking vs tokenization; sovereignty; DLP |
 | 32 | [Resilience & Recovery](chapters/level-3-intermediate/32-resilience-and-recovery.md) | Hot/warm/cold sites, backup types, replication ≠ backup, UPS & generators, testing |
 | 33 | [Change Management, Zero Trust & Deception](chapters/level-3-intermediate/33-change-management-zero-trust-deception.md) | CAB & backout plans, gap analysis, PE/PA/PEP, honeypots & honeytokens |
-| ✅ | [Level 3 Gate Test](chapters/level-3-intermediate/level-3-gate-test.md) | 90-question half-length exam: score 70% to move on |
+| ✅ | [Level 3 Gate Test](chapters/level-3-intermediate/level-3-gate-test.md) | 90-question practice exam on Domains 1–3: score 70% to move on |
 
 ## 🏆 Level 4 — Advanced Knowledge, 100% Exam Pass
 

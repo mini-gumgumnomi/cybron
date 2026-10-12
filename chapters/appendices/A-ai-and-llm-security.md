@@ -19,7 +19,7 @@ CompTIA's next Security+ version, **SY0-801**, adds **artificial intelligence (A
 
 By the end of this appendix you will be able to explain, in plain words:
 - how AI models and **LLMs** (like chatbots) work,
-- the main **attacks against AI**: prompt injection, jailbreaking, data poisoning, model manipulation and theft, evasion, insecure output handling, excessive agency, data leakage,
+- the main **attacks against AI**: prompt injection, jailbreaking, data poisoning, model manipulation and theft, evasion, insecure (improper) output handling, excessive agency, data leakage,
 - the built-in **weaknesses** of AI: hallucinations, bias, lack of explainability,
 - how **attackers use AI** (deepfakes, AI-written phishing, automated vulnerability discovery),
 - how **defenders use AI**, and the **controls and frameworks** that keep AI use safe.
@@ -111,8 +111,8 @@ Inserting **malicious or misleading data into the training data** (or into the d
 ### 5. Evasion (Adversarial Examples) 🎭
 Making **small, carefully chosen changes** to an input so an AI system **misclassifies** it: e.g., tweaking malware so an AI-based antivirus thinks it's harmless, or adding stickers to a stop sign so a car's vision system misreads it.
 
-### 6. Insecure Output Handling 📤
-Trusting AI output blindly. If an app puts LLM output straight into a web page, database query or shell command, the output can carry **XSS, SQL injection or command injection** (Chapters 24, 26). **Treat AI output as untrusted input.**
+### 6. Insecure (Improper) Output Handling 📤
+Trusting AI output blindly. (The OWASP 2025 list calls this **Improper Output Handling**; the older 2023 list called it *Insecure Output Handling*. Same idea.) If an app puts LLM output straight into a web page, database query or shell command, the output can carry **XSS, SQL injection or command injection** (Chapters 24, 26). **Treat AI output as untrusted input.**
 
 ### 7. Excessive Agency 🦾
 Giving an AI agent **more permissions than it needs** (e.g., full mailbox access, admin database rights, the ability to make payments). Combined with prompt injection, the attacker effectively controls those permissions. **Least privilege applies to AI too.**
@@ -120,10 +120,10 @@ Giving an AI agent **more permissions than it needs** (e.g., full mailbox access
 ### 8. Sensitive Data Leakage & Shadow AI 🫗
 - Employees **paste confidential data** (source code, customer lists, contracts) into **public AI tools**, where it may be stored, logged or used for training.
 - **Shadow AI** = using **unapproved AI tools** at work (a form of shadow IT, Chapter 14).
-- The AI may also **reveal its system prompt** or data from other users' sessions if poorly designed.
+- The AI may also **reveal its system prompt** (OWASP calls this **system prompt leakage**) or data from other users' sessions if poorly designed. Never put passwords, API keys or other secrets in a system prompt.
 
 ### 9. Denial of Service / Resource Abuse 💸
-Flooding an AI service with huge or complex prompts to make it slow or expensive ("denial of wallet").
+Flooding an AI service with huge or complex prompts to make it slow or expensive ("denial of wallet"). OWASP's 2025 list calls this **Unbounded Consumption**. Controls: rate limits, input-size limits, spending caps.
 
 ---
 
@@ -205,11 +205,28 @@ Flooding an AI service with huge or complex prompts to make it slow or expensive
 
 | Framework | What it is |
 |---|---|
-| **OWASP Top 10 for LLM Applications** | A list of the most critical LLM app risks (prompt injection, sensitive information disclosure, supply chain, data/model poisoning, improper output handling, excessive agency, and more) |
-| **NIST AI Risk Management Framework (AI RMF 1.0, 2023)** | US guidance for managing AI risk: **Govern, Map, Measure, Manage** |
-| **MITRE ATLAS** | A knowledge base of adversary tactics and techniques against AI systems (like ATT&CK, but for AI) |
-| **ISO/IEC 42001 (2023)** | International standard for an **AI management system** |
-| **EU AI Act (2024)** | EU law that regulates AI by **risk level** (some uses banned, "high-risk" uses strictly controlled) |
+| **OWASP Top 10 for LLM Applications** | A community list of the most critical LLM app risks (2025 edition shown in Figure A.4 below) |
+| **NIST AI Risk Management Framework (AI RMF 1.0, 2023)** | Voluntary US guidance for managing AI risk, built on four functions: **Govern, Map, Measure, Manage**. NIST added a Generative AI Profile (NIST AI 600-1) in 2024 |
+| **MITRE ATLAS** (Adversarial Threat Landscape for Artificial-Intelligence Systems) | A knowledge base of adversary tactics, techniques and real case studies of attacks on AI systems (like ATT&CK, but for AI) |
+| **ISO/IEC 42001 (2023)** | International, certifiable standard for an **AI management system** (like ISO/IEC 27001, but for managing AI) |
+| **EU AI Act (2024)** | EU law that regulates AI by **risk level**: *unacceptable* (banned), *high-risk* (strictly controlled), *limited* (transparency, e.g., telling people they're talking to a chatbot) and *minimal*. Its obligations phase in over several years from 2025 |
+
+## 🖼️ Figure A.4 — OWASP Top 10 for LLM Applications (2025) Mapped to This Appendix
+
+| ID | OWASP name | Where it is in this appendix |
+|---|---|---|
+| LLM01 | Prompt Injection | Part 2, §1 (direct and indirect) and §2 (jailbreaking is a form of it) |
+| LLM02 | Sensitive Information Disclosure | Part 2, §4 (training-data extraction) and §8 (data leakage) |
+| LLM03 | Supply Chain | Part 2, §4 (malicious pre-trained models) and Part 3 (package hallucination) |
+| LLM04 | Data and Model Poisoning | Part 2, §3 |
+| LLM05 | Improper Output Handling | Part 2, §6 |
+| LLM06 | Excessive Agency | Part 2, §7 |
+| LLM07 | System Prompt Leakage | Part 2, §8 |
+| LLM08 | Vector and Embedding Weaknesses | Weaknesses in how RAG stores and fetches documents (e.g., poisoned or over-shared documents); see RAG in Part 1 and §3 |
+| LLM09 | Misinformation | Part 3 (hallucinations) |
+| LLM10 | Unbounded Consumption | Part 2, §9 |
+
+> 💡 You don't need to memorize the ID numbers. Know the **names** and be able to match a scenario to one.
 
 ---
 
@@ -242,7 +259,7 @@ Flooding an AI service with huge or complex prompts to make it slow or expensive
 ## 🧪 Try It (30 minutes, safe and legal)
 
 1. **Practise prompt injection legally:** play **Gandalf by Lakera** (gandalf.lakera.ai), a free game where you try to trick an AI into revealing a password, level by level. Notice which defenses each level adds.
-2. **Read the OWASP Top 10 for LLM Applications** (search "OWASP Top 10 LLM"). Match each item to a section of this appendix.
+2. **Read the OWASP Top 10 for LLM Applications** (search "OWASP Top 10 LLM"). Cover the right-hand column of Figure A.4, then try to match each item to a section of this appendix from memory.
 3. **Browse MITRE ATLAS** (atlas.mitre.org) and open one case study of a real attack on an AI system.
 4. **Write a one-page AI acceptable-use policy** for a small company: which tools are approved, what data must never be entered, who approves new AI tools, and how to report problems.
 5. **Hallucination check:** ask any chatbot for "5 academic papers about a niche topic with links," then verify whether they all exist.
@@ -286,7 +303,7 @@ Flooding an AI service with huge or complex prompts to make it slow or expensive
 A. Data poisoning  B. Evasion  C. Direct prompt injection  D. Model theft
 
 **2.** An AI assistant that reads a user's inbox follows instructions hidden in an incoming email and forwards confidential messages. Which control would BEST limit the damage?
-A. Larger context window  B. Disabling logging  C. Faster GPU  D. Least privilege and human approval for sending email
+A. A larger context window for the model  B. Encrypting the mailbox at rest  C. Upgrading to a newer model version  D. Least privilege and human approval for sending email
 
 **3.** Attackers secretly add mislabeled samples to the dataset used to train a fraud-detection model. This is:
 A. Jailbreaking  B. Data poisoning  C. Hallucination  D. Prompt injection
@@ -298,7 +315,7 @@ A. Evasion  B. Bias  C. Model theft  D. Deepfake
 A. Hallucination  B. Explainability  C. Excessive agency  D. Data poisoning
 
 **6.** Employees are pasting customer data into a free public chatbot. What is the BEST first step?
-A. Ban all computers  B. Give employees admin rights  C. Ignore it  D. Create an AI acceptable-use policy and provide an approved enterprise AI tool, supported by DLP
+A. Require MFA for the chatbot's login page  B. Run a phishing simulation  C. Place a WAF in front of the company's own web servers  D. Create an AI acceptable-use policy and provide an approved enterprise AI tool, supported by DLP
 
 **7.** A web application inserts LLM output directly into its HTML pages, and a user gets the model to output a `<script>` tag. Which risk is this?
 A. Model theft  B. Data poisoning  C. Insecure output handling  D. Bias
@@ -318,12 +335,12 @@ A. PCI DSS  B. MITRE ATLAS  C. SCAP  D. COBIT
 | # | Ans | Why |
 |---|---|---|
 | 1 | C | User-typed instruction override = direct prompt injection |
-| 2 | D | Least privilege + human-in-the-loop limits excessive agency |
+| 2 | D | Least privilege + human-in-the-loop limits excessive agency. Encryption at rest doesn't stop the assistant itself from sending mail |
 | 3 | B | Corrupting training data = poisoning |
 | 4 | A | Modified input fooling a model = evasion |
 | 5 | A | Package hallucination |
-| 6 | D | Policy + approved tools + DLP addresses shadow AI |
-| 7 | C | Output not encoded → XSS (insecure output handling) |
+| 6 | D | Policy + approved tools + DLP addresses shadow AI. MFA, phishing tests and a WAF don't stop users pasting data out |
+| 7 | C | Output not encoded → XSS (insecure/improper output handling) |
 | 8 | B | Out-of-band verification defeats deepfakes |
 | 9 | A | Explainability |
 | 10 | B | MITRE ATLAS |
@@ -336,7 +353,7 @@ A. PCI DSS  B. MITRE ATLAS  C. SCAP  D. COBIT
 
 | Area | Key points |
 |---|---|
-| Attacks on AI | Prompt injection (direct/indirect), jailbreaking, data poisoning, model manipulation/theft, evasion, insecure output handling, excessive agency, data leakage |
+| Attacks on AI | Prompt injection (direct/indirect), jailbreaking, data poisoning, model manipulation/theft, evasion, insecure (improper) output handling, excessive agency, data leakage, system prompt leakage, unbounded consumption |
 | Weaknesses | Hallucinations, bias, lack of explainability |
 | Attackers using AI | AI phishing, deepfakes, automated recon, malware help |
 | Defenders using AI | Anomaly detection, UBA, phishing/malware detection, SOC assistants |

@@ -64,6 +64,10 @@ A safe, free home lab turns reading into **doing**, which is exactly what PBQs t
 
 Start small: **Kali + one target** is enough for most exercises. Add the firewall and SIEM later.
 
+> 🔒 **Keep vulnerable VMs offline.** Once pfSense is in place, add a firewall rule so Metasploitable/DVWA **cannot reach the internet** (only Kali and the update-needing VMs may go out). Deliberately vulnerable machines should never talk to the outside world.
+>
+> 💡 **Resource note:** Security Onion needs far more RAM and disk than the other VMs. On an 8–16 GB PC, start with Wazuh (or skip the SIEM VM until you upgrade).
+
 ### VirtualBox Network Modes (from Chapter 9)
 
 | Mode | Use it for |
@@ -89,6 +93,8 @@ Start small: **Kali + one target** is enough for most exercises. Add the firewal
 5. **Create the VMs** (2 CPUs, 2–4 GB RAM each to start) and attach them to `labnet`.
 6. **Take a "clean" snapshot** of every VM.
 7. **Write down IP addresses** (`ip a` / `ipconfig`) and test with `ping`.
+
+> ⚠️ **No IP address?** A VirtualBox *internal network* has **no DHCP server** of its own. Until you add pfSense (which hands out addresses on `labnet`), either give each VM a **static IP** in the same private range (for example 10.10.10.10, 10.10.10.20, mask 255.255.255.0), or use a **Host-only** network, which has DHCP built in.
 
 ```bash
 # Verify a download before using it (Linux/macOS; compare with the official hash)
@@ -124,7 +130,7 @@ sha256sum kali-linux-*.7z
 
 | Platform | Good for |
 |---|---|
-| **TryHackMe** | Beginner-friendly guided rooms (networking, Linux, web, SOC); has a Security+-style learning path |
+| **TryHackMe** | Beginner-friendly guided rooms and learning paths (networking, Linux, web, SOC) |
 | **PortSwigger Web Security Academy** | Free, high-quality web vulnerability labs (SQLi, XSS, CSRF, SSRF, traversal) |
 | **Hack The Box Academy** | Structured modules; harder machines later |
 | **OverTheWire (Bandit)** | Learning the Linux command line through a game |
