@@ -48,7 +48,7 @@ flowchart LR
 
 | Step | Key activities | Example (ransomware on 3 PCs) |
 |---|---|---|
-| **1. Preparation** | IR **plan** and **policy**, IR team (CSIRT) with roles, contact lists (legal, PR, law enforcement, insurers), tools (EDR, forensic kits), **training**, playbooks, clean backups | Ransomware playbook exists; offline backups tested; team knows roles |
+| **1. Preparation** | IR **plan** and **policy**, IR team (**CSIRT**: Computer Security Incident Response Team) with roles, contact lists (legal, PR, law enforcement, insurers), tools (EDR, forensic kits), **training**, playbooks, clean backups | Ransomware playbook exists; offline backups tested; team knows roles |
 | **2. Detection** | Recognize that something happened: SIEM/EDR alerts, user reports, IoCs, threat intel | EDR alerts on mass file encryption |
 | **3. Analysis** | **Confirm** it's real (not a false positive), determine **scope** (which systems/data), **severity/priority**, attack vector, timeline | 3 PCs in Finance affected; started from a phishing email at 09:12 |
 | **4. Containment** | **Stop it spreading** while preserving evidence: isolate hosts (EDR), disable accounts, block IPs/domains, segment networks | EDR isolates the 3 PCs; block the C2 domain; disable the phished user's account |
@@ -58,7 +58,7 @@ flowchart LR
 
 > ⚠️ **Containment before eradication!** If you start deleting malware while the attacker still has access, they'll simply come back (and you may destroy evidence). First **stop the spread**, then **clean**.
 
-> 💡 NIST SP 800-61 groups these into four phases: (1) Preparation; (2) Detection & Analysis; (3) Containment, Eradication & Recovery; (4) Post-Incident Activity. Same ideas, fewer boxes.
+> 💡 The classic NIST SP 800-61 (Revision 2) lifecycle groups these into four phases: (1) Preparation; (2) Detection & Analysis; (3) Containment, Eradication & Recovery; (4) Post-Incident Activity. Same ideas, fewer boxes. (NIST's newer Revision 3 maps incident response onto the NIST Cybersecurity Framework functions instead.) **On the exam, use CompTIA's seven steps above.**
 
 ### Containment Strategies
 - **Isolation:** disconnect the host completely (EDR network isolation, pull the cable, quarantine VLAN).
@@ -148,12 +148,13 @@ Finding the **underlying reason** an incident happened, not just the symptom, so
 
 ```
    ORIGINAL DISK ──► [ WRITE BLOCKER ] ──► forensic workstation ──► IMAGE FILE (bit-for-bit)
-   (evidence)        (allows READ only,                              │
-                      prevents ANY write)                            │
+   (evidence)        (allows READ only,                               │
+                      prevents ANY write)                             │
         │                                                             │
-        └─ hash: SHA-256 = 7c4e...a91  ═══ must MATCH ═══  hash: SHA-256 = 7c4e...a91
-                                                             │
-                                          ANALYZE ONLY THE COPY; store the original sealed
+        ▼                                                             ▼
+   hash: SHA-256 = 7c4e...a91    ═══ must MATCH ═══       hash: SHA-256 = 7c4e...a91
+
+   ANALYZE ONLY THE COPY; store the original sealed
 ```
 
 ## 🖼️ Figure 41.4 — A Chain-of-Custody Form
@@ -210,7 +211,7 @@ Finding the **underlying reason** an incident happened, not just the symptom, so
 ## 🧪 Try It (30 minutes)
 
 1. **Write a one-page IR plan** for your home: what counts as an incident (hacked email, stolen phone, ransomware), who you contact (bank, email provider, police), where your backups are, and how you'd recover.
-2. **Practice acquisition in your lab:** in a Linux VM, attach a small extra virtual disk, then:
+2. **Practice acquisition in your lab:** in a Linux VM, attach a small extra virtual disk, check its device name with `lsblk` (below we assume `/dev/sdb`), then:
    ```bash
    sudo dd if=/dev/sdb of=evidence.img bs=4M status=progress
    sha256sum /dev/sdb evidence.img     # the two hashes must match

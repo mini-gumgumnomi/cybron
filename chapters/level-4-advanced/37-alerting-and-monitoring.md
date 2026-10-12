@@ -180,7 +180,7 @@ Regularly scan systems (Chapter 36). Their findings feed the SIEM and dashboards
 
 1. **Build a mini SIEM:** install **Wazuh** (free, open-source SIEM/XDR) in your lab, or use the free tier of **Splunk** / **Elastic**. Send your lab VMs' logs to it and search for failed logins.
 2. **Create a failed-login alert:** in your SIEM, make a rule: "more than 5 failed logins for one user in 2 minutes." Trigger it from your lab by typing a wrong password 6 times.
-3. **Look at real flow data:** on Linux, run `sudo tcpdump -i any -q -c 20` to see connection summaries, then compare with full packets (`tcpdump -X`): metadata vs content.
+3. **Metadata vs content:** in your lab Linux VM, run `sudo tcpdump -i any -q -c 20`. Each line is a short header summary (who → whom, which port, how big), the same kind of information a NetFlow record sums up per conversation. Then run `sudo tcpdump -i any -X -c 5` to see the actual payload bytes, which is what a **packet capture** adds and NetFlow never has.
 4. **Run a SCAP scan:** on an Ubuntu/RHEL lab VM, install **OpenSCAP** (`oscap`) and run a profile scan against a CIS or STIG profile. Read the HTML report.
 
 ---

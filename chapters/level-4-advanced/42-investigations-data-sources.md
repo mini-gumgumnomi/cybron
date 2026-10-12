@@ -36,13 +36,13 @@ Show **allowed and blocked connections**: time, action, source/destination IP an
 ## 🖼️ Figure 42.1 — A Port Scan in a Firewall Log
 
 ```
-   2026-03-12 02:14:01 DENY TCP 198.51.100.77:41022 -> 203.0.113.10:21   rule=default-deny
-   2026-03-12 02:14:01 DENY TCP 198.51.100.77:41023 -> 203.0.113.10:22   rule=default-deny
-   2026-03-12 02:14:01 DENY TCP 198.51.100.77:41024 -> 203.0.113.10:23   rule=default-deny
-   2026-03-12 02:14:02 DENY TCP 198.51.100.77:41025 -> 203.0.113.10:25   rule=default-deny
+   2026-03-12 02:14:01 DENY  TCP 198.51.100.77:41022 -> 203.0.113.10:21   rule=default-deny
+   2026-03-12 02:14:01 DENY  TCP 198.51.100.77:41023 -> 203.0.113.10:22   rule=default-deny
+   2026-03-12 02:14:01 DENY  TCP 198.51.100.77:41024 -> 203.0.113.10:23   rule=default-deny
+   2026-03-12 02:14:02 DENY  TCP 198.51.100.77:41025 -> 203.0.113.10:25   rule=default-deny
    2026-03-12 02:14:02 ALLOW TCP 198.51.100.77:41026 -> 203.0.113.10:443 rule=web-in
-   2026-03-12 02:14:02 DENY TCP 198.51.100.77:41027 -> 203.0.113.10:3389 rule=default-deny
-        ▲ ONE source IP           ▲ ONE target, MANY different ports in ~1 second
+   2026-03-12 02:14:02 DENY  TCP 198.51.100.77:41027 -> 203.0.113.10:3389 rule=default-deny
+                                 ▲ ONE source IP        ▲ ONE target ▲ MANY ports, ~1 second
    🔍 Clue: sequential ports, same source, very fast → PORT SCAN (reconnaissance)
    ✅ Action: block 198.51.100.77, check what's exposed on 443, watch for follow-up attacks
 ```
@@ -59,7 +59,7 @@ Written by applications (web servers, databases, email servers, custom apps): re
    203.0.113.66 - - [12/Mar/2026:10:02:15] "GET /products?id=42' HTTP/1.1" 500 312
    203.0.113.66 - - [12/Mar/2026:10:02:19] "GET /products?id=42%20OR%201=1-- HTTP/1.1" 200 98211
    203.0.113.66 - - [12/Mar/2026:10:02:31] "GET /products?id=42%20UNION%20SELECT%20username,password%20FROM%20users-- HTTP/1.1" 200 15530
-                                                          ▲ %20 = space (URL encoding)
+                                                               ▲ %20 = space (URL encoding)
    🔍 Clues: a single quote causing a 500 ERROR (testing), then OR 1=1, then UNION SELECT
             from the users table; response sizes jump (98 KB = lots of data returned)
    → SQL INJECTION with likely DATA EXFILTRATION
@@ -142,9 +142,9 @@ From routers, switches, wireless controllers, DNS and DHCP servers, proxies, VPN
 
 ```
    DNS query log:
-   10:14:02 client 10.0.5.23 query: a8f3k2lq9zx7.data.example-cdn-sync.net  TXT
-   10:14:03 client 10.0.5.23 query: b2k9p0w8uv4m.data.example-cdn-sync.net  TXT
-   10:14:03 client 10.0.5.23 query: c7z1n6r3ty8q.data.example-cdn-sync.net  TXT  (x 4,000/hour)
+   10:14:02 client 10.0.5.23 query: a8f3k2lq9zx7.data.cdn-sync.example  TXT
+   10:14:03 client 10.0.5.23 query: b2k9p0w8uv4m.data.cdn-sync.example  TXT
+   10:14:03 client 10.0.5.23 query: c7z1n6r3ty8q.data.cdn-sync.example  TXT  (x 4,000/hour)
    🔍 Random subdomains + TXT queries + huge volume to one domain → DNS TUNNELING
 ```
 
@@ -235,7 +235,7 @@ flowchart TD
 ## 🧪 Try It (40 minutes)
 
 1. **Read your own Windows Security log:** Event Viewer → Windows Logs → Security → **Filter Current Log** → `4624,4625`. Find your own logins and any failures.
-2. **Linux lab:** on a lab VM, try `ssh wronguser@localhost` with wrong passwords 5 times, then run `sudo grep "Failed password" /var/log/auth.log`.
+2. **Linux lab:** on a lab VM, try `ssh wronguser@localhost` with wrong passwords 5 times, then run `sudo grep "Failed password" /var/log/auth.log` (if that file doesn't exist on your distribution, use `sudo journalctl -u ssh -u sshd | grep "Failed password"`).
 3. **Analyze a sample PCAP:** download a free practice capture from **malware-traffic-analysis.net** (training exercises; open them only inside your isolated lab VM). Open it in Wireshark and use **Statistics → Conversations** (like NetFlow), then follow a TCP stream (like a full packet capture).
 4. **Build a timeline** from Figure 42.4: write each event, the time, and what it means in plain English.
 

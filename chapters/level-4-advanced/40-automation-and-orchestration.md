@@ -151,7 +151,8 @@ flowchart TD
    ```bash
    #!/bin/bash
    # disable-user.sh <username>  (lab only!)
-   sudo usermod -L "$1" && echo "$(date) locked account $1" | sudo tee -a /var/log/offboarding.log
+   # -L locks the password; -e 1 expires the account so SSH-key logins are blocked too
+   sudo usermod -L -e 1 "$1" && echo "$(date) disabled account $1" | sudo tee -a /var/log/offboarding.log
    ```
    Now think: what checks would you add so it can't lock **root** or the wrong user by mistake?
 2. **Design a playbook** on paper for "EDR detects ransomware on a laptop." Which steps can be automated? Where do you want a human approval?

@@ -207,9 +207,9 @@ Not everything should be destroyed immediately:
 ## 🧪 Try It (20 minutes)
 
 1. **Make your personal asset inventory:** list every device you own (phones, laptops, tablets, routers, smart devices, old drives in drawers). For each, note: owner, sensitivity, encrypted? still patched?
-2. **Enumerate your home network:** log into your router and view "connected devices" (or run `nmap -sn 192.168.1.0/24` in your lab). Do you recognize every device?
+2. **Enumerate your home network:** log into your router and view "connected devices" (or run `nmap -sn 192.168.1.0/24` on your own home/lab network, replacing the range with yours). Do you recognize every device?
 3. **Prepare an old phone for disposal:** check that it's encrypted (most modern phones are), sign out of all accounts, then **factory reset**. Because the data was encrypted, the reset destroys the key: a **cryptographic erase**.
-4. **Read NIST SP 800-88's summary table** (search "NIST 800-88 Rev 1 Table A") and find the recommended method for a USB flash drive.
+4. **Look at NIST SP 800-88:** search "NIST SP 800-88" and find the Clear / Purge / Destroy definitions. (Revision 1 has a media-by-media table in its Appendix A; if you find it, look up the recommended method for a USB flash drive. Newer revisions keep the same three levels.)
 
 ---
 

@@ -41,8 +41,8 @@ flowchart LR
 
 | Phase | What happens | Tools |
 |---|---|---|
-| **Establish** | Decide the settings: start from trusted references such as **CIS Benchmarks** or **DISA STIGs**, adjust for your needs, **test**, document and approve | CIS-CAT, vendor security guides |
-| **Deploy** | Push the baseline consistently to every system | **Group Policy** (Windows), **MDM** profiles (phones), **Ansible/Puppet**, **IaC** templates, **golden images** (pre-hardened OS images) |
+| **Establish** | Decide the settings: start from trusted references such as **CIS Benchmarks** (from the Center for Internet Security) or **DISA STIGs** (Security Technical Implementation Guides from the US Defense Information Systems Agency), adjust for your needs, **test**, document and approve | CIS-CAT, vendor security guides |
+| **Deploy** | Push the baseline consistently to every system | **Group Policy** (Windows), **MDM** profiles (phones), **Ansible/Puppet**, **IaC** (Infrastructure as Code, Chapter 29) templates, **golden images** (pre-hardened OS images) |
 | **Maintain** | Detect **configuration drift**, re-apply settings, update the baseline when software or threats change | **SCAP** scanners (Chapter 37), configuration management tools, change management |
 
 > 💡 **Configuration drift** = systems slowly moving away from the baseline as people "temporarily" change settings. Maintaining the baseline means finding and fixing that drift.
@@ -106,7 +106,7 @@ Security uses of surveys/heat maps:
 
 | Setting | Recommendation |
 |---|---|
-| **WPA3** | Use **WPA3** (SAE for personal; **WPA3-Enterprise** with 802.1X for businesses). Disable WEP/WPA/TKIP and WPS |
+| **WPA3** | Use **WPA3** (**SAE**, Simultaneous Authentication of Equals, for personal; **WPA3-Enterprise** with 802.1X for businesses). Disable WEP/WPA/TKIP and WPS |
 | **AAA / RADIUS** | Enterprise Wi-Fi authenticates each user through **RADIUS** (802.1X), giving per-user accounting and easy revocation (Chapters 7, 30) |
 | **Cryptographic protocols** | WPA2 uses **CCMP (AES)**. WPA3 uses **CCMP/GCMP** (WPA3-Enterprise 192-bit mode uses **GCMP-256**). Never TKIP or WEP's RC4 |
 | **Authentication protocols** | **EAP methods** via 802.1X: **EAP-TLS** (certificates, strongest), **PEAP**, **EAP-TTLS**. **SAE** for WPA3-Personal |

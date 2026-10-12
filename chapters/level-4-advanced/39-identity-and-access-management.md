@@ -60,7 +60,7 @@ A protocol for **reading and searching directory services** (the "phone book" of
 
 ```
    CN=Alice Khan, OU=Finance, DC=example, DC=com
-   │              │           └────────────┴── domain components (example.com)
+   │              │           └───────────┴─── domain components (example.com)
    │              └── organizational unit (department)
    └── common name (the object)
 ```
@@ -227,7 +227,7 @@ Other privileged-access practices: **separate admin accounts** (never browse ema
 
 ## 🧪 Try It (30 minutes)
 
-1. **See OAuth consent in action:** go to your Google account → Security → **Third-party apps with account access**. Each app there was given an **OAuth token** with specific **scopes**. Remove any you no longer use.
+1. **See OAuth consent in action:** go to your Google account → **Security** → the section listing your **connections to third-party apps & services** (the exact wording changes over time). Each app there was given an **OAuth token** with specific **scopes**. Remove any you no longer use.
 2. **Decode a JWT:** paste a sample token from **jwt.io** into its debugger (use the site's example, never a real token). Look at the header, payload (claims) and signature.
 3. **SAML tracer:** install a "SAML tracer" browser extension, then log in to any SAML-based app (many schools/companies use one) and view the XML assertion.
 4. **Lab:** in Windows Server (free evaluation) set up Active Directory, create an OU, a user and a group, and browse it with an LDAP tool (e.g., `ldp.exe`).

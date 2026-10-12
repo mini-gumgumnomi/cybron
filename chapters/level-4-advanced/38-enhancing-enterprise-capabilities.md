@@ -83,8 +83,9 @@ A firewall rule matches traffic on **source, destination, port, protocol** (and 
 ```
    Example signature (Snort/Suricata-style, simplified):
    alert tcp any any -> $WEB_SERVERS 80 (msg:"SQL injection attempt"; content:"UNION SELECT"; nocase; sid:1000001;)
-   └─────┘ └─┘ └─────┘ └────────────────┘   └──────────────────────────┘ └──────────────────┘
-   action  proto  src     destination+port         alert text              pattern to match
+   └───┘ └─┘ └─────┘    └─────────────┘  └──────────────────────────┘ └─────────────────────┘
+   action    source (IP port)            alert text
+         protocol       destination + port                            pattern to match
 ```
 
 **Modifying the capability:** update signature feeds, **enable** relevant rule sets, **disable/tune** noisy ones, switch an IDS to **IPS (inline blocking)** once tuned, and watch **trend** dashboards.
@@ -144,7 +145,7 @@ When modifying a system, choose:
 ## 📖 Part 6 — DNS Filtering 🧭
 
 The DNS resolver **refuses to resolve** known-malicious or unwanted domains (or returns a block page), stopping malware downloads, phishing sites and **C2 callbacks** for **every device** that uses that resolver, with no agent needed.
-- Examples: Quad9, Cisco Umbrella, Cloudflare for Teams, Pi-hole at home.
+- Examples: Quad9, Cisco Umbrella, Cloudflare Gateway, Pi-hole at home.
 - ⚠️ Can be bypassed by hard-coded IPs or encrypted DNS (DoH) to an outside resolver, so block unapproved DoH/DNS.
 
 ---
