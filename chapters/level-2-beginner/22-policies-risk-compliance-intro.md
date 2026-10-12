@@ -32,18 +32,18 @@ Security governance uses exactly the same four layers.
 ```
                          /\
                         /  \
-                       / PO \        POLICY       "We protect customer data."
-                      / LICY \                    High-level, approved by senior
-                     /________\                   management. MANDATORY.
+                       /    \             POLICY     "We protect customer data."
+                      /POLICY\                       High-level, approved by senior
+                     /________\                      management. MANDATORY.
                     /          \
-                   /  STANDARD  \    STANDARD     "Passwords: 14+ characters,
-                  /______________\                 MFA required, AES-256 for laptops."
-                 /                \               Specific. MANDATORY.
-                /    PROCEDURE     \  PROCEDURE   "To reset a password: 1. Verify ID
-               /____________________\              by call-back 2. … 3. …"
-              /                      \             Step-by-step. MANDATORY.
-             /       GUIDELINE        \  GUIDELINE "Consider using a password manager."
-            /__________________________\           Recommendations. OPTIONAL.
+                   /  STANDARD  \         STANDARD   "Passwords: 14+ characters,
+                  /______________\                   MFA required, AES-256 for laptops."
+                 /                \                  Specific. MANDATORY.
+                /    PROCEDURE     \      PROCEDURE  "To reset a password: 1. Verify ID
+               /____________________\                by call-back 2. … 3. …"
+              /                      \               Step-by-step. MANDATORY.
+             /       GUIDELINE        \   GUIDELINE  "Consider using a password manager."
+            /__________________________\             Recommendations. OPTIONAL.
 ```
 
 | Document | Answers | Mandatory? | Example |
@@ -121,7 +121,7 @@ flowchart LR
 
 ### Risk Appetite vs Risk Tolerance (intro)
 
-- **Risk appetite:** how much risk an organization is **willing to pursue** to reach its goals (a startup may be "hungry," a bank "conservative").
+- **Risk appetite:** how much risk an organization is **willing to take on** to reach its goals. SY0-701 names three styles: **expansionary** (willing to take more risk to grow, like a startup), **conservative** (avoids risk, like a bank) and **neutral** (in between).
 - **Risk tolerance:** how much **variation** from that it can **put up with** before acting.
 
 ### The Risk Register 📋
@@ -129,12 +129,12 @@ flowchart LR
 A **risk register** is a list (often a spreadsheet) tracking each risk:
 
 ```
-| ID | Risk                          | Likelihood | Impact | Rating | Owner    | Response | Status      |
-|----|-------------------------------|------------|--------|--------|----------|----------|-------------|
-| R1 | Ransomware on file servers    | Medium     | High   | HIGH   | IT Mgr   | Mitigate | Backups+EDR |
-| R2 | Laptop theft                  | High       | Medium | HIGH   | IT Mgr   | Mitigate | FDE rollout |
-| R3 | Data center flood             | Low        | High   | MEDIUM | Facilities| Transfer| Insurance   |
-| R4 | Old intranet page defaced     | Low        | Low    | LOW    | Web team | Accept   | Reviewed    |
+| ID | Risk                          | Likelihood | Impact | Rating | Owner      | Response | Status      |
+|----|-------------------------------|------------|--------|--------|------------|----------|-------------|
+| R1 | Ransomware on file servers    | Medium     | High   | HIGH   | IT Mgr     | Mitigate | Backups+EDR |
+| R2 | Laptop theft                  | High       | Medium | HIGH   | IT Mgr     | Mitigate | FDE rollout |
+| R3 | Data center flood             | Low        | High   | MEDIUM | Facilities | Transfer | Insurance   |
+| R4 | Old intranet page defaced     | Low        | Low    | LOW    | Web team   | Accept   | Reviewed    |
 ```
 
 ### Qualitative vs Quantitative (preview of Chapter 44)

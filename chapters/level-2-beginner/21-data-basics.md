@@ -213,7 +213,7 @@ Data is always in one of three states, and **each needs different protection**.
 1. **Classify your own data.** List 10 files or accounts you have (photos, ID scans, school work, bank app…). Give each a classification: public / private / sensitive / confidential / restricted / critical. Which ones need encryption and backups?
 2. **Find data at rest protection:** check whether your phone is encrypted (most modern phones are, once a screen lock is set) and whether your laptop has BitLocker/FileVault on.
 3. **See data in transit protection:** open any website, click the 🔒, and check that the connection uses **TLS 1.2 or 1.3**.
-4. **Spot masking:** find an online account or receipt that shows only part of your card number or email (e.g., `j***@gmail.com`).
+4. **Spot masking:** find an online account or receipt that shows only part of your card number or email (e.g., `j***@example.com`).
 
 ---
 

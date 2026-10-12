@@ -173,7 +173,7 @@ A **compensating control** reduces the risk another way:
 - *"An unpatchable legacy system is placed on an isolated VLAN. This is a…"* → **Compensating** control.
 - *"Which is a managerial control?"* → Look for **policy, risk assessment, procedure, planning**.
 - *"Restoring data from backup after ransomware is a…"* → **Corrective** control.
-- Read carefully for **what the control does in the scenario**. The same camera can be detective (reviewing footage) or deterrent (preventing by being seen).
+- Read carefully for **what the control does in the scenario**. The same camera can be detective (reviewing footage) or deterrent (discouraging attackers just by being seen).
 
 ---
 

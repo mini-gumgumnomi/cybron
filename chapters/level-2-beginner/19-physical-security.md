@@ -90,7 +90,7 @@ A small room with **two doors**. **Only one door can be open at a time.** You mu
 ```
         OUTSIDE              VESTIBULE                INSIDE (secure area)
                         ┌──────────────────┐
-     🚶 ──badge──► 🚪A ─│  YOU (only one   │─ 🚪B ──badge/PIN──► 🏢
+ You ──badge──► Door A ─│  YOU (only one   │─ Door B ──badge/PIN──► Secure area
                         │  person fits, or │
                         │  a sensor/guard  │
                         │  checks)         │

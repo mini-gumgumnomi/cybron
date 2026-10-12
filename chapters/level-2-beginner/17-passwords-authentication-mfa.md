@@ -178,17 +178,24 @@ Biometric checks are **never 100% exact**, so systems can make two kinds of mist
    Error
    rate
     ▲
-    │ \                                        /
-    │  \  FAR (impostors accepted)            /  FRR (real users rejected)
-    │   \                                    /
-    │    \                                  /
-    │     \                                /
-    │      \                              /
-    │       ────────────── ✖ ─────────────
-    │                     CER  ← where the two lines cross
-    │                          (lower crossing point = better system)
+    │ \  FAR                 FRR  /
+    │   \                       /
+    │     \                   /
+    │       \               /
+    │         \           /
+    │           \       /
+    │             \   /
+    │               X                   ← CER: the point where FAR = FRR
+    │             /   \                   (a lower crossing point means
+    │           /       \                  a more accurate system)
+    │         /           \
+    │       /               \
+    │     /                   \
     └──────────────────────────────────────────────────────►
-      Lenient (low sensitivity)                Strict (high sensitivity)
+      Lenient (low sensitivity)        Strict (high sensitivity)
+
+   FAR = impostors accepted:  HIGH when lenient, falls as the system gets stricter
+   FRR = real users rejected: LOW when lenient, rises as the system gets stricter
 ```
 
 - Make the system **stricter** → FAR goes **down** (fewer impostors) but FRR goes **up** (more real users rejected).

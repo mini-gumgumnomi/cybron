@@ -127,7 +127,7 @@ A. Spyware  B. Rootkit  C. Adware  D. Virus
 A. Ransomware  B. Spyware  C. Bloatware  D. A worm
 
 **35.** Which is the BEST way to recover from a ransomware attack without paying?
-A. Run a disk defragmenter  B. Change the wallpaper  C. Restore from offline/immutable backups  D. Reboot the server
+A. Run a full antivirus scan  B. Reboot the server into safe mode  C. Restore from offline/immutable backups  D. Reinstall the operating system only
 
 **36.** Malware that runs only in memory and abuses PowerShell is called:
 A. Fileless malware  B. Bloatware  C. A logic bomb  D. A boot sector virus
@@ -211,7 +211,7 @@ A. Bollard  B. Security guard  C. Fence  D. Pressure sensor
 A. Preventive and corrective  B. Directive and compensating  C. Detective and deterrent  D. Corrective only
 
 **59.** Why do server rooms often use gas-based fire suppression?
-A. Gas is cheaper than water  B. It is required by GDPR  C. Gas cools the servers  D. Water damages electronic equipment
+A. Gas is cheaper than water  B. Gas also triggers the intruder alarms  C. Gas cools the servers  D. Water damages electronic equipment
 
 ---
 

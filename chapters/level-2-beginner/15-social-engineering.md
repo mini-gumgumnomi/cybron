@@ -153,7 +153,7 @@ Registering domain names that are **common typing mistakes** of real sites, hopi
 | Real site | Typosquatted examples |
 |---|---|
 | `google.com` | `gooogle.com`, `goggle.com`, `google.co` |
-| `paypal.com` | `paypa1.com`, `paypal-login.com` |
+| `paypal.com` | `paypa1.com`, `paypall.com` |
 | `microsoft.com` | `rnicrosoft.com` ("r" + "n" looks like "m"!) |
 
 ### Misinformation & Disinformation 📰
@@ -225,7 +225,7 @@ flowchart LR
 
 1. **Take a free phishing quiz:** search "Google phishing quiz" (Jigsaw) and score yourself.
 2. **Inspect a real spam email** in your junk folder (don't click anything!). Find the sender's real domain. Hover over a link and read the true address. Count the red flags.
-3. **Check the headers:** in Gmail, open the email → ⋮ → **Show original**. Look for `SPF: FAIL` or `DMARC: FAIL`. That means the sender domain was faked.
+3. **Check the headers:** in Gmail, open the email → ⋮ → **Show original**. Look for `SPF: FAIL` or `DMARC: FAIL`. That usually means the sender's domain was faked (spoofed).
 4. **Typo hunt:** write 5 typosquat variations of your bank's domain.
 
 ---

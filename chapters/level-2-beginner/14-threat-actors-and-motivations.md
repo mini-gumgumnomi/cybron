@@ -104,7 +104,7 @@ Each one has **different skills, money and reasons**, so the museum needs differ
 | **Resources** | 💰💰 Low to medium (often volunteer groups) |
 | **Sophistication** | ⭐⭐–⭐⭐⭐ Varies |
 | **Main motivations** | **Philosophical / political beliefs**, getting attention, disruption |
-| **Typical attack** | DDoS against a government site, website defacement, leaking documents ("doxxing") |
+| **Typical attack** | DDoS against a government site, website defacement, leaking stolen documents, publishing people's personal details ("doxxing") |
 
 ---
 

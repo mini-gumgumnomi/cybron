@@ -57,9 +57,10 @@ A firewall **allows or blocks traffic based on rules**: source/destination IP, p
    1   ALLOW    Any            Web server       443    TCP        Public website (HTTPS)
    2   ALLOW    Admin subnet   Web server       22     TCP        Admins manage via SSH
    3   DENY     Any            Any              23     TCP        Block Telnet everywhere
-   4   DENY     Any            Any              Any    Any        "IMPLICIT DENY": block
-                                                                  everything not allowed
-   Rules are checked TOP to BOTTOM; the FIRST match wins.
+   4   DENY     Any            Any              Any    Any        Block everything else
+   Rules are checked TOP to BOTTOM; the FIRST match wins. Rule 4 shows the
+   "IMPLICIT DENY": most firewalls block anything not allowed even if you never
+   write this rule. Admins often add it anyway so blocked traffic gets logged.
 ```
 
 | Firewall kind | Works at | Notes |
@@ -89,7 +90,7 @@ A firewall **allows or blocks traffic based on rules**: source/destination IP, p
 
    Internet ──► Firewall ──► Switch ──► LAN    Internet ──► Firewall ──► IPS ──► LAN
                                │                                         │
-                               └─copy─► IDS ──► 🚨 alert                  └─ blocks bad
+                               └─copy─► IDS ──► 🚨 alert                 └─ blocks bad
                                                                              traffic itself
 ```
 
