@@ -339,6 +339,41 @@ Achieved with **redundancy** (no single point of failure), **load balancing**, *
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** A provider's contract promises 99.99% ("four nines") availability. About how much downtime does that allow per year?
+A. About 8.8 hours  B. About 3.65 days  C. About 52.6 minutes  D. About 5.3 minutes
+
+**MC2.** A developer pushes an infrastructure-as-code template to a public repository with a cloud access key typed directly into it. Which practice would BEST have prevented this?
+A. Using a monolith instead of microservices  B. Deploying the template manually instead  C. Moving the servers on-premises  D. Keeping secrets in a secrets manager or KMS and referencing them from the template, never storing them in code
+
+**MC3.** A team runs dozens of containers in production. Which practice BEST reduces the risk that comes from the containers themselves?
+A. Use trusted, scanned, minimal images and run containers as non-root  B. Give every container full root access so updates install easily  C. Store database passwords inside each image  D. Turn off patching on the container host
+
+**MC4.** A company uses both on-premises servers and a public cloud. MFA rules differ between the two, and logs sit in separate tools that nobody correlates. Which hybrid consideration does this describe?
+A. Inability to patch  B. Air-gap failure  C. Lack of consistent policy and visibility across both environments  D. Rapid elasticity
+
+**MC5.** A company moves email to a SaaS provider whose contract makes the provider pay penalties for outages and handle the servers. When comparing architectures, which consideration does this MOST directly reflect?
+A. Responsiveness  B. Compute  C. Inability to patch  D. Risk transference
+
+**MC6.** A battery-powered field sensor cannot run an antivirus agent or heavy encryption because its tiny processor and battery cannot cope. Which two considerations explain this limit?
+A. Scalability and cost  B. Compute and power  C. Ease of deployment and resilience  D. Patch availability and responsiveness
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | C | 0.01% of 8,760 hours is about 52.6 minutes; 8.8 hours is three nines and 5.3 minutes is five nines. |
+| MC2 | D | IaC files are stored and shared like code, so secrets belong in a vault or KMS, never hard-coded in the template. |
+| MC3 | A | Containers share the host kernel, so trusted minimal images and non-root containers limit the damage; secrets inside images leak easily. |
+| MC4 | C | Hybrid setups need the same identity rules and one view of the logs across on-premises and cloud. |
+| MC5 | D | Shifting some impact to the provider through the contract and SLA is risk transference. |
+| MC6 | B | Limited processing power (compute) and battery (power) stop small IoT and embedded devices from running normal security controls. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

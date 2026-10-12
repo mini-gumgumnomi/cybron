@@ -275,6 +275,41 @@ Network-delivered malicious code: **worms** spreading through vulnerable service
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** A botnet sends thousands of normal-looking product searches per second to an online store. Bandwidth use is normal, but the database server's CPU stays at 100% and the site stops responding. Which type of DoS is this?
+A. Volumetric  B. Protocol (SYN flood)  C. Application-layer (Layer 7)  D. Jamming
+
+**MC2.** An attacker phishes the password for a company's domain registrar account and changes where `example.com` points. Which control would BEST have prevented this?
+A. HSTS on the website  B. DHCP snooping  C. 802.11w on the access points  D. MFA and a registrar lock on the domain account
+
+**MC3.** Office Wi-Fi users are repeatedly disconnected at the same moment by forged "disconnect" frames. Which defense BEST stops this?
+A. Protected Management Frames (802.11w), which WPA3 requires  B. Hiding the SSID  C. MAC filtering on the AP  D. Moving the AP to a higher floor
+
+**MC4.** Firewall logs show one workstation sending a small outbound packet to `198.51.100.77` every 60 seconds, day and night, even when no one is logged in. What does this MOST likely indicate?
+A. A DNS amplification attack against the workstation  B. Normal NTP time sync  C. Malware beaconing to a command-and-control server  D. A deauthentication attack
+
+**MC5.** Users on one floor suddenly receive the wrong default gateway from an unknown DHCP server on the LAN, and their traffic now passes through an attacker's laptop. Which switch feature BEST prevents this?
+A. Port mirroring  B. Jumbo frames  C. Spanning tree  D. DHCP snooping
+
+**MC6.** A company learns that its own DNS server is being used to flood other organizations with large replies to spoofed requests. What is the BEST action?
+A. Add more bandwidth to the DNS server  B. Stop the server answering recursive queries from the internet (close the open resolver) and apply rate limiting  C. Enable HSTS on the company website  D. Change the DNS server's IP address
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | C | Application-layer attacks exhaust server resources such as CPU and database with valid-looking requests; volumetric attacks fill the bandwidth. |
+| MC2 | D | Domain hijacking takes over the registrar account, so MFA and a registrar lock protect it; HSTS only forces HTTPS in browsers. |
+| MC3 | A | 802.11w protects management frames so forged deauth frames are rejected; a hidden SSID is still easy to find. |
+| MC4 | C | Small, regular outbound connections to an unknown IP are classic C2 beaconing. |
+| MC5 | D | DHCP snooping lets only trusted switch ports send DHCP offers, blocking rogue DHCP servers that put an attacker on-path. |
+| MC6 | B | Open resolvers that answer anyone are the reflectors in DNS amplification; closing them and rate limiting stops the abuse. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

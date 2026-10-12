@@ -213,6 +213,41 @@ The exam often describes a problem and asks for the **BEST** mitigation. Match t
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** A router ACL reads: `10 PERMIT 10.10.0.0/24 → 10.20.0.10 443/tcp` and `20 DENY any → any any`. A staff PC at `10.10.0.25` tries to open SSH (22/tcp) to `10.20.0.10`. What happens?
+A. It is allowed by rule 10, because the source and destination match  B. It is allowed, because SSH is an encrypted protocol  C. It is allowed until the ACL is reloaded  D. It is blocked by rule 20, because rule 10 only permits port 443
+
+**MC2.** A critical patch has been released, and the team has already ranked it as top priority. What should they do NEXT, before rolling it out to production servers?
+A. Deploy it immediately to every server  B. Verify with a rescan  C. Test it in a test environment  D. Remove the server from the asset inventory
+
+**MC3.** A team needs a published, widely trusted list of recommended secure settings for Windows Server to use as its hardening baseline. Which source BEST fits?
+A. A CIS Benchmark (or a DISA STIG)  B. A software bill of materials  C. The company's risk register  D. The acceptable use policy
+
+**MC4.** Which hardening control watches a server's own activity and blocks an exploit that tries to change protected system files?
+A. A network ACL on the core router  B. A forward proxy  C. A block list of websites  D. HIPS (host-based intrusion prevention)
+
+**MC5.** A firewall already has an implicit deny at the end of its rules. Why might an administrator still add an explicit `DENY any any` as the last rule?
+A. To make the firewall process rules from the bottom up  B. So that blocked traffic is logged  C. Because implicit deny only applies to UDP  D. To allow traffic that no other rule matches
+
+**MC6.** An analyst wants to open a suspicious email attachment to see what it does, without any risk to the company network. Which technique BEST fits?
+A. Patching the analyst's laptop first  B. Adding the file to a block list  C. Running it in a sandbox (isolation)  D. Emailing it to a colleague with a newer PC
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | D | Rules are checked top to bottom; rule 10 matches only port 443, so SSH falls through to the deny-all rule. |
+| MC2 | C | The patch process is inventory → monitor → prioritize → test → deploy → verify, so testing comes before deployment. |
+| MC3 | A | CIS Benchmarks and DISA STIGs publish recommended secure settings for each OS and application. |
+| MC4 | D | HIPS monitors a single host for malicious behavior and blocks it; a router ACL only filters network traffic. |
+| MC5 | B | Writing the deny out explicitly lets the firewall log what it blocks, which helps monitoring and investigations. |
+| MC6 | C | A sandbox is an isolated environment where suspicious files can run without reaching real systems. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

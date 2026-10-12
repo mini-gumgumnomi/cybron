@@ -297,6 +297,41 @@ Making sure you have **enough resources** to handle normal load, peaks and recov
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** A company takes a full backup on Sunday and incremental backups Monday through Thursday. A server crashes Thursday night, after Thursday's backup finished. How many backup sets are needed to restore it?
+A. 5  B. 2  C. 4  D. 1
+
+**MC2.** A company can accept being down for two or three days after a disaster. Its alternate site already has servers and network links, but data would have to be restored from backups. Which type of site is this?
+A. Hot site  B. Warm site  C. Cold site  D. Mobile site
+
+**MC3.** To make a database server faster, an administrator sets up its disks as RAID 0. What is the MAIN risk?
+A. It needs at least six disks  B. Writes become much slower  C. It mirrors data, wasting half the space  D. There is no redundancy, so one disk failure loses all the data
+
+**MC4.** During a DR test, the recovery system is started and processes the same transactions as the live system at the same time, so the results can be compared without switching production over. Which test is this?
+A. Tabletop exercise  B. Failover test  C. Parallel processing  D. Simulation
+
+**MC5.** A company's primary data center and its backup site are 5 km apart on the same coastline, in an area that often has hurricanes. What is the MAIN weakness?
+A. Lack of geographic dispersion: one disaster could take out both sites  B. Lack of platform diversity  C. Too many backup copies  D. The sites are too far apart for replication
+
+**MC6.** During a recovery test, the database restore stalls because the only engineer who knows the procedure is on holiday. Which area of capacity planning was overlooked?
+A. Technology  B. People (cross-training and on-call cover)  C. Infrastructure  D. Power
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | A | An incremental restore needs the last full plus EVERY incremental since: Sunday + Mon + Tue + Wed + Thu = 5; with differentials it would be 2. |
+| MC2 | B | A warm site has equipment and connectivity, but data must be restored, so recovery takes hours to days. |
+| MC3 | D | RAID 0 only stripes data for speed; with no mirror or parity, losing any one disk loses everything. |
+| MC4 | C | In parallel processing the backup runs alongside the primary on the same work; a failover test actually switches production over. |
+| MC5 | A | Backup sites must be far enough apart that one regional disaster cannot hit both. |
+| MC6 | B | Capacity planning covers people as well as technology and infrastructure, so staff must be cross-trained and on call. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

@@ -290,6 +290,41 @@ Deception tools are **fake resources** that **legitimate users have no reason to
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** In a zero trust architecture, the access decision has already been made. Which component now sets up the session between the user and the resource and issues the session credentials?
+A. Policy Engine  B. Policy Enforcement Point  C. Policy Administrator  D. Implicit trust zone
+
+**MC2.** Before its first PCI DSS assessment, a retailer compares its current controls with every PCI DSS requirement and lists what is missing, with owners and deadlines. What is this?
+A. A tabletop exercise  B. An impact analysis  C. A backout plan  D. A gap analysis
+
+**MC3.** A company micro-segments each workload and gives users short-lived, least-privilege access, so a stolen account can reach very little. Which zero trust concept is this?
+A. Threat scope reduction  B. Adaptive identity  C. Implicit trust zone expansion  D. Perimeter security
+
+**MC4.** A new monitoring server is installed under an approved change, but it cannot reach any of its agents because firewall rules and the application allow list were never updated. Which technical implication was missed?
+A. Legacy applications  B. Service restart  C. Allow lists / deny lists  D. Maintenance window length
+
+**MC5.** Attackers are actively exploiting a critical flaw, and a fix must go in tonight instead of waiting for next week's Change Advisory Board. How should this change be handled?
+A. Skip change management entirely  B. Wait for the CAB, whatever the risk  C. Apply it as a standard pre-approved change with no record  D. Treat it as an emergency change: fast-track approval and document it fully afterwards
+
+**MC6.** A security team builds an entire fake department network, with several servers and workstations, to watch how attackers move once they are inside. What is this?
+A. A honeyfile  B. A honeynet  C. A honeytoken  D. A jump server
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | C | The Policy Engine decides, the Policy Administrator arranges the session and credentials, and the PEP enforces it. |
+| MC2 | D | Comparing the current state with a required target state and listing the gaps is gap analysis. |
+| MC3 | A | Threat scope reduction limits the blast radius with least privilege, micro-segmentation and short sessions. |
+| MC4 | C | New systems often need allow-list and firewall entries; forgetting them blocks the change from working. |
+| MC5 | D | Emergency changes are fast-tracked for urgent fixes but must still be recorded and reviewed afterwards. |
+| MC6 | B | A honeynet is a whole network of honeypots; a honeyfile is a single decoy document. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

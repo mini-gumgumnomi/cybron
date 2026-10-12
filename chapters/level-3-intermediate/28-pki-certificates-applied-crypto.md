@@ -342,6 +342,41 @@ Uses: cryptocurrencies, supply-chain tracking, tamper-evident records.
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** A company stores a copy of every laptop's BitLocker recovery key in its directory service, so encrypted data can still be recovered if an employee leaves or forgets their PIN. What is this practice called?
+A. Key stretching  B. Key escrow  C. Certificate pinning  D. Tokenization
+
+**MC2.** An administrator discovers that the private key for the company's public web server certificate was copied by an attacker. What should happen to the certificate FIRST?
+A. Revoke it so it appears on the CRL and in OCSP responses, then issue a new key pair and certificate  B. Leave it in place until it expires  C. Send the CA a new CSR containing the stolen private key  D. Convert it into a wildcard certificate
+
+**MC3.** A company needs ONE certificate that covers `example.com`, `example.net` and `www.example.org`. Which certificate feature BEST fits?
+A. A wildcard certificate  B. A self-signed root certificate  C. A code-signing certificate  D. A SAN (Subject Alternative Name) certificate
+
+**MC4.** A customer database must keep the national-ID column encrypted even while the database is running and other columns are being queried. Which encryption level BEST fits?
+A. Full-disk encryption  B. Record/column-level encryption  C. Partition encryption  D. Transport encryption with TLS
+
+**MC5.** A laptop with full-disk encryption is infected with malware while its user is logged in and working. Can the malware read the user's files?
+A. No, because FDE keeps files encrypted at all times  B. No, because the TPM blocks all malware  C. Yes, because FDE mainly protects data when the device is off or locked; files are decrypted for the logged-in user  D. Yes, but only files larger than 1 GB
+
+**MC6.** To speed up visits and avoid telling the CA which sites users browse, a web server fetches its own certificate status response and sends it to clients during the TLS handshake. What is this called?
+A. OCSP stapling  B. A CRL download  C. Key escrow  D. A CSR
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | B | Key escrow keeps a protected copy of keys with a trusted party or system so data can be recovered. |
+| MC2 | A | A stolen private key means the certificate can no longer be trusted, so it is revoked first and then replaced. |
+| MC3 | D | A SAN certificate lists several specific names, even different domains; a wildcard only covers one level of subdomains of one domain. |
+| MC4 | B | Record/column-level encryption protects specific fields while the system is running; FDE protects only the powered-off disk. |
+| MC5 | C | Once the user logs in, FDE decrypts data for use, so malware running as that user can read it; record- or file-level encryption adds protection. |
+| MC6 | A | With OCSP stapling the server attaches its own OCSP response, which is faster and more private than each browser asking the CA. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

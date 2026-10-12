@@ -301,6 +301,41 @@ Covered in Chapter 15: phishing, vishing, smishing, misinformation/disinformatio
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** A finance clerk gets a call that sounds exactly like the CEO, and caller ID shows the CEO's number. The caller demands an urgent wire transfer. Which control BEST protects against this kind of request?
+A. Blocking all calls from unknown numbers  B. Installing a stronger email filter  C. Hanging up and calling back on a known number, or using a pre-agreed code word, before acting  D. Recording the call for later review
+
+**MC2.** Phishing emails start arriving that contain only a picture of the message text, so the email filter's keyword scanning finds nothing suspicious. Which vector is the attacker using?
+A. Voice call  B. Removable device  C. Default credentials  D. Image-based
+
+**MC3.** An attacker takes over a contractor's chat account and posts a "shared document" link in the company's workplace chat channel. Staff click it because it comes from a "colleague." Which threat vector is this?
+A. Instant messaging (message-based)  B. Open service ports  C. Unsupported systems  D. Removable devices
+
+**MC4.** Users keep receiving `.docm` "invoice" attachments that ask them to click "Enable Content." Which control BEST stops the macros from running even if a user clicks?
+A. A longer password policy  B. SPF records for the company domain  C. A policy that blocks macros in files that came from the internet  D. 802.1X on the office switches
+
+**MC5.** A critical flaw is announced in a popular open-source library. The security team must quickly find out which of the company's purchased applications include that library. What would help MOST?
+A. A list of open ports  B. The company's AUP  C. A recent penetration test report  D. A software bill of materials (SBOM) for each application
+
+**MC6.** A server has RDP (TCP 3389) open to the whole internet so administrators can manage it from home. Which change BEST shrinks the attack surface while keeping admin access?
+A. Change RDP to a different port number  B. Allow RDP only through the company VPN or a jump server  C. Leave RDP open but add a warning banner  D. Turn off logging on the server
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | C | Voices can be deepfaked and caller ID spoofed, so verifying through a separate trusted channel is the reliable defense. |
+| MC2 | D | Images of text are an image-based vector used to slip past filters that only scan words. |
+| MC3 | A | The malicious link arrived through a chat app, a message-based vector; people trust messages from colleagues. |
+| MC4 | C | Blocking macros in internet-sourced files stops the code even if a user is fooled; SPF only checks the sending server. |
+| MC5 | D | An SBOM lists every component inside the software, so the team can see which apps contain the vulnerable library. |
+| MC6 | B | Limiting RDP to VPN or a jump server removes it from the public internet; changing the port only hides it briefly from scanners. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

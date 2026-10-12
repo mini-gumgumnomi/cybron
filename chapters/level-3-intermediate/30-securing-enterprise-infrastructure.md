@@ -345,6 +345,41 @@ When the exam asks which control to choose, think:
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** While connected to the VPN, remote staff must have ALL of their traffic, including general web browsing, pass through the company's web filter. Which VPN setting is required?
+A. Split tunnel  B. Full tunnel  C. IPsec transport mode  D. A site-to-site tunnel
+
+**MC2.** A company wants internet users to reach several internal web servers through one front-end system that hides the servers' addresses and handles TLS for them. Which appliance BEST fits?
+A. Reverse proxy  B. Forward proxy  C. Transparent proxy for staff browsing  D. Network TAP
+
+**MC3.** Two servers in the same data center must protect the traffic between them with IPsec. The original IP headers may stay visible. Which IPsec mode fits BEST?
+A. Tunnel mode  B. AH only, with no ESP  C. Split tunnel mode  D. Transport mode
+
+**MC4.** Customers of an online shop behind a load balancer keep losing the items in their carts, because each click may go to a different web server. Which load-balancer setting BEST fixes this?
+A. Round-robin scheduling  B. Fail-closed mode  C. Persistence (sticky sessions / session affinity)  D. TLS offloading
+
+**MC5.** A data center's emergency exit doors must unlock automatically during a power failure so that people can escape a fire. What is this design called?
+A. Fail-safe  B. Fail-secure  C. Fail-closed  D. Inline
+
+**MC6.** Company Wi-Fi uses a server certificate to build an encrypted TLS tunnel, and users then type their domain password inside that tunnel. No client certificates are used. Which EAP method is this MOST likely?
+A. EAP-TLS  B. PEAP  C. EAP with MAC filtering  D. WPS
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | B | A full tunnel sends all of the user's traffic through the company; a split tunnel sends internet traffic directly, skipping the filter. |
+| MC2 | A | A reverse proxy sits in front of servers, hiding them and terminating TLS; a forward proxy acts for internal users going out. |
+| MC3 | D | Transport mode encrypts only the payload and keeps the original header, which suits host-to-host links; tunnel mode suits gateway-to-gateway VPNs. |
+| MC4 | C | Persistence keeps a user on the same server for the whole session, so the session data (the cart) is not lost. |
+| MC5 | A | Fail-safe doors unlock on power loss because life safety comes first; fail-secure doors stay locked. |
+| MC6 | B | PEAP uses only a server certificate to build the tunnel and then a password inside it; EAP-TLS needs certificates on both sides. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

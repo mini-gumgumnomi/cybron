@@ -226,6 +226,41 @@ flowchart TD
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** In the same customer app, help-desk staff see `**** **** **** 4821`, but the fraud team viewing the same record sees the full card number. Which technique is this?
+A. Static masking  B. Tokenization  C. Dynamic masking  D. Hashing
+
+**MC2.** A law firm wants a contract to stay view-only, with no printing or forwarding allowed, even after it has been emailed to a client outside the firm. Which tool BEST fits?
+A. Full-disk encryption  B. A forward proxy  C. Network segmentation  D. Information rights management (IRM/DRM)
+
+**MC3.** A company wants to see which cloud apps employees use and block uploads of sensitive files to unapproved personal cloud storage. Which tool BEST fits?
+A. A CASB (cloud access security broker)  B. A TPM  C. A load balancer  D. A hashing algorithm
+
+**MC4.** A company wants every laptop drive encrypted but does not want encryption work to slow the laptops' CPUs. Which option BEST fits?
+A. File-level encryption done by a script  B. Base64 encoding of the disk  C. Self-encrypting drives (SEDs)  D. Hashing every file at login
+
+**MC5.** A company blocks logins from countries where it has no staff. Why should IP-based geolocation be treated as only one signal among several?
+A. Geolocation only works on IPv6  B. Geolocation reveals users' passwords  C. Geolocation is illegal under GDPR  D. Attackers can hide their real location with a VPN or proxy
+
+**MC6.** Card-processing servers are moved into their own network zone so that ordinary office PCs cannot reach them at all. Which data-protection method is this?
+A. Permission restrictions  B. Segmentation  C. Masking  D. Obfuscation
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | C | Dynamic masking hides data on the fly depending on who is looking; static masking permanently changes data in a copy. |
+| MC2 | D | Rights management travels with the file and enforces "view, don't print or forward" even outside the company. |
+| MC3 | A | A CASB monitors and controls how staff use cloud apps, including blocking uploads to unsanctioned services. |
+| MC4 | C | A self-encrypting drive encrypts in the drive's own hardware, so it adds no load on the CPU. |
+| MC5 | D | IP location is easy to fake with a VPN, so it should be combined with other signals such as MFA and device health. |
+| MC6 | B | Segmentation limits which SYSTEMS can reach the data; permission restrictions limit which PEOPLE can. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

@@ -287,6 +287,41 @@ flowchart LR
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** A cloud-hosted web app lets users "import a profile picture from a URL." An attacker submits `http://169.254.169.254/latest/meta-data/` and the app returns the server's cloud credentials. Which attack is this?
+A. CSRF  B. SSRF  C. Directory traversal  D. Stored XSS
+
+**MC2.** A logged-in customer changes `?account=1001` to `?account=1002` in the URL and sees another customer's bank statement. Which attack does this show?
+A. Horizontal privilege escalation  B. Vertical privilege escalation  C. Downgrade attack  D. Replay attack
+
+**MC3.** A router's web admin page has a "ping test" box. Entering `8.8.8.8; cat /etc/shadow` returns the contents of the system's password hash file. What is this?
+A. SQL injection  B. A buffer overflow  C. Password spraying  D. Command injection
+
+**MC4.** Attackers log in to hundreds of customer accounts on a shopping site using username and password pairs that leaked from a different company's breach. Which attack is this?
+A. Rainbow table attack  B. Brute force against one account  C. Credential stuffing  D. Birthday attack
+
+**MC5.** Because of the birthday paradox, about how many attempts does it take to find ANY collision in a 128-bit hash such as MD5?
+A. About 2^64  B. About 2^128  C. About 2^32  D. About 128
+
+**MC6.** A company first learns it was breached when a security researcher emails to say the company's customer database is being sold on a leak site. Which indicator of malicious activity is this?
+A. Out-of-cycle logging  B. Published / documented  C. Concurrent session usage  D. Resource consumption
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | B | SSRF tricks the server into fetching internal addresses such as the cloud metadata service; CSRF tricks the user's browser instead. |
+| MC2 | A | Reaching another user's data at the same privilege level is horizontal escalation; vertical would be gaining admin rights. |
+| MC3 | D | The `;` lets the attacker add an operating-system command, which is command injection; SQL injection targets a database. |
+| MC4 | C | Reusing pairs leaked from other sites is credential stuffing; MFA and unique passwords are the best defenses. |
+| MC5 | A | A collision in an n-bit hash takes about 2^(n/2) tries, so 2^64 for 128 bits; 2^128 would be the naive guess. |
+| MC6 | B | Finding out about an attack because it is already public (leak site, researcher, news) is the published/documented indicator. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary
