@@ -47,7 +47,7 @@ That's this chapter: knowing **which cryptographic "locks" are strong, which are
 |---|---|---|---|---|
 | **AES** | Block (128-bit blocks) | **128 / 192 / 256** bits | ✅ **Standard** | The default choice for data at rest and in transit |
 | **ChaCha20** (with Poly1305) | Stream | 256 bits | ✅ Strong | Fast on phones without AES hardware; used in TLS 1.3, WireGuard |
-| **3DES** (Triple DES) | Block (64-bit) | 112/168 bits effective | ❌ **Deprecated** | Slow; NIST disallowed it for encryption after 2023 |
+| **3DES** (Triple DES) | Block (64-bit) | 168-bit key (≈ 112-bit effective strength) | ❌ **Deprecated** | Slow; NIST disallowed it for encryption after 2023 |
 | **DES** | Block (64-bit) | **56** bits | ❌ **Broken** | Brute-forced in the 1990s |
 | **RC4** | Stream | 40–2048 bits | ❌ **Broken** | Used by WEP and old TLS. Never use |
 | **Blowfish / Twofish** | Block | Up to 448 / 256 bits | ⚠️ / ✅ | Blowfish is old (64-bit blocks); bcrypt is built from Blowfish |
@@ -57,8 +57,8 @@ That's this chapter: knowing **which cryptographic "locks" are strong, which are
 | Mode | How it works | Status |
 |---|---|---|
 | **ECB** (Electronic Codebook) | Each block encrypted **independently** with the same key → **identical plaintext blocks give identical ciphertext**, so **patterns leak** | ❌ **Insecure** |
-| **CBC** (Cipher Block Chaining) | Each block is mixed (XOR) with the previous ciphertext block, starting with a random **IV** | ⚠️ OK if done right; no built-in integrity |
-| **CTR** (Counter) | Turns a block cipher into a **stream** cipher using an incrementing counter | ✅ Fast, parallel |
+| **CBC** (Cipher Block Chaining) | Each block is mixed (XOR) with the previous ciphertext block, starting with a random **IV** (initialization vector: a random starting value, see Part 5) | ⚠️ OK if done right; no built-in integrity |
+| **CTR** (Counter) | Turns a block cipher into a **stream** cipher using an incrementing counter | ✅ Fast, parallel; but no built-in integrity |
 | **GCM** (Galois/Counter Mode) | CTR **plus authentication**: **AEAD** (Authenticated Encryption with Associated Data) gives **confidentiality + integrity** in one step | ✅ **Preferred** (AES-GCM in TLS 1.2/1.3) |
 
 ## 🖼️ Figure 49.2 — Why ECB Is Bad (the famous "penguin")
@@ -83,7 +83,7 @@ That's this chapter: knowing **which cryptographic "locks" are strong, which are
 | **RSA** | Encryption, **digital signatures**, key transport | **2048** bits minimum (3072+ for long-term) | Based on factoring large numbers. Widely used in certificates |
 | **ECC** (Elliptic Curve Cryptography) | Signatures (**ECDSA**, **EdDSA/Ed25519**), key exchange (**ECDH/ECDHE**) | **256** bits (≈ RSA 3072 strength) | **Small keys, fast, low power**: ideal for mobile and IoT |
 | **Diffie-Hellman (DH)** | **Key exchange/agreement** only (not encryption or signatures) | 2048+ bits | Lets two parties agree on a shared secret over an open network |
-| **DSA** | Digital signatures only | 2048+ bits | Older; being replaced by ECDSA/EdDSA |
+| **DSA** | Digital signatures only | 2048+ bits | Legacy: no longer approved for new signatures in FIPS 186-5 (2023); replaced by ECDSA/EdDSA |
 
 ### Diffie-Hellman: The Paint-Mixing Analogy 🎨
 
@@ -117,7 +117,7 @@ If each session uses **ephemeral (temporary) keys**, e.g., **DHE/ECDHE**, then *
                 → the stolen long-term key opens NOTHING from the past. ✔
 ```
 
-TLS 1.3 **requires** PFS (only ephemeral DH/ECDHE key exchange is allowed).
+TLS 1.3 **removed** static RSA and static DH key exchange, so every certificate-based TLS 1.3 handshake uses **ephemeral (EC)DHE** and has PFS built in.
 
 ---
 
@@ -130,6 +130,8 @@ TLS 1.3 **requires** PFS (only ephemeral DH/ECDHE key exchange is allowed).
 | **SHA-2 family** (SHA-224/**256**/384/512) | 224–512 bits | ✅ **Standard** |
 | **SHA-3** | 224–512 bits | ✅ Different internal design (Keccak); a backup if SHA-2 is ever weakened |
 | **RIPEMD-160** | 160 bits | ⚠️ Niche (used in Bitcoin addresses) |
+
+> 🎂 **Why output size matters:** the **birthday attack** (Chapter 26) finds a **collision** (two inputs with the same hash) in about 2^(n/2) tries for an n-bit hash. So a 128-bit hash like MD5 only ever offered about 2^64 collision resistance (and smarter attacks now find MD5 collisions in seconds), while SHA-256 offers about 2^128, far beyond any computer.
 
 ### HMAC: Hash-based Message Authentication Code
 **HMAC = hash + secret key.** It proves a message is **unchanged** *and* came from someone who **knows the shared key**.
@@ -204,7 +206,7 @@ Every concept from this book appears in that one handshake:
 
 | Requirement | Choose |
 |---|---|
-| Encrypt a laptop disk / database | **AES-256** (XTS mode for disks; GCM for data) |
+| Encrypt a laptop disk / database | **AES-256** (XTS, a mode designed for disk sectors; GCM for data) |
 | Encrypt traffic on a phone without AES hardware | **ChaCha20-Poly1305** |
 | Agree on a session key with forward secrecy | **ECDHE** (or DHE) |
 | Digitally sign code or documents | **RSA-2048+**, **ECDSA**, or **EdDSA (Ed25519)** |

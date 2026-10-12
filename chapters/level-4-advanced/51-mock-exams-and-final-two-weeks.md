@@ -128,6 +128,9 @@ If not: **move the exam date** (CompTIA/Pearson usually allow rescheduling in ad
 
 ## 📖 Part 4 — Exam Day 🎯
 
+### Know the Format 📋
+The real SY0-701 exam has **up to 90 questions** (multiple choice **plus PBQs**), a **90-minute** time limit, and a passing score of **750** on a scale of **100–900**. The score is scaled, so there's no fixed "number correct" to pass; that's why this book aims for **85%+** on practice exams.
+
 ### The Night Before 🌙
 - **Stop studying by early evening.** Cramming late hurts more than it helps.
 - Prepare: **government photo ID** (name must match your registration exactly), confirmation email, directions/travel time, or a tested OnVUE setup (system test done, clean desk, quiet room).
@@ -227,7 +230,7 @@ The single biggest score booster in the final two weeks is **reviewing your mist
 4. **Rest**: light flashcard skim only, prepare ID and logistics, sleep early. No new material.
 5. **0–5 min:** glance at PBQs and flag. **5–60:** multiple-choice. **60–80:** PBQs. **80–90:** review and make sure nothing is blank.
 6. **Make your best guess, flag it, move on**, and return if time allows.
-7. **3 years.** Renew with **50 CEUs** (plus fees) or by passing a higher-level/new-version exam.
+7. **3 years.** Renew through CompTIA's Continuing Education program: earn **50 CEUs** (plus fees) or pass a qualifying higher-level CompTIA exam.
 
 </details>
 

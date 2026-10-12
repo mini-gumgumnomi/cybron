@@ -87,7 +87,7 @@ A situation where someone's **personal interests could improperly influence** th
 |---|---|---|---|---|
 | **SLA** | Service-Level Agreement | Defines **measurable service levels** (uptime, response/repair times) and **penalties** if missed | ✅ (usually part of a contract) | "99.9% uptime; critical tickets answered in 1 hour; service credits if missed" |
 | **MOU** | Memorandum of Understanding | A **statement of intent** / mutual goals between parties; **informal** | ❌ Usually **not** legally binding | Two universities agree to "cooperate on research" |
-| **MOA** | Memorandum of Agreement | **More formal** than an MOU: defines **specific responsibilities and terms** for working together | ✅ Often binding (more formal) | Two agencies agree who does what in a joint project |
+| **MOA** | Memorandum of Agreement | **More formal** than an MOU: defines **specific responsibilities and terms** for working together | ⚠️ More formal than an MOU; may be binding depending on its terms | Two agencies agree who does what in a joint project |
 | **MSA** | Master Service Agreement | The **umbrella contract** setting general terms (payment, liability, confidentiality, IP) for **all future work** | ✅ | Signed once with an IT consultancy |
 | **WO / SOW** | Work Order / Statement of Work | **Specific project details** under the MSA: tasks, **deliverables, timelines, costs** | ✅ | "Pentest of 3 web apps, report by 30 June, $25,000" |
 | **NDA** | Non-Disclosure Agreement | Promise to **keep confidential information secret** | ✅ | Before sharing network diagrams with a vendor |

@@ -285,6 +285,7 @@ A **BIA** identifies **critical business functions**, the systems they depend on
 - *"A metric that signals a risk is rising, e.g., the number of unpatched systems."* → **Key risk indicator (KRI).**
 - *"Management approves a temporary deviation from the patch policy for one server."* → **Exception** (risk acceptance).
 - *"Which assessment type is performed after a merger is announced?"* → **Ad hoc.**
+- **Math traps:** convert percentages to decimals (EF 30% = 0.3) and "once every N years" to 1 ÷ N before multiplying. **SLE is per event; ALE is per year.** Distractor answers are often the SLE when the question asked for the ALE (or vice versa), so re-read which one is asked.
 
 ---
 

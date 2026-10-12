@@ -88,7 +88,7 @@ A web server (**10.1.1.10**, in the screened subnet) must accept **HTTPS from an
 
 <details><summary><b>Solution</b></summary>
 
-1. **Rule 1 (deny any/any) is at the TOP**, so it blocks everything and no ALLOW rule is ever reached. **Move it to the bottom** (implicit deny).
+1. **Rule 1 (deny any/any) is at the TOP**, so it blocks everything and no ALLOW rule is ever reached. **Move it to the bottom**, as the final "deny everything else" rule (firewalls read rules top-down and stop at the first match).
 2. **Rule 3 allows Telnet (23) from anywhere**: plaintext and not required. **Delete it.**
 3. **Rule 5 allows SSH from `any`**, but only the admin subnet should have it. Change the source to **10.9.9.0/24** (least privilege).
 
@@ -98,7 +98,7 @@ The corrected rule set:
    1  ALLOW   any            10.1.1.10     443   TCP   (HTTPS)
    2  ALLOW   10.1.1.10      10.2.2.20     3306  TCP   (web → DB only)
    3  ALLOW   10.9.9.0/24    10.1.1.10     22    TCP   (admin SSH only)
-   4  DENY    any            any           any   any   (implicit deny, log)
+   4  DENY    any            any           any   any   (deny all else, log)
 ```
 
 </details>
@@ -214,7 +214,7 @@ Practise **rewriting this whole page from memory** in under 5 minutes, every day
  ├──────────────────────────────────────────────────────────────────────────────────┤
  │ CRYPTO  Encrypt with THEIR public · Sign with YOUR private                       │
  │ Symmetric: AES (ChaCha20) · Asymmetric: RSA, ECC, DH · Hash: SHA-256             │
- │ Broken: DES, 3DES, RC4, MD5, SHA-1, ECB · Salt=rainbow · Stretch=brute force     │
+ │ Avoid:  DES, 3DES, RC4, MD5, SHA-1, ECB · Salt=rainbow · Stretch=brute force     │
  │ CRL=list · OCSP=live check · Wildcard=*.domain · CSR has PUBLIC key              │
  ├──────────────────────────────────────────────────────────────────────────────────┤
  │ ZERO TRUST  PE decides · PA arranges · PEP enforces (control vs data plane)      │
