@@ -70,7 +70,7 @@ Each chapter follows the same 8-part recipe, so a beginner always knows what com
 | 5 | 🧠 **Memory trick** | Mnemonic / acronym / rhyme |
 | 6 | ⚠️ **Exam tip** | How CompTIA asks about this topic |
 | 7 | 🧪 **Try it** | A tiny hands-on lab (free tools) |
-| 8 | ✅ **Checkpoint** | Practice questions with hidden answers |
+| 8 | ✅ **Checkpoint** | Open recall questions **plus 6 exam-style multiple-choice questions** (BEST/FIRST/MOST scenarios), all with hidden answers |
 | + | 📌 **Summary** | One table that recaps the chapter |
 
 **Figure types used in the book:**

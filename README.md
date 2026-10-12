@@ -127,6 +127,6 @@ A beginner-first, figure-heavy book for passing the **CompTIA Security+ (SY0-701
 
 ## How each chapter works
 
-🎯 Goal → 🏠 Real-life story → 🖼️ Figures → 📖 Explanation → 🧠 Memory trick → ⚠️ Exam tip → 🧪 Try it → ✅ Checkpoint questions → 📌 Summary
+🎯 Goal → 🏠 Real-life story → 🖼️ Figures → 📖 Explanation → 🧠 Memory trick → ⚠️ Exam tip → 🧪 Try it → ✅ Checkpoint questions (open recall + 6 exam-style multiple-choice) → 📌 Summary
 
 Figures are text drawings and Mermaid diagrams, so they display directly on GitHub.

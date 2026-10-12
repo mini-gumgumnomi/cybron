@@ -8,7 +8,8 @@ This book contains **over 1,000 practice questions**: checkpoint questions in ev
 
 | Source | Questions | Where |
 |---|---:|---|
-| Chapter checkpoints (Ch 1–51) | ≈ 505 | End of every chapter |
+| Chapter checkpoints: open recall (Ch 1–51) | ≈ 505 | End of every chapter |
+| Chapter checkpoints: exam-style multiple choice (Ch 1–51) | 306 (6 per chapter) | End of every chapter, "🎯 Exam-Style Practice" |
 | Level 1 Gate Test | 50 | [Level 1](../level-1-foundation/level-1-gate-test.md) |
 | Level 2 Gate Test | 75 | [Level 2](../level-2-beginner/level-2-gate-test.md) |
 | Level 3 Gate Test | 90 | [Level 3](../level-3-intermediate/level-3-gate-test.md) |
