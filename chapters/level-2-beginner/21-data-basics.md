@@ -246,6 +246,41 @@ Data is always in one of three states, and **each needs different protection**.
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** A payment app replaces each card number with a random value such as `tok_8f3K…` and keeps the real card numbers in a separate, tightly secured vault. Which protection method is this?
+A. Masking  B. Hashing  C. Tokenization  D. Obfuscation
+
+**MC2.** A company's order-processing database holds nothing secret, but the business stops completely if it is unavailable for even an hour. Which classification BEST fits this data?
+A. Public  B. Restricted  C. Confidential  D. Critical
+
+**MC3.** A warehouse prints QR codes on shipping labels. Each code holds the customer's name and home address. Which statement is MOST accurate?
+A. The QR codes still contain PII and need protecting, even though people cannot read them directly  B. QR codes are non-human-readable, so they cannot contain personal data  C. QR codes are automatically encrypted  D. Only trade secrets can be stored in QR codes
+
+**MC4.** The finance director decides who may access the general ledger. The IT team runs the nightly backups and applies those access rules. Which role does the IT team play?
+A. Data owner  B. Data subject  C. Data custodian / steward  D. Data controller
+
+**MC5.** A company outsources its payroll. The payroll provider handles employees' personal data only on the company's instructions. Which role does the payroll provider have under privacy law?
+A. Data owner  B. Data subject  C. Data controller  D. Data processor
+
+**MC6.** A DLP tool automatically blocks any email that carries a "Confidential" file to an outside address. What must the company have done FIRST for this to work?
+A. Encrypted every email  B. Classified and labeled its data  C. Moved all data to a public cloud  D. Turned off TLS on the mail server
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | C | Tokenization swaps the real value for a random token and stores the real value elsewhere; masking only hides part of it on screen. |
+| MC2 | D | "Critical" is about availability, meaning data the organization cannot operate without, even if it is not secret. |
+| MC3 | A | Non-human-readable does not mean safe: a phone can read a QR code instantly, so the name and address are still PII. |
+| MC4 | C | The custodian/steward handles day-to-day care such as backups and applying access rules; the director is the data owner. |
+| MC5 | D | A processor handles personal data on behalf of the controller, which decides why and how it is processed. |
+| MC6 | B | DLP can only act on labels it can see, so data must be classified and labeled before rules can block it. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

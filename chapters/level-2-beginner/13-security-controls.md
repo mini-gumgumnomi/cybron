@@ -214,6 +214,41 @@ A **compensating control** reduces the risk another way:
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** A bank requires every teller to take two weeks off in a row each year while someone else does their job, so that any hidden fraud is more likely to come to light. Which control type is this policy MAINLY?
+A. Preventive  B. Deterrent  C. Detective  D. Corrective
+
+**MC2.** A fire starts in a storage room and the ceiling sprinklers switch on and put it out. Which control type are the sprinklers acting as?
+A. Deterrent  B. Directive  C. Detective  D. Corrective
+
+**MC3.** A security guard walks a set route around the building every night and reports anything unusual. Which control CATEGORY BEST describes the patrol?
+A. Operational  B. Managerial  C. Technical  D. Compensating
+
+**MC4.** A user clicks a link and the endpoint's anti-malware blocks the malicious file before it is saved to disk. Which category and type BEST describe this action?
+A. Physical, detective  B. Managerial, corrective  C. Technical, preventive  D. Operational, deterrent
+
+**MC5.** Before users can log in, a pop-up requires them to read and accept the acceptable use policy. Which category and type BEST describe this pop-up?
+A. Managerial, preventive  B. Technical, directive  C. Physical, deterrent  D. Operational, corrective
+
+**MC6.** A warehouse installs hidden cameras that staff cannot see, and footage is reviewed only after a loss is reported. Which control type BEST describes these cameras?
+A. Deterrent  B. Preventive  C. Compensating  D. Detective
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | C | Mandatory vacation is a managerial control whose purpose is to uncover (detect) fraud while someone else covers the job. |
+| MC2 | D | Sprinklers fix the situation after the incident has started, which makes them corrective; a smoke alarm would be detective. |
+| MC3 | A | A control carried out by people in daily work is operational; managerial covers policies, plans and risk decisions. |
+| MC4 | C | Software doing the work is technical, and stopping the file before it lands is preventive. |
+| MC5 | B | It is enforced by software (technical) and tells users the rules they must follow (directive). |
+| MC6 | D | Hidden cameras cannot discourage anyone because nobody sees them, so they only detect and record; visible cameras would also deter. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

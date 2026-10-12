@@ -259,6 +259,41 @@ flowchart LR
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** An email says, "All of your colleagues have already confirmed their new payroll login. You are the last one in your team." Which psychological principle is the attacker MAINLY using?
+A. Authority  B. Scarcity  C. Consensus / social proof  D. Intimidation
+
+**MC2.** In a city car park, someone sticks fake QR-code stickers over the real ones on parking meters. Scanning them opens a fake payment page. What is this attack called?
+A. Vishing  B. Typosquatting  C. Smishing  D. Quishing
+
+**MC3.** The accounts team receives an email from the CFO's genuine mailbox, which an attacker took over last month, asking them to pay a "new supplier" today and not to call because the CFO is in meetings. Which attack BEST describes this?
+A. Whaling  B. Watering hole  C. Business email compromise  D. Brand impersonation
+
+**MC4.** Staff receive a forwarded message warning that a file called `jdbgmgr.exe` is a virus and must be deleted at once. The file is actually a normal Windows component. What is this?
+A. A hoax  B. Disinformation from a nation-state  C. Pretexting  D. Spear phishing
+
+**MC5.** Several USB sticks labelled "Layoffs 2026 - CONFIDENTIAL" are found in the company car park. Which social engineering technique is MOST likely being used?
+A. Tailgating  B. Dumpster diving  C. Shoulder surfing  D. Baiting
+
+**MC6.** An employee clicks a link in an email, types their password into the page, and then realizes it was a phishing site. What should they do FIRST?
+A. Delete the email and say nothing to avoid trouble  B. Report it to the security team immediately  C. Wait a few days to see whether anything strange happens  D. Forward the email to colleagues to warn them
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | C | "Everyone else already did it" is consensus (social proof); scarcity would be "only a few left." |
+| MC2 | D | Quishing is phishing through malicious QR codes; smishing uses SMS text messages. |
+| MC3 | C | A real business account being used to trick staff into sending money is BEC; whaling would be an attack aimed AT the executive. |
+| MC4 | A | A hoax is a fake warning that makes users harm their own systems; verify such warnings with IT. |
+| MC5 | D | Leaving tempting infected media for victims to find and plug in is baiting. |
+| MC6 | B | Reporting quickly lets the team reset the password and block the site before damage spreads; forwarding the email spreads the risk. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

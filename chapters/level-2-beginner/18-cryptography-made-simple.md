@@ -302,6 +302,41 @@ More on data states in Chapter 21.
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** A vendor says its product is secure "because nobody knows how our encryption algorithm works." What is the BEST critique?
+A. Secret algorithms are always stronger than public ones  B. A good system should stay secure even if the algorithm is public; only the key should need to be secret  C. The algorithm should be shared, but the key should be published too  D. Encryption is not needed if the algorithm is secret
+
+**MC2.** A software company digitally signs every update. Before installing an update, each customer's computer checks the signature. Which key does the customer's computer use?
+A. The software company's public key  B. The software company's private key  C. The customer's own private key  D. A shared symmetric key sent with the update
+
+**MC3.** A 100-person company stops using a separate symmetric key for every pair of employees and gives each employee an asymmetric key pair instead. How many keys are needed in total now?
+A. 100  B. 4,950  C. 9,900  D. 200
+
+**MC4.** Alice digitally signs an email to Bob but does not encrypt it. An attacker intercepts it on the network. What can the attacker do?
+A. Nothing, because signed messages are unreadable  B. Change the message without Bob noticing  C. Read the message, because a signature does not provide confidentiality  D. Recover Alice's private key from the signature
+
+**MC5.** Two users happen to choose the same password, yet the hashes stored in the database are completely different. What is the MOST likely reason?
+A. A random salt was added to each password before hashing  B. The passwords were encrypted with AES instead  C. MD5 was used, and it gives random results  D. The database is corrupted
+
+**MC6.** Why is the Caesar cipher so easy for an attacker to break?
+A. It uses asymmetric keys that are too long  B. There are only 25 possible keys, so every one can be tried quickly  C. It cannot be decrypted, even by the receiver  D. It needs a certificate that expires
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | B | Kerckhoffs's principle: algorithms are public, and security depends only on the key; hiding the algorithm is security through obscurity. |
+| MC2 | A | Signatures are made with the signer's private key and verified with the signer's public key, which anyone may have. |
+| MC3 | D | Each person needs one key pair (2 keys), so 100 × 2 = 200; 4,950 is what pairwise symmetric keys would need. |
+| MC4 | C | A signature gives authentication, integrity and non-repudiation, but not secrecy; changes would be detected when Bob verifies. |
+| MC5 | A | A salt is a random value added to each password before hashing, so identical passwords produce different hashes. |
+| MC6 | B | A shift of 1–25 gives a tiny keyspace, so brute force takes seconds; modern ciphers have astronomically many keys. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

@@ -261,6 +261,41 @@ A common AAA server for networks is **RADIUS** (you met it in Chapter 7 for ente
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** A developer says, "We store a SHA-256 hash of every signed contract, so we can prove which customer sent each one." What is the flaw in this plan?
+A. SHA-256 cannot be used on documents  B. Anyone can calculate a hash, so it proves the contract was not changed but not who sent it; a digital signature is needed  C. Hashes provide confidentiality, not integrity  D. Hashes must be stored on paper to count as proof
+
+**MC2.** A hospital gives every nurse read access to patient charts because of their job title, and removes that access when they move to another job. Which authorization model is this?
+A. RBAC (role-based)  B. DAC (discretionary)  C. MAC (mandatory)  D. Rule-based
+
+**MC3.** A company allows access to the payroll system only for HR managers, using a company laptop, from inside the office, between 9 a.m. and 5 p.m. Which authorization model BEST fits?
+A. DAC  B. MAC  C. RBAC only  D. ABAC (attribute-based)
+
+**MC4.** After a security push, staff must enter three different passwords to open any shared file, and much of their work stops getting done. Which security goal is this over-control harming the MOST?
+A. Confidentiality  B. Availability  C. Integrity  D. Non-repudiation
+
+**MC5.** A network team wants one central AAA server that checks and logs administrators who log in to the company's routers and switches. Which protocol is BEST suited to this job?
+A. LDAP  B. SNMPv3  C. TACACS+  D. NTP
+
+**MC6.** Attackers steal a retailer's customer list and post it on a public website. Using the DAD model, which attacker goal was achieved?
+A. Disclosure  B. Alteration  C. Destruction  D. Denial
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | B | A plain hash only proves integrity; non-repudiation needs a digital signature made with the sender's private key. |
+| MC2 | A | Access tied to the job role is RBAC; DAC would let the chart's owner decide. |
+| MC3 | D | ABAC combines many attributes (role, device, location, time) in one decision; RBAC alone looks only at the role. |
+| MC4 | B | Too much friction stops authorized people from getting to their data, which harms availability. |
+| MC5 | C | TACACS+ is the AAA protocol mainly used for administrators logging in to network devices; LDAP is a directory lookup protocol. |
+| MC6 | A | Disclosure is the opposite of confidentiality: secrets revealed to people who should not see them. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

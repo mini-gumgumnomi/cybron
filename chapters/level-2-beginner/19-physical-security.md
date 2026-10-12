@@ -240,6 +240,41 @@ A small room with **two doors**. **Only one door can be open at a time.** You mu
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** A museum wants an alarm to sound if anyone steps on the floor directly in front of a display case after closing time. Which sensor type BEST fits?
+A. Infrared  B. Microwave  C. Ultrasonic  D. Pressure
+
+**MC2.** A forensic team seizes a suspect's phone and must stop it from receiving a remote-wipe command before it is examined. What should they place it in?
+A. A locked server rack  B. An access control vestibule  C. A Faraday bag or cage  D. A safe with a combination lock
+
+**MC3.** A company stores its backup encryption keys in a vault that opens only when two named staff members are present together. What is the MAIN purpose of this rule?
+A. No single person can access the keys alone, which protects against an insider acting alone  B. It makes the vault open faster  C. It replaces the need for any logging  D. It stops vehicles from reaching the vault
+
+**MC4.** Attackers cloned an employee's RFID badge using a hidden reader. Which change BEST stops a cloned badge ALONE from opening the server room?
+A. Brighter lighting outside the building  B. Adding a "No entry" sign  C. Requiring badge plus PIN or biometric at the server room door  D. Moving the badge readers lower on the wall
+
+**MC5.** An auditor finds printed customer lists in an open recycling bin behind the office. Which attack does this expose the company to, and what is the BEST fix?
+A. Tailgating; install bollards  B. Badge cloning; use RFID sleeves  C. Shoulder surfing; use privacy screens  D. Dumpster diving; shred documents and use locked bins
+
+**MC6.** HVAC contractors need regular access to the server room to service the cooling units. Which control BEST stops them from touching the servers while they work?
+A. A fence around the car park  B. Locked server racks or cabinets  C. Ultrasonic motion sensors  D. A visitor sign-in sheet only
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | D | Pressure sensors detect weight or force on a surface such as a floor mat; infrared detects body heat in a whole area. |
+| MC2 | C | A Faraday bag or cage blocks radio signals, so the phone cannot receive a remote-wipe command. |
+| MC3 | A | Two-person integrity means no one person can act alone, reducing the insider threat. |
+| MC4 | C | A second factor (PIN or biometric) means a copied badge alone is not enough to get in. |
+| MC5 | D | Searching the trash is dumpster diving; shredding and locked bins are the standard defense. |
+| MC6 | B | Locked racks protect equipment even from people who are allowed into the room; a sign-in sheet only records visits. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

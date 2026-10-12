@@ -250,6 +250,41 @@ flowchart LR
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** An HR assistant meant to email a salary spreadsheet to a manager but picked an outside vendor's address by mistake. Which threat actor BEST describes the assistant?
+A. Hacktivist  B. Insider threat (accidental)  C. Unskilled attacker  D. Organized crime
+
+**MC2.** A criminal with little technical skill rents ready-made ransomware from a gang, and the gang keeps 30% of every ransom paid. What is this business model called?
+A. Ransomware-as-a-Service (RaaS)  B. Shadow IT  C. A bug bounty program  D. An advanced persistent threat
+
+**MC3.** A rival company secretly pays an engineer to copy unreleased product designs onto a USB drive. Which motivation BEST describes the rival company?
+A. Service disruption  B. Philosophical beliefs  C. Revenge  D. Espionage
+
+**MC4.** An analyst finds malware that quietly compresses the customer database and sends it to an external server each night, without damaging anything. Which motivation does this MOST directly show?
+A. Service disruption  B. Data exfiltration  C. Ethical hacking  D. Chaos
+
+**MC5.** During a military conflict, a highly skilled, well-funded group uses a custom zero-day exploit to shut down another country's power grid. Which motivation BEST fits?
+A. Blackmail  B. Ethical  C. War  D. Disruption for fun
+
+**MC6.** A company worries about employees who already have legitimate access misusing it. Which approach BEST reduces this risk?
+A. Least privilege, separation of duties and monitoring of user activity  B. A stronger perimeter firewall  C. Blocking all inbound internet traffic  D. Hiring only people with security certifications
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | B | Insiders include accidental ones with no bad intent; the assistant is internal and has legitimate access. |
+| MC2 | A | In RaaS, developers rent their malware to affiliates and share the profits, like a franchise. |
+| MC3 | D | Secretly gathering a competitor's secrets is (corporate) espionage; the bribed engineer is the insider. |
+| MC4 | B | Sending stolen data out of the organization is data exfiltration; nothing was disrupted. |
+| MC5 | C | Cyberattacks used as part of a military conflict are motivated by war, typical of nation-state actors. |
+| MC6 | A | Insiders are already past the perimeter, so limiting and watching what they can do works; a firewall faces outward. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

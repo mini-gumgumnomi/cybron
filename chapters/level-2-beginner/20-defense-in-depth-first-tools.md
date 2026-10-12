@@ -284,6 +284,41 @@ flowchart TB
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** A firewall has these rules, in order: Rule 1 `DENY Any → Any, TCP 443`; Rule 2 `ALLOW Any → Web server, TCP 443`. What happens to HTTPS traffic from the internet to the web server?
+A. It is blocked, because the first matching rule wins  B. It is allowed, because the more specific rule wins  C. It is allowed, because ALLOW rules always beat DENY rules  D. It is logged but neither allowed nor blocked
+
+**MC2.** A new IPS is placed inline. The next morning the payroll application stops working because the IPS blocked its normal traffic as "suspicious." What does this show?
+A. A false negative letting an attack through  B. A false positive blocking legitimate traffic, a known risk of inline prevention  C. That the IPS is really an IDS  D. That signature-based detection is turned off
+
+**MC3.** On a flat network, malware on an infected smart camera was able to reach the database server directly. Which change BEST stops this from happening again?
+A. Installing antivirus on the camera  B. Replacing the camera with a newer model  C. Adding a honeypot  D. Segmenting the network into zones (for example VLANs) with firewall rules between them
+
+**MC4.** A security team puts a file named `passwords.xlsx` on a file share. No one has a reason to open it, and opening it triggers an alert. What is this file?
+A. A honeyfile  B. A honeynet  C. A block list  D. A signature
+
+**MC5.** A firewall lets reply traffic back into the network only when the reply belongs to a connection that was started from inside. Which kind of firewall is this?
+A. A stateless packet filter  B. A stateful firewall  C. A web application firewall  D. A forward proxy
+
+**MC6.** A company wants to allow staff to use a social media site's chat feature but block the games on the same site. Which tool BEST does this?
+A. A stateless packet-filtering firewall  B. A DNS filter  C. A next-generation firewall (NGFW)  D. A site-to-site VPN
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | A | Firewall rules are checked top to bottom and the first match wins, so Rule 1 blocks the traffic before Rule 2 is reached. |
+| MC2 | B | An inline IPS can block legitimate traffic when it raises a false positive; an IDS would only have alerted. |
+| MC3 | D | Segmentation keeps a compromised device stuck in its own zone so it cannot reach servers freely. |
+| MC4 | A | A honeyfile is bait data that alerts when opened; a honeynet is a whole network of honeypots. |
+| MC5 | B | A stateful firewall remembers connections and allows only replies that belong to them; a stateless filter checks each packet alone. |
+| MC6 | C | An NGFW understands applications at Layer 7, so it can allow one feature of a site and block another; a DNS filter can only block the whole domain. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

@@ -253,6 +253,41 @@ A **risk register** is a list (often a spreadsheet) tracking each risk:
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** A document says, "All company laptops must use AES-256 full-disk encryption, and passwords must be at least 14 characters." Which type of governance document is this MOST likely?
+A. Policy  B. Standard  C. Procedure  D. Guideline
+
+**MC2.** A factory machine cannot be patched. The CIO signs a formal exemption from the patching standard until 2027, after reviewing the risk. Which risk response does this exemption represent?
+A. Accept  B. Avoid  C. Transfer  D. Mitigate
+
+**MC3.** A publicly traded US company must prove that its financial reports are accurate and that controls protect how they are produced. Which law applies MOST directly?
+A. HIPAA  B. GDPR  C. FERPA  D. SOX
+
+**MC4.** A fast-growing startup's leaders say they are willing to take on extra risk if it helps them win market share quickly. Which risk appetite does this describe?
+A. Conservative  B. Neutral  C. Expansionary  D. Risk avoidance
+
+**MC5.** Before signing a contract, a company reads a cloud vendor's security audit reports and asks detailed questions about how customer data is protected. What is this an example of?
+A. Due diligence  B. Due care  C. Risk transfer  D. Job rotation
+
+**MC6.** A system administrator resigns, and today is their last day. Which action is MOST important when they leave?
+A. Asking them to sign a new AUP  B. Disabling their accounts immediately and collecting their badge and devices  C. Moving them to a different role for a week  D. Sending them on mandatory vacation
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | B | A standard sets specific, mandatory settings and levels that support a policy; the policy states the high-level goal. |
+| MC2 | A | Exceptions and exemptions are formal, documented ways of accepting a risk; nothing is reduced, stopped or insured. |
+| MC3 | D | SOX (Sarbanes-Oxley) covers the integrity of public companies' financial reporting; HIPAA covers health data. |
+| MC4 | C | An expansionary appetite accepts more risk to grow; a conservative one, like a bank, avoids risk. |
+| MC5 | A | Researching and understanding risks before acting is due diligence; due care is actually carrying out the protections. |
+| MC6 | B | Offboarding must remove access at once so the account cannot be misused later, as happened with Colonial Pipeline's old VPN account. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary

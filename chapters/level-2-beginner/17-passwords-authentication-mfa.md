@@ -265,6 +265,41 @@ Biometric checks are **never 100% exact**, so systems can make two kinds of mist
 
 </details>
 
+### 🎯 Exam-Style Practice (multiple choice)
+
+**MC1.** After a break-in attempt, an administrator makes the data center's fingerprint readers much stricter. What is the MOST likely side effect?
+A. Both FAR and FRR will fall  B. The CER will automatically rise  C. FAR will fall, but more genuine staff will be rejected (higher FRR)  D. FAR will rise, but fewer genuine staff will be rejected
+
+**MC2.** An audit shows users change their password five times in a row within minutes so they can go back to their favourite old password. Which setting BEST stops this?
+A. Maximum password age  B. Password complexity  C. Account lockout  D. Minimum password age (together with password history)
+
+**MC3.** A login to the CFO's account is blocked because it comes from a country where the company has no staff. Which authentication factor is the system checking?
+A. Something you know  B. Somewhere you are  C. Something you have  D. Something you are
+
+**MC4.** A key fob shows a new code each time its button is pressed. The code is based on a counter, not on the clock. Which type of one-time password is this?
+A. TOTP  B. SMS OTP  C. HOTP  D. A push notification
+
+**MC5.** A user signs in to a site with a passkey. A week later they land on a perfect copy of that site run by a phisher. Why can the phisher NOT capture a reusable secret?
+A. Passkeys only work on weekdays  B. The website stores the user's private key, not the user  C. Passkeys send the password in encrypted form  D. The private key never leaves the user's device, and the device only signs challenges for the real site
+
+**MC6.** A company forces every user to change their password every 30 days, and many users now write passwords on sticky notes. What does modern (NIST) guidance recommend instead?
+A. Require long passwords and MFA, and force a change only when a compromise is suspected  B. Force changes every 7 days instead  C. Allow short passwords so users can remember them  D. Ban password managers
+
+<details>
+<summary><b>Show multiple-choice answers</b></summary>
+
+| # | Answer | Why |
+|---|---|---|
+| MC1 | C | A stricter setting lets fewer impostors in (lower FAR) but rejects more real users (higher FRR). |
+| MC2 | D | Minimum password age stops rapid repeated changes, and history stops reuse of recent passwords; maximum age is expiration. |
+| MC3 | B | Location (GPS, IP address, country) is "somewhere you are," usually used as an extra check. |
+| MC4 | C | HOTP is counter-based (a new code per button press); TOTP changes with time, about every 30 seconds. |
+| MC5 | D | A passkey's private key stays on the device and the signature is tied to the real site, so there is nothing to phish. |
+| MC6 | A | NIST advises against forced regular changes, which push users to weak or written-down passwords; length and MFA matter more. |
+
+</details>
+
+
 ---
 
 ## 📌 Chapter Summary
