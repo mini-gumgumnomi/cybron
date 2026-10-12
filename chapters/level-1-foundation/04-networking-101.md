@@ -33,7 +33,7 @@ Sending data across a network is just like sending a letter.
    │  TO:   203.0.113.10  : port 443       (a web server)         │
    │ ┌──────────────────────────────────────────────────────────┐ │
    │ │                                                          │ │
-   │ │      DATA (payload):  "GET me the Google homepage"       │ │
+   │ │      DATA (payload):  "GET me the example.com homepage"  │ │
    │ │                                                          │ │
    │ └──────────────────────────────────────────────────────────┘ │
    └──────────────────────────────────────────────────────────────┘
@@ -146,7 +146,7 @@ When your computer wants to send something, it first asks: *"Is the destination 
                   "192.168.1 street"   "house 20"
 
    192.168.1.20  →  192.168.1.77   Same street   → deliver locally via switch
-   192.168.1.20  →  8.8.8.8        Different     → send to default gateway (router) 192.168.1.1
+   192.168.1.20  →  203.0.113.10   Different     → send to default gateway (router) 192.168.1.1
 ```
 
 > "/24" (**CIDR notation**) means "the first **24 bits** are the network part." `/24` = `255.255.255.0`, which allows 254 usable host addresses (.1 to .254).
@@ -215,7 +215,7 @@ flowchart LR
 | **Modem** | Converts your provider's signal (cable, fiber, DSL) into network data | — | Translator at the border |
 | **Router** | Connects **different networks** and picks the best path | **IP** addresses (Layer 3) | Post office between cities |
 | **Switch** | Connects devices **within one LAN**, sends data only to the right port | **MAC** addresses (Layer 2) | Mail sorter in your building |
-| **Hub** (old) | Copies everything to **every** port | — | Shouting in a room. Anyone can listen! |
+| **Hub** (old) | Copies everything to **every** port | Nothing: it just repeats signals (Layer 1) | Shouting in a room. Anyone can listen! |
 | **Access point (AP)** | Lets wireless devices join the wired LAN | Wi-Fi | A wireless doorway |
 | **Firewall** | Allows or blocks traffic based on rules | IP, ports, apps | Security guard at the door |
 
@@ -288,7 +288,7 @@ The usual topology today is the **star**: every device is connected to a central
 
 3. **Look at your ARP table.** Run `arp -a` (Windows/macOS) or `ip neigh` (Linux). Find your router's IP and its MAC.
 
-4. **Look up a manufacturer.** Take the first 6 hex digits of your MAC and search "MAC vendor lookup."
+4. **Look up a manufacturer.** Take the first 6 hex digits of your MAC and search "MAC vendor lookup." (If your device uses a random "private" MAC address, the lookup finds no vendor. That is the privacy feature working.)
 
 ---
 
@@ -332,7 +332,7 @@ The usual topology today is the **star**: every device is connected to a central
 | IP address | Logical location; IPv4 32-bit, IPv6 128-bit | Basis of firewall rules |
 | Subnet mask / gateway | Local vs remote decision; door to outside | — |
 | Private IP + NAT | 10/8, 172.16/12, 192.168/16 | Hides inside hosts (not a firewall!) |
-| Switch vs router vs hub | L2 local / L3 between networks / broadcast | Hubs leak traffic |
+| Switch vs router vs hub | L2 local / L3 between networks / L1 repeats to every port | Hubs leak traffic |
 | ARP | IP → MAC lookup | ARP poisoning (on-path attack) |
 
 **Next chapter →** *Chapter 5: Network Models — OSI & TCP/IP.* Let's organize all of this into the famous 7-layer model the exam keeps referring to.

@@ -196,7 +196,7 @@ A **hash function** takes any input (one word, or a whole movie) and produces a 
 - **Checking downloads:** a website shows the SHA-256 of a file. You hash your downloaded copy. If the hashes match, the file wasn't tampered with.
 - **Digital forensics:** investigators hash evidence to prove nobody changed it (Chapter 41).
 
-> 🔐 **Why security cares:** If two *different* inputs ever produce the *same* hash, that's called a **collision**, and the hash function is considered broken. **MD5** and **SHA-1** have known collisions, so use **SHA-256** or better.
+> 🔐 **Why security cares:** When two *different* inputs produce the *same* hash, that's called a **collision**. Because a hash is a fixed length, collisions must exist in theory; a hash function is considered **broken** once attackers can *find* collisions on purpose in practice. **MD5** and **SHA-1** are broken this way, so use **SHA-256** or better.
 
 ---
 

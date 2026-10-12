@@ -54,6 +54,7 @@ Networking works the same way. Each **layer** adds its own "wrapping" with its o
  │    │                  │                                │                     │ jamming               │
  └────┴──────────────────┴────────────────────────────────┴─────────────────────┴───────────────────────┘
    * TLS doesn't fit neatly into one layer; it's often described as Layers 5–6.
+   WAF = Web Application Firewall, NGFW = Next-Generation Firewall (both in Chapter 20).
 ```
 
 ### Mnemonics
@@ -236,7 +237,7 @@ A server **listens** on a fixed port (e.g., 443). Your browser uses a random **e
 | 2 Data Link | ARP poisoning, MAC flooding, MAC spoofing, rogue APs | Port security, 802.1X, Dynamic ARP Inspection |
 | 1 Physical | Cable tapping, jamming, stealing devices | Locked rooms, shielded cables, cameras |
 
-You don't need to understand all these attacks yet. They all come later. For now, just get used to the idea that **each layer has its own attacks and its own defenses**.
+You don't need to understand all these attacks yet. Most of them come back in Levels 2 and 3 (especially Chapters 24–26 and 30). For now, just get used to the idea that **each layer has its own attacks and its own defenses**.
 
 ---
 

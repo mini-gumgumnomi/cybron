@@ -47,11 +47,11 @@ This chapter is your training plan.
 
 | Domain | Weight | ≈ Questions (of 90) | Where in this book |
 |---|---|---|---|
-| 1.0 General Security Concepts | 12% | ~11 | Ch 12, 13, 18, 19, 28, 33 |
+| 1.0 General Security Concepts | 12% | ~11 | Ch 12, 13, 18, 19, 28, 33, 49 |
 | 2.0 Threats, Vulnerabilities & Mitigations | 22% | ~20 | Ch 14–16, 23–27 |
-| 3.0 Security Architecture | 18% | ~16 | Ch 29–32 |
-| 4.0 Security Operations | **28%** | ~25 | Ch 34–42 |
-| 5.0 Security Program Management & Oversight | 20% | ~18 | Ch 43–48 |
+| 3.0 Security Architecture | 18% | ~16 | Ch 20, 21, 29–32 |
+| 4.0 Security Operations | **28%** | ~25 | Ch 17, 34–42 |
+| 5.0 Security Program Management & Oversight | 20% | ~18 | Ch 22, 43–48 |
 
 ---
 
@@ -101,7 +101,7 @@ Small **simulations** where you *do* something instead of just choosing:
 
 ## 📖 Part 3 — How Scoring Works
 
-- The score is **scaled** from 100 to 900, and you need **750**. It's not a simple percentage, because some questions are weighted differently. In practice, aim for **85%+ on good practice exams** before booking.
+- The score is **scaled** from 100 to 900, and you need **750**. It's not a simple percentage: CompTIA converts your raw result to the 100–900 scale and doesn't publish the exact formula (harder or longer items, like PBQs, may count for more). In practice, aim for **85%+ on good practice exams** before booking.
 - Some questions may be **unscored** (CompTIA trying out new questions). You can't tell which, so treat every question seriously.
 - ✅ **There's no penalty for wrong answers. NEVER leave a question blank.** Guess if you must.
 - You get a **pass/fail result immediately** on screen, with a score report showing your weaker areas.
@@ -323,7 +323,7 @@ At ~1–1.5 hours per day (see the book plan for the full 18-week schedule):
 
 - Read **every word** of the question, especially **NOT, LEAST, FIRST, BEST**.
 - If two answers seem right, the **more specific** one that matches **more clues** usually wins.
-- Your **first instinct** is usually right. Only change an answer if you find a clear reason.
+- Don't change answers on a whim, but **do** change one when you find a clear reason (for example, you misread the question or a later question reminds you of a fact).
 - **No blanks!** A guess has a 25% chance; a blank has 0%.
 
 ---

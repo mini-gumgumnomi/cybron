@@ -117,7 +117,7 @@ Reply from 8.8.8.8: bytes=32 time=15ms TTL=117
     1     1 ms   192.168.1.1        🏠 your home router (default gateway)
     2     8 ms   10.20.0.1          🏘️ your internet provider's local hub
     3    12 ms   198.51.100.1       🛣️ motorway junction (provider backbone)
-    4    13 ms   * * *              🌫️ a router that doesn't answer (ICMP blocked)
+    4      *     Request timed out. 🌫️ a router that doesn't answer (ICMP blocked)
     5    14 ms   8.8.8.8            🏁 destination reached
 
    💻 ──► 🏠 ──► 🏘️ ──► 🛣️ ──► 🌫️ ──► 🏁

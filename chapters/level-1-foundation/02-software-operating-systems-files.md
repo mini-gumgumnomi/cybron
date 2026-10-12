@@ -86,7 +86,7 @@ The OS sits between the apps and the hardware. Apps never talk to the hardware d
 | OS | Made by | Where you see it | Fun fact for security |
 |---|---|---|---|
 | **Windows** | Microsoft | Most office PCs and many servers | Biggest malware target because it's the most common desktop OS |
-| **macOS** | Apple | Mac computers | Based on Unix, like Linux |
+| **macOS** | Apple | Mac computers | Unix-based. Linux is "Unix-like", so many terminal commands are the same on both |
 | **Linux** | Open-source community (Ubuntu, Red Hat, Kali…) | Most web servers, cloud and IoT devices | **Kali Linux** is a popular security-testing distribution |
 | **Android** | Google (based on Linux) | Most smartphones worldwide | Allows apps from outside the store (side-loading, Chapter 7) |
 | **iOS / iPadOS** | Apple | iPhone, iPad | Very locked down. Removing restrictions = **jailbreaking** |
@@ -97,7 +97,7 @@ The OS sits between the apps and the hardware. Apps never talk to the hardware d
 ## 📖 Programs, Processes and Services
 
 - A **program** (or application) is a file on the disk, like `chrome.exe`. It's a recipe sitting in a cookbook.
-- A **process** is a program that is **running** in RAM. It's the recipe being cooked right now. One program can run as many processes (Chrome opens one per tab).
+- A **process** is a program that is **running** in RAM. It's the recipe being cooked right now. One program can run as many processes (Chrome, for example, often runs a separate process for each tab).
 - A **service** (Windows) or **daemon** (Linux) is a process that runs **in the background** without a window, often starting automatically at boot. Examples: the print spooler, the web server, Windows Update.
 
 > 🔐 **Why security cares:** Every running service is a possible door for an attacker. **Hardening** (Chapter 27) means turning off every service you don't need. Malware also likes to disguise itself as a normal-looking service or process, such as `svch0st.exe` instead of `svchost.exe`.

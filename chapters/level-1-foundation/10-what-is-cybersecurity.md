@@ -130,6 +130,7 @@ flowchart LR
 | Link | Example defense that breaks it |
 |---|---|
 | Reconnaissance | Limit public info; detect scans |
+| Weaponization | Happens on the attacker's own systems, so defenders rarely see it; threat intelligence can give early warning |
 | Delivery | Email filtering, blocking USB drives, user training |
 | Exploitation | **Patching**, least privilege |
 | Installation | Anti-malware / EDR, application allow lists |

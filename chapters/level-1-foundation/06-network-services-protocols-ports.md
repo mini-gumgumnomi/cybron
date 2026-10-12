@@ -59,11 +59,11 @@ sequenceDiagram
 |---|---|---|
 | **A** | Name → **IPv4** address | `www.example.com → 203.0.113.80` |
 | **AAAA** | Name → **IPv6** address | `www.example.com → 2001:db8::80` |
-| **CNAME** | Alias (nickname → real name) | `shop.example.com → example.myshopify.com` |
+| **CNAME** | Alias (nickname → real name) | `shop.example.com → stores.example.net` |
 | **MX** | **Mail** server for the domain | `example.com mail → mail.example.com` |
 | **NS** | The domain's name servers | |
 | **PTR** | **Reverse** lookup: IP → name | |
-| **TXT** | Free text, used for **email security (SPF, DKIM, DMARC)** and domain ownership checks | `v=spf1 include:_spf.google.com -all` |
+| **TXT** | Free text, used for **email security (SPF, DKIM, DMARC)** and domain ownership checks | `v=spf1 include:_spf.example.net -all` |
 | **SOA** | Start of Authority: admin info for the zone | |
 
 > 🔐 **Why security cares:** If an attacker poisons the DNS "phone book", typing your bank's name takes you to a fake site (**DNS poisoning / spoofing**, Chapter 25). Defenses: **DNSSEC** (digitally signs DNS answers so they can't be faked), and **DNS over HTTPS (DoH)** / **DNS over TLS (DoT, port 853)**, which encrypt your lookups so others can't see them.
@@ -149,6 +149,8 @@ Email uses **different protocols to send and to receive**.
 | **SMTP** | **Send** mail | 25 (server ↔ server) | **587** (submission with STARTTLS), **465** (SMTPS, implicit TLS) |
 | **POP3** | **Download** mail (usually deletes from server) | 110 | **POP3S 995** |
 | **IMAP** | **Sync** mail (stays on server, all devices see it) | 143 | **IMAPS 993** |
+
+> 💡 **STARTTLS** is a command that upgrades a normal (plaintext) connection to an encrypted TLS connection on the same port. **Implicit TLS** (like port 465) is encrypted from the very first byte.
 
 > 🔐 Plain SMTP doesn't check who the sender really is, which is why **spoofed "From:" addresses** are so easy. Fixes: **SPF, DKIM and DMARC** (DNS TXT records, Chapter 38).
 
@@ -257,7 +259,7 @@ Email uses **different protocols to send and to receive**.
 
 - **"22 is for SSH, the safe twin. 23 is Telnet, the talkative one who tells everyone your password."**
 - **"80 is HTTP, 443 is HTTPS"**: "4-4-3, the S is for Secure, it's safe for me."
-- **Secure mail ports are all 99x:** IMAPS **993**, POP3S **995**.
+- **Secure mail-*reading* ports are 99x:** IMAPS **993**, POP3S **995**. (Secure *sending* uses 465 or 587.)
 - **"S at the start = SSH"**: **S**FTP uses **S**SH. **FTPS** has the S at the end, like TL**S** (TLS is added on top of FTP).
 - **DORA** for DHCP: Discover, Offer, Request, Acknowledge.
 - **3389 = RDP**: "Remote Desktop's 33-89 is the door attackers knock on."
