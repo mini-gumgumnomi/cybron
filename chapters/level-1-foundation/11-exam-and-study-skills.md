@@ -161,10 +161,11 @@ Small **simulations** where you *do* something instead of just choosing:
 ### Time Management ⏱️
 
 ```
-   90 minutes ÷ up to 90 questions  ≈  1 minute each
+   90 minutes ÷ up to 90 questions  ≈  1 minute each on average
+   (MCQs must go faster, about 40 s, to leave time for the PBQs)
    ┌───────────┬───────────────────────────────────────────────────┐
    │ 0-5 min   │ Look at the PBQs; flag the long ones              │
-   │ 5-60 min  │ All multiple-choice questions (~45-50 s each)     │
+   │ 5-60 min  │ All multiple-choice questions (~40 s each)        │
    │ 60-80 min │ Return to the flagged PBQs                        │
    │ 80-90 min │ Review flagged MCQs; make sure NOTHING is blank   │
    └───────────┴───────────────────────────────────────────────────┘

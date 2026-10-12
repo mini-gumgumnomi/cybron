@@ -27,7 +27,7 @@ The written driving theory test asks, *"What does this sign mean?"* The practica
 ```
    1. At the start, LOOK at each PBQ for ~30 seconds. Short and clear? Do it now.
       Long or confusing? FLAG it and move on.
-   2. Answer all multiple-choice questions first (≈ 45–50 s each).
+   2. Answer all multiple-choice questions first (≈ 40 s each).
    3. Return to flagged PBQs with the time you saved (aim to leave 20–25 min).
    4. Read EVERY instruction line: "select ALL that apply," "each item may be used once,"
       "drag the BEST control."
