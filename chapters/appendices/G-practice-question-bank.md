@@ -26,9 +26,9 @@ Use this table when your score report or mock results show a weak objective. "L2
 | Obj | Topic | Chapters (checkpoints) | Gate tests | Mock exams | Bonus |
 |---|---|---|---|---|---|
 | **1.1** | Security controls | 13 | L2 Q8–14 | M1 Q1–2<br>M2 Q1–3<br>M3 Q1–3 | — |
-| **1.2** | Fundamental concepts (CIA, AAA, zero trust, physical, deception) | 12, 19, 33 | L2 Q1–7, 53–59, 65<br>L3 Q88–90 | M1 Q3–5, 11<br>M2 Q4–6<br>M3 Q3–7, 23 | — |
+| **1.2** | Fundamental concepts (CIA, AAA, zero trust, physical, deception) | 12, 19, 33 | L2 Q1–7, 53–59, 65<br>L3 Q88–90 | M1 Q3–5, 11<br>M2 Q4–6, 23<br>M3 Q4–7, 23 | — |
 | **1.3** | Change management | 33 | L3 Q86–87 | M1 Q6–7<br>M2 Q7–8<br>M3 Q8 | Q1–8 |
-| **1.4** | Cryptographic solutions & PKI | 18, 28, 49 | L2 Q45–52<br>L3 Q28, 43–52 | M1 Q3, 8–10<br>M2 Q9–11, 23, 46<br>M3 Q9–11 | — |
+| **1.4** | Cryptographic solutions & PKI | 18, 28, 49 | L2 Q45–52<br>L3 Q28, 43–52 | M1 Q3, 8–10<br>M2 Q9–11, 46<br>M3 Q9–11 | — |
 | **2.1** | Threat actors & motivations | 14 | L2 Q15–21 | M1 Q13, 25–26<br>M2 Q27 | Q9–13 |
 | **2.2** | Threat vectors & attack surfaces | 15, 23 | L2 Q22–27, 29<br>L3 Q1–8 | M1 Q12, 14<br>M2 Q12, 24, 31<br>M3 Q12–13, 26 | — |
 | **2.3** | Vulnerability types | 24 | L3 Q9–17 | M1 Q16, 23, 27, 29<br>M2 Q16, 25–26, 29<br>M3 Q17–18, 26–28 | — |
@@ -47,9 +47,9 @@ Use this table when your score report or mock results show a weak objective. "L2
 | **4.7** | Automation & orchestration | 40 | — | M1 Q67<br>M2 Q70<br>M3 Q68–69 | Q40–47 |
 | **4.8** | Incident response | 41 | — | M1 Q68–70<br>M2 Q71–72<br>M3 Q70–72 | Q48–52 |
 | **4.9** | Data sources for investigations | 42 | — | M1 Q58, 71–72 | Q53–60 |
-| **5.1** | Security governance | 22, 43 | L2 Q74 | M1 Q73–75<br>M2 Q73–76<br>M3 Q73–75 | — |
-| **5.2** | Risk management | 22, 44 | L2 Q72–73 | M1 Q76–81<br>M2 Q77–82<br>M3 Q57, 76–81 | — |
-| **5.3** | Third-party risk | 45 | — | M1 Q82–84<br>M2 Q83–86<br>M3 Q82–85 | Q61–65 |
+| **5.1** | Security governance | 22, 43 | L2 Q74 | M1 Q73–75<br>M2 Q73–74, 76<br>M3 Q73–75 | — |
+| **5.2** | Risk management | 22, 44 | L2 Q72–73 | M1 Q76–81<br>M2 Q77–82<br>M3 Q76–81 | — |
+| **5.3** | Third-party risk | 45 | — | M1 Q82–84<br>M2 Q83–86, 89<br>M3 Q82–85 | Q61–65 |
 | **5.4** | Compliance & privacy | 22, 46 | L2 Q75 | M1 Q75, 85–86<br>M2 Q75, 87–88<br>M3 Q86–87 | Q66–70 |
 | **5.5** | Audits & assessments | 47 | — | M1 Q87–89<br>M2 Q86–87, 89<br>M3 Q88–89 | Q71–78 |
 | **5.6** | Security awareness | 15, 48 | L2 Q28 | M1 Q90<br>M2 Q90<br>M3 Q90 | Q79–84 |

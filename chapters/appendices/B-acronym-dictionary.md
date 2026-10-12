@@ -389,7 +389,7 @@ Security+ is full of acronyms. This dictionary explains every acronym used in th
 | **SDLC** | Software Development Life Cycle | Process for building software (securely) | 43 |
 | **SDN** | Software-Defined Networking | Central software control of the network | 29 |
 | **SD-WAN** | Software-Defined Wide Area Network | Smart routing between sites over many links | 30 |
-| **SED** | Self-Encrypting Drive | Drive with built-in hardware encryption (a form of FDE) | — |
+| **SED** | Self-Encrypting Drive | Drive with built-in hardware encryption (a form of FDE) | 31 |
 | **SFTP** | SSH File Transfer Protocol | Secure file transfer over SSH (port 22) | 6 |
 | **SHA** | Secure Hash Algorithm | Hash family (SHA-1 broken; SHA-256 standard) | 3, 49 |
 | **SIEM** | Security Information and Event Management | Collects and correlates logs, alerts | 20, 37 |
@@ -439,7 +439,7 @@ Security+ is full of acronyms. This dictionary explains every acronym used in th
 | **TOC/TOU** | Time-of-Check to Time-of-Use | A race condition | 24 |
 | **TOTP** | Time-based One-Time Password | Codes that change every ~30 seconds | 17 |
 | **TPM** | Trusted Platform Module | Motherboard chip storing keys, supporting secure boot | 1, 28 |
-| **TTP** | Tactics, Techniques and Procedures | How attackers operate (what MITRE ATT&CK catalogs) | 10 |
+| **TTP** | Tactics, Techniques and Procedures | How attackers operate (what MITRE ATT&CK catalogs) | 10, 41 |
 | **TXT** | Text record | DNS record holding text (SPF, DKIM, DMARC) | 6, 38 |
 
 ## U – Z

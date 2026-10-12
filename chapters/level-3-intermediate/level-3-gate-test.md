@@ -2,7 +2,7 @@
 
 **90 questions · Chapters 23–33 (Domains 1–3) · 90 minutes · Target: 63 / 90 (70%) to move on to Level 4**
 
-This is a **half-length practice exam** in real exam style: mostly scenarios, with keywords like **BEST**, **MOST likely** and **FIRST**. Do it in one sitting with a 90-minute timer. Then mark it, write every miss in your **mistake journal**, and re-read the chapter given in the key.
+This is a **practice exam on Domains 1–3** in real exam style: mostly scenarios, with keywords like **BEST**, **MOST likely** and **FIRST**. Do it in one sitting with a 90-minute timer. Then mark it, write every miss in your **mistake journal**, and re-read the chapter given in the key.
 
 ---
 

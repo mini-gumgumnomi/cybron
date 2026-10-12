@@ -97,7 +97,7 @@ Finding the **underlying reason** an incident happened, not just the symptom, so
 
 ### Threat Hunting 🏹
 **Proactively searching** for attackers who are **already inside** but **haven't triggered any alert**. It's the opposite of waiting for alarms.
-- Starts with a **hypothesis**, often from threat intelligence or MITRE ATT&CK: *"If an APT used stolen credentials, we'd see logins at odd hours from service accounts."*
+- Starts with a **hypothesis**, often from threat intelligence or MITRE ATT&CK, which catalogs attackers' **TTPs** (tactics, techniques and procedures: *how* they operate): *"If an APT used stolen credentials, we'd see logins at odd hours from service accounts."*
 - Hunters search logs, EDR data and NetFlow for evidence.
 - Findings become **new detection rules**.
 

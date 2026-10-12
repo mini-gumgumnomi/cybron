@@ -80,6 +80,7 @@ Limit **where data may be stored or accessed from**.
 Transform data so **only key holders can read it** (Chapters 18, 28). **Reversible with the key.**
 - Use for: data at rest and in transit, backups, anything sensitive that must be **read again** later.
 - Remember: protecting the **keys** (HSM/KMS) is as important as the encryption itself.
+- **Full-disk encryption (FDE)** encrypts a whole drive; a **self-encrypting drive (SED)** does this in the drive's own hardware, so it adds no load on the CPU.
 
 ### 3. Hashing #️⃣
 One-way fingerprint. **Not reversible.**
