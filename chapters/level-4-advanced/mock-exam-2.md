@@ -78,8 +78,8 @@ A. Published/documented  B. Account lockout  C. Impossible travel  D. Resource c
 **22.** An attacker forces a TLS connection to use an old, weak cipher suite. This is a:
 A. Collision attack  B. Birthday attack  C. Downgrade attack  D. Replay attack
 
-**23.** Which control BEST defends stored password hashes against rainbow tables?
-A. Compression  B. Masking  C. Encoding  D. Salting
+**23.** An intruder forces open a locked rear door with a crowbar to reach the server room. Which type of attack is this?
+A. Tailgating  B. RFID cloning  C. Environmental attack  D. Physical brute force
 
 **24.** Attackers register `exampie.com` hoping users mistype `example.com`. This is:
 A. DNS poisoning  B. Domain hijacking  C. Typosquatting  D. Pretexting
@@ -142,8 +142,8 @@ A. Full  B. Differential  C. Snapshot  D. Incremental
 **42.** What is the main risk of relying ONLY on real-time replication for ransomware recovery?
 A. Replication also copies the encrypted or corrupted data  B. Replication is too expensive  C. Replication cannot cross sites  D. Replication requires tape
 
-**43.** Which statement BEST describes a hot site?
-A. Empty building with power only  B. Equipment present but data must be restored  C. Fully equipped with near-live data, takes over quickly, most expensive  D. A mobile trailer
+**43.** A database records every transaction in a separate log so that changes made since the last backup can be replayed after a crash. This is:
+A. Snapshot  B. Differential backup  C. Journaling  D. Load balancing
 
 **44.** A company runs workloads on two different cloud providers to survive a provider-wide outage. This is:
 A. Platform diversity only  B. Multi-cloud  C. Clustering  D. Load balancing
@@ -164,8 +164,8 @@ A. Failover  B. Parallel processing  C. Tabletop exercise  D. Simulation
 **48.** Which tool shows Wi-Fi signal strength across a floor plan, revealing leakage into the parking lot?
 A. NetFlow  B. Heat map from a site survey  C. SIEM dashboard  D. CVSS calculator
 
-**49.** Employees choose from a list of approved phone models that the company buys and owns. This is:
-A. CYOD  B. COPE  C. BYOD  D. COBO
+**49.** A company wants each employee to join the corporate Wi-Fi with their own directory account instead of a shared password. Which configuration is BEST?
+A. WPA3-Enterprise with RADIUS (802.1X)  B. WPA3-Personal with a long passphrase  C. WPA2-Personal with MAC filtering  D. A hidden SSID with WEP
 
 **50.** A BYOD phone is lost. How can the company remove corporate data without erasing personal photos?
 A. Selective (container) wipe through MDM  B. Full device wipe  C. Degaussing  D. Jailbreaking
@@ -189,10 +189,10 @@ A. CASB  B. Bug bounty  C. ISAC (information-sharing organization)  D. SOAR plat
 A. An exemption  B. Risk transfer  C. A compensating control  D. Decommissioning
 
 **57.** After applying a patch, what should the team do to validate remediation?
-A. Disable monitoring  B. Close the ticket immediately  C. Delete the logs  D. Rescan the system
+A. Update the asset inventory  B. Close the ticket as soon as the patch installs  C. Lower the CVSS score  D. Rescan the system
 
 **58.** Analysts ignore alerts because most are false positives. What is the BEST action?
-A. Alert tuning  B. Turn off the SIEM  C. Hire fewer analysts  D. Disable logging
+A. Alert tuning  B. Increase log retention  C. Add more log sources  D. Archive old alerts
 
 **59.** Which framework provides standardized, automated checking of systems against configuration benchmarks?
 A. STIX  B. SCAP  C. SAML  D. SNMP
@@ -207,7 +207,7 @@ A. Centralized proxy  B. Agent-based filtering  C. Router ACL  D. NAC
 A. Group Policy  B. SELinux  C. NetFlow  D. Nmap
 
 **63.** Which capability lets responders isolate an infected laptop from the network with one click?
-A. CRL  B. DMARC  C. EDR  D. UPS
+A. FIM  B. DLP  C. EDR  D. Web filter
 
 **64.** A system flags that an accountant downloaded 40 GB of files at 2 a.m., far above their normal behavior. Which technology is this?
 A. RAID  B. SPF  C. User behavior analytics  D. OCSP
@@ -230,8 +230,8 @@ A. Identity proofing  B. Escalation  C. Provisioning  D. Attestation (access rev
 **70.** Old automation scripts that nobody understands keep breaking. This is BEST described as:
 A. Employee retention  B. Workforce multiplier  C. Guard rails  D. Technical debt
 
-**71.** In incident response, which step includes reimaging hosts and removing attacker persistence?
-A. Containment  B. Preparation  C. Recovery  D. Eradication
+**71.** After an incident is resolved, the team determines that an unpatched VPN appliance was the underlying reason the attacker got in. This activity is:
+A. Containment  B. Threat hunting  C. Acquisition  D. Root cause analysis
 
 **72.** Lawyers instruct the company to preserve all email related to a dispute. This is a:
 A. Chain of custody  B. Legal hold  C. Data retention purge  D. Right to be forgotten
@@ -243,11 +243,11 @@ A. Chain of custody  B. Legal hold  C. Data retention purge  D. Right to be forg
 **73.** Which policy covers secure coding, code review and security testing?
 A. AUP  B. SDLC policy  C. BC policy  D. Password standard
 
-**74.** Which governance document is optional and offers recommendations?
-A. Policy  B. Guideline  C. Procedure  D. Standard
+**74.** A multinational lets each regional office manage its own security within broad corporate rules. Which governance structure is this?
+A. Centralized  B. Decentralized  C. Government entity  D. Audit committee
 
-**75.** Under privacy law, which party decides why and how personal data is processed?
-A. Processor  B. Controller  C. Data subject  D. Custodian
+**75.** A company builds a record of every system that stores personal data: what it holds, why, who can access it and how long it is kept. This is BEST described as:
+A. Legal hold  B. Data inventory and retention  C. Data masking  D. Right to be forgotten
 
 **76.** The IT team performs backups and manages permissions for HR data. In this role they are the:
 A. Data custodian  B. Data owner  C. Data controller  D. Data subject
@@ -285,11 +285,11 @@ A. Vendor questionnaire  B. Vendor marketing brochure  C. SOC 2 Type II report  
 **87.** Executives sign a formal statement that the company's financial controls are effective. This is:
 A. Attestation  B. Acknowledgement  C. Self-assessment  D. E-discovery
 
-**88.** A merchant is banned from processing card payments after repeated PCI DSS failures. Which consequence is this?
-A. Reputational damage only  B. Contractual renegotiation  C. Sanctions against individuals  D. Loss of license
+**88.** After repeated compliance failures, a regulator revokes a money-transfer company's permit to operate. Which consequence of non-compliance is this?
+A. Reputational damage  B. Contractual impacts  C. Fines  D. Loss of license
 
-**89.** A penetration tester receives network diagrams, credentials and source code before testing. Which type of test is this?
-A. Unknown environment  B. Partially known environment  C. Known environment  D. Passive reconnaissance
+**89.** Before a penetration test begins, which document defines the systems in scope, the permitted testing hours and who to call if something breaks?
+A. SLA  B. NDA  C. Rules of engagement  D. Chain of custody
 
 **90.** An employee accidentally emails a customer spreadsheet to the wrong recipient. How is this behavior BEST classified?
 A. Unintentional  B. Unexpected  C. Risky  D. Malicious
@@ -325,7 +325,7 @@ A. Unintentional  B. Unexpected  C. Risky  D. Malicious
 | 20 | B | D2 | Evil twin (25) |
 | 21 | D | D2 | Resource consumption (26) |
 | 22 | C | D2 | Downgrade (26) |
-| 23 | D | D2 | Salting (26, 28) |
+| 23 | D | D2 | Forcing a lock or door = physical brute force (19, 26) |
 | 24 | C | D2 | Typosquatting (15) |
 | 25 | C | D2 | Zero-day (24) |
 | 26 | B | D2 | Resource reuse (24) |
@@ -345,13 +345,13 @@ A. Unintentional  B. Unexpected  C. Risky  D. Malicious
 | 40 | A | D3 | Hashing (31) |
 | 41 | D | D3 | Incremental (32) |
 | 42 | A | D3 | Replication copies the damage (32) |
-| 43 | C | D3 | Hot site (32) |
+| 43 | C | D3 | Journaling (32) |
 | 44 | B | D3 | Multi-cloud (32) |
 | 45 | B | D3 | RAID 1 (32) |
 | 46 | A | D3 | Full-disk encryption (28, 31) |
 | 47 | C | D3 | Tabletop (32) |
 | 48 | B | D4 | Heat map / site survey (34) |
-| 49 | A | D4 | CYOD (34) |
+| 49 | A | D4 | Per-user Wi-Fi logins = WPA3-Enterprise + RADIUS (34) |
 | 50 | A | D4 | Selective wipe (34) |
 | 51 | A | D4 | Code signing (34) |
 | 52 | B | D4 | SAST (34, 36) |
@@ -373,11 +373,11 @@ A. Unintentional  B. Unexpected  C. Risky  D. Malicious
 | 68 | B | D4 | Password vaulting (39) |
 | 69 | D | D4 | Attestation / access review (39) |
 | 70 | D | D4 | Technical debt (40) |
-| 71 | D | D4 | Eradication (41) |
+| 71 | D | D4 | Finding the underlying cause = root cause analysis (41) |
 | 72 | B | D4 | Legal hold (41) |
 | 73 | B | D5 | SDLC policy (43) |
-| 74 | B | D5 | Guideline (43) |
-| 75 | B | D5 | Controller (43, 46) |
+| 74 | B | D5 | Regions manage their own = decentralized (43) |
+| 75 | B | D5 | Data inventory and retention (46) |
 | 76 | A | D5 | Custodian (43) |
 | 77 | B | D5 | 500,000 × 0.1 = 50,000; × 0.2 = 10,000 (44) |
 | 78 | D | D5 | 1 ÷ 25 = 0.04 (44) |
@@ -390,8 +390,8 @@ A. Unintentional  B. Unexpected  C. Risky  D. Malicious
 | 85 | B | D5 | BPA (45) |
 | 86 | C | D5 | SOC 2 Type II (45, 47) |
 | 87 | A | D5 | Attestation (46, 47) |
-| 88 | D | D5 | Loss of license (46) |
-| 89 | C | D5 | Known environment (47) |
+| 88 | D | D5 | Permit revoked = loss of license (46) |
+| 89 | C | D5 | Rules of engagement (45, 47) |
 | 90 | A | D5 | Unintentional (48) |
 
 **Scoring:** 77+ (85%) = ready-level performance · 63–76 = keep going, focus on your weakest domain · below 63 = re-study your two weakest domains before Mock 3.

@@ -69,8 +69,8 @@ A. A DHCP failure  B. Impossible travel  C. A password attack against user accou
 **19.** Attackers send small queries to public NTP servers with a spoofed source address, flooding the victim with large responses. This is:
 A. An amplified (reflected) DDoS  B. DNS tunneling  C. ARP poisoning  D. A SYN flood
 
-**20.** A legacy server cannot be patched against a known remote code execution flaw. What is the BEST mitigation?
-A. Isolate it on a restricted network segment  B. Disable its logging  C. Give users local admin rights  D. Ignore it until replacement
+**20.** An attacker compromises a help desk technician's account and uses it to change domain-wide security settings. Which mitigation would MOST have limited the damage?
+A. Least privilege  B. Full-disk encryption  C. Data masking  D. A web application firewall
 
 **21.** Which mitigation BEST prevents users from running unauthorized executables?
 A. DLP  B. Full-disk encryption  C. Host-based firewall  D. Application allow list
@@ -103,7 +103,7 @@ A. Jailbreaking  B. Side-loading  C. Memory injection  D. Steganography
 A. Published/documented  B. Out-of-cycle logging  C. Blocked content  D. Resource inaccessibility
 
 **31.** Which action BEST reduces the attack surface of a newly installed web server?
-A. Disable unnecessary services and ports  B. Increase the log retention period  C. Add more RAM  D. Enable directory listing
+A. Disable unnecessary services and ports  B. Increase the log retention period  C. Place it behind a load balancer  D. Change the server's hostname
 
 ---
 
@@ -116,7 +116,7 @@ A. The cloud provider  B. The hypervisor vendor  C. The customer  D. The interne
 A. It requires air-gapping  B. Switches can't forward traffic  C. It cannot use VLANs  D. Compromise of the controller would give control over the entire network
 
 **34.** A hospital infusion pump runs embedded software that cannot be patched. Which is the BEST approach?
-A. Replace the hospital's firewall  B. Connect it directly to the internet for updates  C. Disable its alarms  D. Place it on a segmented network with strict access controls
+A. Install antivirus software on the pump  B. Connect it directly to the internet for vendor updates  C. Encrypt the pump's local storage  D. Place it on a segmented network with strict access controls
 
 **35.** Where should a web application firewall be placed?
 A. Between users' PCs and the internet proxy  B. In front of the web servers it protects  C. Inside the database server  D. On the guest Wi-Fi
@@ -180,7 +180,7 @@ A. Procurement  B. Enumeration  C. Certification  D. Data retention
 A. True positive  B. True negative  C. False negative  D. False positive
 
 **54.** A CVSS 9.8 vulnerability on an internet-facing VPN appliance is being actively exploited. What should be done?
-A. Patch it as an emergency change  B. Add it to next year's budget  C. Accept the risk  D. Disable logging on the appliance
+A. Patch it as an emergency change  B. Schedule the patch for the next quarterly maintenance window  C. Accept the risk  D. Wait for the vendor's next major release
 
 **55.** Which provides a unique identifier for a publicly known vulnerability?
 A. CVSS  B. STIX  C. SCAP  D. CVE
@@ -322,7 +322,7 @@ A. The cost of the training platform  B. The number of training slides  C. A ris
 | 17 | B | D2 | Same level, other user's data = horizontal (26) |
 | 18 | C | D2 | Account lockout indicator (26) |
 | 19 | A | D2 | Spoofed source + large replies = amplified/reflected (25) |
-| 20 | A | D2 | Isolation/segmentation as compensating control (27) |
+| 20 | A | D2 | Least privilege limits what a stolen account can do (27) |
 | 21 | D | D2 | Application allow list (27) |
 | 22 | C | D2 | Deauthentication (25) |
 | 23 | B | D2 | Malicious update / supply chain (24) |

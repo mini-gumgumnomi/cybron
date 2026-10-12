@@ -69,8 +69,8 @@ Gaining **more access than you're supposed to have**.
 ## 🖼️ Figure 26.2 — CSRF vs SSRF
 
 ```
-   CSRF:  🦹 evil site ──"hidden form"──► 👩 victim's browser ──(sends cookie)──► 🏦 bank.com
-                                         "transfer $1000 to Mallory"              ✔ obeys
+   CSRF:  🦹 evil site ──"hidden form"──► 👩 victim's browser ──(sends cookie)──► 🏦 bank.example
+                                         "transfer $1000 to Mallory"                ✔ obeys
 
    SSRF:  🦹 attacker ──"fetch http://10.0.0.5/admin"──► 🌐 web server ──► 🔒 internal admin panel
                                                          (server makes the     (only reachable from

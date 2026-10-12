@@ -45,8 +45,10 @@ Divide the network into **zones** (VLANs, subnets, cloud security groups) with *
    10  PERMIT   10.10.0.0/24      10.20.0.10        443/tcp    Staff → web app
    20  PERMIT   10.10.0.0/24      10.20.0.20        445/tcp    Staff → file server
    30  PERMIT   10.10.5.0/28      10.20.0.0/24      22/tcp     IT admins → SSH to servers
-   40  DENY     any               any               any        Implicit deny (log it)
+   40  DENY     any               any               any        Deny all else (log it)
 ```
+
+Rules are read **top to bottom**, and the **first match wins**. Most firewalls also have an invisible **implicit deny** at the end (anything not allowed is blocked). Rule 40 writes that deny out **explicitly** so blocked traffic gets logged.
 
 ### 3. Application Allow List ✅
 Only **pre-approved applications** may run; everything else is blocked (Chapter 20). Excellent against malware and unauthorized software. (The opposite, a **block list / deny list**, blocks only known-bad apps.)

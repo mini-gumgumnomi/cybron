@@ -130,11 +130,12 @@ Traditional security trusted everything **inside** the network perimeter. Once a
 ```
    PERIMETER (castle & moat)                      ZERO TRUST
    ┌────────────── INSIDE = TRUSTED ───────┐      Every request, every time:
-   │  💻 ──► 🗄️  free movement once inside  │       👤 who are you? (strong auth + MFA)
-   │  🦹 (got in via phishing) ──► 🗄️ 🗄️ 🗄️  │       💻 is your device healthy & managed?
-   └───────────────────────────────────────┘       📍 where/when? is this normal for you?
-   🧱 one big wall                                  🎯 access to THIS app only, for THIS session
-                                                    → no implicit trust from network location
+   │  PC ──► server: free movement once    │      👤 who are you? (strong auth + MFA)
+   │  inside                               │      💻 is your device healthy & managed?
+   │  attacker (got in via phishing)       │      📍 where/when? is this normal for you?
+   │     ──► server, server, server        │      🎯 access to THIS app only, for THIS session
+   └───────────────────────────────────────┘      → no implicit trust from network location
+   🧱 one big wall
 ```
 
 ### The Zero Trust Architecture (NIST SP 800-207) ⭐
@@ -174,7 +175,7 @@ Zero trust splits into two planes, like SDN (Chapter 29):
 | Term | Meaning |
 |---|---|
 | **Adaptive identity** | Authentication that **adapts to context and risk**: location, device, time, behavior. An unusual login gets extra checks (step-up MFA) or is denied |
-| **Threat scope reduction** | **Limit the "blast radius"**: least privilege, micro-segmentation, short sessions, so a compromised account can reach very little |
+| **Threat scope reduction** | **Limit the "blast radius"**: least privilege, micro-segmentation (very small segments around individual servers or workloads), short sessions, so a compromised account can reach very little |
 | **Policy-driven access control** | Access decisions are made by **centrally defined policies** (who, what, when, where, which device), not by network location |
 | **Policy Engine (PE)** | The component that **makes the decision** (grant/deny) using policy plus inputs (identity, device posture, threat intel, logs) |
 | **Policy Administrator (PA)** | **Executes the decision**: establishes or shuts down the connection between subject and resource, issuing session credentials/tokens |

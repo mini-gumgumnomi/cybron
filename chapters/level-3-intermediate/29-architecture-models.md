@@ -192,7 +192,7 @@ Everyday objects with network connections: smart cameras, thermostats, TVs, spea
 ### ICS / SCADA ⚙️
 - **ICS (Industrial Control Systems):** systems that control **physical processes**: power plants, water treatment, factories, pipelines.
 - **SCADA (Supervisory Control and Data Acquisition):** a type of ICS that monitors and controls equipment spread over **large areas** (a power grid, a pipeline).
-- Components: **PLCs** (Programmable Logic Controllers, which control machines), **HMIs** (Human-Machine Interfaces, the operators' screens), sensors.
+- Components: **PLCs** (Programmable Logic Controllers, which control machines), **HMIs** (Human-Machine Interfaces, the operators' screens), sensors, and a **historian** (a database that records process data over time).
 
 ## 🖼️ Figure 29.4 — A Simple SCADA Network
 

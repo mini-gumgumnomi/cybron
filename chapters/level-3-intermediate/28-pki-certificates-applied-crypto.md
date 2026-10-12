@@ -37,7 +37,7 @@ Recall from Chapter 18:
 - **Public key**: share with everyone. Used to **encrypt to you** and to **verify your signatures**.
 - **Private key**: keep secret. Used to **decrypt** and to **sign**.
 
-The problem PKI solves: *"How do I know this public key really belongs to bank.com and not an attacker?"* **Answer: a certificate, signed by a CA I trust.**
+The problem PKI solves: *"How do I know this public key really belongs to bank.example and not an attacker?"* **Answer: a certificate, signed by a CA I trust.**
 
 ### Key Escrow 🔐
 **Key escrow** = a **copy of a key is held by a trusted third party** (or a secure internal system) so it can be **recovered** if needed. Examples: the employee leaves, a key is lost, or there's a legal requirement to access encrypted data.
@@ -186,7 +186,7 @@ Protects data **in transit**: **TLS** (HTTPS, secure email), **IPsec** (VPNs), *
 
 | Tool | What it is | Where | Analogy |
 |---|---|---|---|
-| **TPM**: Trusted Platform Module | A small **chip on the motherboard** that securely stores keys, supports **Secure/Measured Boot**, and ties disk encryption to that specific computer | Laptops, desktops, servers | A tiny safe soldered into one house |
+| **TPM**: Trusted Platform Module | A small **chip on the motherboard** that securely stores keys, records **Measured Boot** values (working alongside UEFI **Secure Boot**), and ties disk encryption to that specific computer | Laptops, desktops, servers | A tiny safe soldered into one house |
 | **HSM**: Hardware Security Module | A **dedicated, tamper-resistant device** (appliance or PCIe card, or a cloud service) that **generates, stores and uses keys** at high speed. Keys never leave it | CAs, banks, payment systems, large websites | A bank vault with its own guards |
 | **KMS**: Key Management System | Software/service that manages the **whole key lifecycle**: create, store, rotate, revoke, audit (often backed by HSMs) | Cloud (AWS KMS, Azure Key Vault), enterprises | The key-control office with a logbook |
 | **Secure enclave** | A **protected, isolated area inside a processor** that runs sensitive operations, shielded even from the main OS | Apple Secure Enclave (Face ID/Touch ID data), Intel SGX, ARM TrustZone | A locked room inside the chef's kitchen that even the chef can't enter |
@@ -203,7 +203,7 @@ Protects data **in transit**: **TLS** (HTTPS, secure email), **IPsec** (VPNs), *
 |---|---|---|
 | **Steganography** | **Hiding** data **inside** other data (images, audio, video) so nobody knows it's there | A secret message hidden in the least significant bits of a photo's pixels |
 | **Tokenization** | Replacing sensitive data with a **random token**. The real value is stored in a secure **token vault** | Card `4111 1111 1111 1111` → token `tkn_9XQ2...`. Payment systems store tokens, not cards |
-| **Data masking** | **Hiding part** of the data when it's displayed or copied | `XXX-XX-6789`, `j***@gmail.com`, test databases with fake names |
+| **Data masking** | **Hiding part** of the data when it's displayed or copied | `XXX-XX-6789`, `j***@example.com`, test databases with fake names |
 
 > 💡 **Tokenization vs encryption:** encrypted data can be decrypted with the key (mathematically related). A token has **no mathematical relationship** to the original. Only the vault can map it back. That's why tokenization **reduces PCI DSS scope**: systems holding only tokens don't hold card data.
 
@@ -289,6 +289,9 @@ Uses: cryptocurrencies, supply-chain tracking, tamper-evident records.
 - *"Which technique makes each password hash unique even when passwords are the same?"* → **Salting.**
 - *"Which makes brute-forcing password hashes slower?"* → **Key stretching** (bcrypt/PBKDF2).
 - *"What must be sent to a CA to get a certificate?"* → **CSR** (containing the **public** key).
+- *"Which key does a CA use to sign a certificate?"* → The **CA's private key**. Browsers check that signature with the **CA's public key** (found in the CA's own certificate).
+- *"A user's private key was stolen. What should happen FIRST to the certificate?"* → **Revoke it** (so it appears on the CRL/OCSP), then issue a new key pair and certificate.
+- *"Encrypted data must stay recoverable if an employee leaves or loses a key."* → **Key escrow.**
 
 ---
 

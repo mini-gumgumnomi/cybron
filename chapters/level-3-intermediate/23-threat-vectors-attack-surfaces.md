@@ -154,10 +154,11 @@ Software with security flaws (bugs attackers can exploit). Security+ mentions **
 ```
    🏢 Company lobby
    ┌────────────────────────────────────────────────┐
-   │   🪑 🪑      [ network wall port ] ◄── visitor plugs in a laptop
-   │                       │                        │
-   └───────────────────────┼────────────────────────┘
-                           ▼
+   │  chairs   [ network wall port ] ◄── visitor    │
+   │                 │                plugs in a    │
+   │                 │                laptop        │
+   └─────────────────┼──────────────────────────────┘
+                     ▼
               WITHOUT 802.1X: visitor is now INSIDE the corporate LAN
               WITH    802.1X: port stays closed until the device authenticates
 ```

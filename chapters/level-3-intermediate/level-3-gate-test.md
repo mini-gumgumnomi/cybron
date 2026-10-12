@@ -18,7 +18,7 @@ A. Shadow IT  B. Unsupported system  C. Image-based vector  D. Open service port
 A. Default credentials  B. Supply chain  C. Message-based  D. Bluetooth
 
 **4.** A hospital imaging system runs an operating system that no longer receives security updates. What is the BEST immediate action?
-A. Disable its antivirus  B. Isolate it on a restricted network segment  C. Connect it directly to the internet  D. Ignore it until it fails
+A. Enable automatic updates on it  B. Isolate it on a restricted network segment  C. Install a second antivirus product  D. Move it to the screened subnet
 
 **5.** Which control BEST prevents visitors from joining the corporate LAN by plugging into lobby wall ports?
 A. 802.1X port authentication  B. WPA3  C. DNS filtering  D. Full-disk encryption
@@ -136,7 +136,7 @@ A. Application allow list  B. Block list  C. Antivirus only  D. Load balancer
 A. Isolation  B. Segmentation  C. Decommissioning  D. Tokenization
 
 **38.** Which of the following is a hardening technique listed in SY0-701?
-A. Enabling Telnet for remote admin  B. Removing unnecessary software  C. Sharing admin passwords  D. Disabling the host firewall
+A. Enabling Telnet for remote admin  B. Removing unnecessary software  C. Installing the vendor's sample web applications  D. Enabling SMBv1 for compatibility
 
 **39.** Systems keep drifting away from the approved secure configuration. Which mitigation BEST addresses this?
 A. Honeypots  B. Decommissioning  C. Configuration enforcement  D. Steganography
@@ -145,10 +145,10 @@ A. Honeypots  B. Decommissioning  C. Configuration enforcement  D. Steganography
 A. Leaving it powered on in case it's needed  B. Removing it only from the asset inventory  C. Moving it to the screened subnet  D. Sanitizing its storage and revoking its accounts and certificates
 
 **41.** Which mitigation limits the damage if a user's account is compromised?
-A. Using a hub  B. Broadcasting the SSID  C. Least privilege  D. Public cloud buckets
+A. Full-disk encryption  B. Load balancing  C. Least privilege  D. RAID 1
 
 **42.** A legacy controller can't be patched. Which mitigation is the BEST compensating control?
-A. Giving all users admin rights  B. Isolation/segmentation with monitoring  C. Disabling logging  D. Removing the firewall
+A. Applying the latest vendor patch  B. Isolation/segmentation with monitoring  C. Increasing its RAM  D. Enabling account lockout
 
 ---
 
@@ -257,7 +257,7 @@ A. Passive, receiving a copy of traffic  B. Inline and active  C. Fail-closed  D
 A. Replication  B. Hashing  C. Steganography  D. Masking
 
 **73.** Which method is NOT reversible?
-A. Hashing  B. Tokenization  C. Encryption  D. Masking applied only on display
+A. Hashing  B. Tokenization  C. Encryption  D. Base64 encoding
 
 **74.** A law requires customer records to remain within national borders. Which method addresses this?
 A. Hashing  B. Obfuscation  C. Geographic restrictions  D. Load balancing
@@ -330,7 +330,7 @@ A. Honeypot  B. Honeytoken  C. Honeynet  D. Honeyfile
 | 1 | C | Compromised MSP = supply chain (Ch 23) |
 | 2 | D | Unneeded listening services = open service ports (Ch 23) |
 | 3 | A | Factory logins = default credentials (Ch 23) |
-| 4 | B | Isolate unsupported systems as a compensating control (Ch 23) |
+| 4 | B | No patches exist, so isolate it as a compensating control; a DMZ would expose it more (Ch 23) |
 | 5 | A | 802.1X blocks unauthenticated wired ports (Ch 23) |
 | 6 | B | Malicious USB devices = removable device vector (Ch 23) |
 | 7 | A | Attack surface = all entry points (Ch 23) |
@@ -399,7 +399,7 @@ A. Honeypot  B. Honeytoken  C. Honeynet  D. Honeyfile
 | 70 | A | SASE (Ch 30) |
 | 71 | A | Passive, copy of traffic (Ch 30) |
 | 72 | D | Masking (Ch 31) |
-| 73 | A | Hashing is one-way (Ch 31) |
+| 73 | A | Hashing is one-way; tokens map back via the vault, encryption and Base64 reverse (Ch 31) |
 | 74 | C | Geographic restrictions / sovereignty (Ch 31) |
 | 75 | B | DLP (Ch 31) |
 | 76 | C | Static data masking (Ch 31) |

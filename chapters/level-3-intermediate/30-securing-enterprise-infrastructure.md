@@ -70,7 +70,7 @@ Each zone has a **different trust level**, and every **crossing point** between 
 | **Screened subnet** (formerly **DMZ**) | A zone **between** the internet and the internal network for **public-facing servers**. If a web server is hacked, the attacker still has another firewall to get through |
 | **Device placement** | Putting each control **where it can see and stop the right traffic**: WAF in front of web servers, IPS at the edge, sensors in each zone, jump server at the entrance to the admin zone |
 | **Attack surface** | Fewer zone crossings and fewer exposed services = smaller attack surface |
-| **Connectivity** | How zones and sites connect (internet, VPN, MPLS, SD-WAN, cloud links). Every connection must be secured and monitored |
+| **Connectivity** | How zones and sites connect (internet, VPN, MPLS (a private, carrier-managed WAN link), SD-WAN, cloud links). Every connection must be secured and monitored |
 
 ---
 
@@ -143,7 +143,7 @@ Spreads incoming requests across **multiple servers**, for **availability** and 
 - **Active/active:** all servers serve traffic. **Active/passive:** standby servers take over if the active one fails.
 - Scheduling methods: **round-robin** (take turns), **least connections**, weighted.
 - **Persistence (sticky sessions / affinity):** keep a user on the same server during a session.
-- Often also does **TLS offloading** and health checks, and helps absorb DoS attacks.
+- Often also does **TLS offloading** (decrypting HTTPS itself so the servers don't have to) and health checks, and helps absorb DoS attacks.
 
 ### Sensors 📡
 Devices or agents that **collect data** for monitoring: network sensors on taps, IDS sensors in each zone, NetFlow collectors, environmental sensors. They feed the **SIEM**.
@@ -231,7 +231,7 @@ Other port-security features on switches: **disable unused ports**, **MAC limiti
 ```
 
 ### SD-WAN: Software-Defined Wide Area Network 🛣️
-Uses software to **intelligently route traffic between branch offices and the cloud** over several connections (broadband, 4G/5G, MPLS), choosing the best path for each application.
+Uses software to **intelligently route traffic between branch offices and the cloud** over several connections (broadband, 4G/5G, MPLS private links), choosing the best path for each application.
 - ✅ Cheaper and faster than old private WAN links; good for cloud apps.
 - ⚠️ Branches now connect **directly to the internet**, so security must travel with the traffic. That leads to SASE.
 

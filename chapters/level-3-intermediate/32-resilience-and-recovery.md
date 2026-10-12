@@ -42,10 +42,10 @@ Both use **multiple servers**, but in different ways.
 
           users                                            users
             │                                                │
-     ┌──────┴───────┐                                ┌───────┴────────┐
-     │ LOAD BALANCER│                                │ CLUSTER (one    │
-     └──┬────┬───┬──┘                                │ virtual address)│
-        ▼    ▼   ▼                                   └───┬────────┬───┘
+     ┌──────┴────────┐                               ┌───────┴─────────┐
+     │ LOAD BALANCER │                               │ CLUSTER (one    │
+     └──┬────┬───┬───┘                               │ virtual address)│
+        ▼    ▼   ▼                                   └───┬────────┬────┘
       [S1] [S2] [S3]   independent servers,              ▼        ▼
                        each handles some requests      [Node A]◄──►[Node B]
                        If S2 dies, the LB stops          share storage/state,

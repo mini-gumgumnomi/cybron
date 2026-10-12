@@ -14,17 +14,17 @@ A. Managerial, detective  B. Physical, deterrent  C. Technical, preventive  D. O
 **2.** Which of the following is a directive control?
 A. Fire extinguisher  B. A backup generator  C. An IDS  D. A policy requiring employees to wear visible ID badges
 
-**3.** A sprinkler system activates and puts out a fire in a storage room. Which control type is this?
-A. Corrective  B. Deterrent  C. Directive  D. Detective
+**3.** The security team runs monthly phishing-awareness sessions that all employees attend. Which control category is this?
+A. Operational  B. Technical  C. Physical  D. Managerial
 
-**4.** Which technique MOST directly protects data integrity?
-A. Hashing  B. Encryption  C. Load balancing  D. Tokenization
+**4.** Before IoT sensors may send readings to a central server, each sensor must prove its identity. Which is the BEST approach?
+A. Device certificates  B. A shared Wi-Fi password  C. MAC address filtering  D. A hidden SSID
 
 **5.** After logging in successfully, a user is denied access to the payroll folder. Which AAA function denied access?
 A. Authorization  B. Authentication  C. Identification  D. Accounting
 
-**6.** In a zero trust architecture, which component establishes or shuts down the session after the access decision is made?
-A. Policy Engine  B. Policy Administrator  C. Subject  D. Implicit trust zone
+**6.** In a zero trust architecture, which plane contains the Policy Engine and Policy Administrator that make and manage access decisions?
+A. Data plane  B. Control plane  C. Implicit trust zone  D. Management VLAN
 
 **7.** A security team deploys a network of decoy servers and workstations that imitates a real department. This is a:
 A. Honeyfile  B. Honeytoken  C. Sandbox  D. Honeynet
@@ -75,8 +75,8 @@ A. Anti-CSRF tokens  B. Disk encryption  C. RAID  D. Port security
 **21.** Which control BEST stops online brute-force attempts against a single account?
 A. Data masking  B. Account lockout with MFA  C. Steganography  D. Load balancing
 
-**22.** The birthday attack is used to find:
-A. Hash collisions  B. Open ports  C. Weak Wi-Fi channels  D. Default passwords
+**22.** Users who type the correct address for their bank are sent to a fake site because the company's DNS resolver has cached a forged record. This is:
+A. DNS poisoning  B. Typosquatting  C. Domain hijacking  D. DNS tunneling
 
 **23.** Which control BEST mitigates RFID badge cloning?
 A. Brighter lighting  B. Encrypted smart cards or badge plus PIN  C. Longer passwords  D. A bigger fence
@@ -100,7 +100,7 @@ A. Firmware  B. Cloud-specific (exposed credentials)  C. Race condition  D. Buff
 A. Impossible travel  B. Resource inaccessibility  C. Out-of-cycle logging  D. Concurrent session usage
 
 **30.** An unused server from a finished project is still running and unpatched. What is the BEST action?
-A. Ignore it  B. Give it a public IP  C. Disable its firewall  D. Decommission it securely
+A. Add it to the monthly patch cycle  B. Move it to a separate VLAN  C. Install EDR on it  D. Decommission it securely
 
 **31.** Servers repeatedly drift from the approved security settings. Which mitigation BEST addresses this?
 A. Job rotation  B. Steganography  C. Tokenization  D. Configuration enforcement
@@ -127,8 +127,8 @@ A. Inconsistent security policies  B. Too many local administrators  C. A single
 **37.** A load balancer keeps each user on the same web server for their whole session. This feature is:
 A. Clustering  B. Fail-open  C. Persistence (sticky sessions)  D. Round-robin
 
-**38.** Which device must be inline to block attacks in real time?
-A. IPS  B. IDS on a tap  C. NetFlow collector  D. SIEM
+**38.** Which device sits between employees and the internet, inspecting and filtering their outbound web requests?
+A. Forward proxy  B. Reverse proxy  C. Load balancer  D. Jump server
 
 **39.** What can a Layer 7 firewall do that a Layer 4 firewall cannot?
 A. Filter by IP address  B. Allow an application but block specific functions within it  C. Filter by port  D. Route packets
@@ -162,7 +162,7 @@ A. Obfuscation  B. Anonymity  C. Non-repudiation  D. Availability
 ## Domain 4 — Security Operations
 
 **48.** Which is a hardening step for network switches?
-A. Disable unused ports  B. Enable Telnet  C. Keep default credentials  D. Disable logging
+A. Disable unused ports  B. Enable Telnet for remote management  C. Allow all VLANs on every port  D. Keep the default management credentials
 
 **49.** Which authentication method does WPA3-Personal use?
 A. PSK with TKIP  B. SAE  C. WEP  D. EAP-TLS
@@ -173,8 +173,8 @@ A. Only in the browser  B. On the server side  C. Only in the firewall  D. In th
 **51.** An email gateway opens suspicious attachments in an isolated environment to watch their behavior. This is:
 A. Clustering  B. Tokenization  C. Sandboxing  D. Steganography
 
-**52.** Degaussing is effective for sanitizing which media?
-A. Magnetic hard drives and tapes  B. USB flash drives  C. SSDs  D. Optical discs
+**52.** Each server in the inventory lists the person responsible for its upkeep and security decisions. Which asset management activity is this?
+A. Assigning ownership  B. Enumeration  C. Sanitization  D. Certification
 
 **53.** Which policy defines how long data must be kept before secure disposal?
 A. Change management policy  B. AUP  C. Data retention policy  D. Password standard
@@ -188,8 +188,8 @@ A. Red team contract  B. Bug bounty program  C. SOC 2 audit  D. Questionnaire
 **56.** A vulnerability has a CVSS base score of 5.5. Which severity band is this?
 A. Low  B. Medium  C. High  D. Critical
 
-**57.** A vulnerable system can't be patched for three months; management formally approves this with an end date. This is a(n):
-A. Transfer  B. False positive  C. Exception  D. Compensating control
+**57.** Two servers have the same vulnerability with a CVSS base score of 7.5. One is internet-facing; the other sits on an isolated lab network. Why should the internet-facing server be patched FIRST?
+A. Its CVSS base score is higher  B. Lab systems never need patches  C. Environmental variables such as exposure raise its real-world risk  D. It has a different CVE ID
 
 **58.** Logs must be kept for seven years for compliance. Which monitoring activity is this?
 A. Archiving  B. Alert tuning  C. Quarantine  D. Scanning
@@ -207,7 +207,7 @@ A. FIM  B. DNS filtering  C. HIPS  D. MDM
 A. SPF  B. Content categorization  C. Reputation  D. Static analysis
 
 **63.** Which technology correlates detections across endpoints, network, email, cloud and identity?
-A. AV  B. XDR  C. UPS  D. HSM
+A. EDR  B. XDR  C. HIPS  D. DLP
 
 **64.** Staff at a partner organization access a shared portal using their own organization's credentials. This is:
 A. Federation  B. Shadow IT  C. Tokenization  D. Key escrow
@@ -258,8 +258,8 @@ A. 4  B. 2.5  C. 0.4  D. 0.25
 **78.** In a risk register, who is the risk owner?
 A. The auditor  B. The attacker  C. The person accountable for managing that risk  D. The insurer
 
-**79.** Which organization MOST likely has a conservative risk appetite?
-A. A high-growth startup  B. A retail bank  C. A venture fund  D. A hackathon team
+**79.** The board rules that any risk with a potential loss above $250,000 must be escalated to it before anyone may accept it. This sets a:
+A. Risk register entry  B. Risk threshold  C. Exposure factor  D. Residual risk
 
 **80.** What is residual risk?
 A. Risk before any controls  B. Risk remaining after controls are applied  C. Risk transferred to insurers  D. Risk from vendors only
@@ -305,10 +305,10 @@ A. Hybrid work  B. Password management  C. Removable media  D. Operational secur
 |---|---|---|---|
 | 1 | C | D1 | Technical, preventive (13) |
 | 2 | D | D1 | Policy telling people what to do = directive (13) |
-| 3 | A | D1 | Puts out the fire = corrective (13, 19) |
-| 4 | A | D1 | Hashing (12) |
+| 3 | A | D1 | People carrying out training = operational (13) |
+| 4 | A | D1 | Authenticating systems with certificates (12) |
 | 5 | A | D1 | Authorization (12) |
-| 6 | B | D1 | Policy Administrator (33) |
+| 6 | B | D1 | Control plane = the decision-maker (33) |
 | 7 | D | D1 | Honeynet (33) |
 | 8 | B | D1 | Downtime (33) |
 | 9 | D | D1 | Public key + identity (28) |
@@ -324,7 +324,7 @@ A. Hybrid work  B. Password management  C. Removable media  D. Operational secur
 | 19 | C | D2 | Encoded `../` = directory traversal (26) |
 | 20 | A | D2 | Anti-CSRF tokens (26) |
 | 21 | B | D2 | Lockout + MFA (26) |
-| 22 | A | D2 | Collisions (26) |
+| 22 | A | D2 | Forged record in resolver cache = DNS poisoning (25) |
 | 23 | B | D2 | Encrypted cards / badge + PIN (19, 26) |
 | 24 | B | D2 | ARP poisoning (25) |
 | 25 | C | D2 | Nonces/timestamps (25) |
@@ -332,7 +332,7 @@ A. Hybrid work  B. Password management  C. Removable media  D. Operational secur
 | 27 | A | D2 | Mobile device vulnerability (24) |
 | 28 | B | D2 | Cloud-specific (24) |
 | 29 | B | D2 | Resource inaccessibility (26) |
-| 30 | D | D2 | Decommissioning (27) |
+| 30 | D | D2 | Unused system = decommission, not maintain (27) |
 | 31 | D | D2 | Configuration enforcement (27) |
 | 32 | A | D3 | PaaS: customer owns app and data (29) |
 | 33 | A | D3 | More APIs = more attack surface (29) |
@@ -340,7 +340,7 @@ A. Hybrid work  B. Password management  C. Removable media  D. Operational secur
 | 35 | B | D3 | Deterministic timing (29) |
 | 36 | C | D3 | Single point of failure (29) |
 | 37 | C | D3 | Persistence (30) |
-| 38 | A | D3 | IPS inline (30) |
+| 38 | A | D3 | Forward proxy (30) |
 | 39 | B | D3 | Application awareness (30) |
 | 40 | B | D3 | Public web server (30) |
 | 41 | D | D3 | SSL/TLS VPN over 443 (30) |
@@ -354,12 +354,12 @@ A. Hybrid work  B. Password management  C. Removable media  D. Operational secur
 | 49 | B | D4 | SAE (34) |
 | 50 | B | D4 | Server-side (34) |
 | 51 | C | D4 | Sandboxing (34) |
-| 52 | A | D4 | Magnetic media only (35) |
+| 52 | A | D4 | Assignment/accounting: ownership (35) |
 | 53 | C | D4 | Data retention (35) |
 | 54 | A | D4 | Package monitoring (36) |
 | 55 | B | D4 | Bug bounty (36) |
 | 56 | B | D4 | 4.0–6.9 = Medium (36) |
-| 57 | C | D4 | Exception (36, 44) |
+| 57 | C | D4 | Environmental variables (exposure) drive priority (36) |
 | 58 | A | D4 | Archiving (37) |
 | 59 | A | D4 | Nothing to install (37) |
 | 60 | D | D4 | DKIM signature (38) |
@@ -381,7 +381,7 @@ A. Hybrid work  B. Password management  C. Removable media  D. Operational secur
 | 76 | B | D5 | Qualitative (44) |
 | 77 | D | D5 | 20,000 ÷ 80,000 = 0.25 (44) |
 | 78 | C | D5 | Risk owner (44) |
-| 79 | B | D5 | Conservative = bank (44) |
+| 79 | B | D5 | Escalation trigger level = risk threshold (44) |
 | 80 | B | D5 | Residual risk (44) |
 | 81 | D | D5 | MTTR (44) |
 | 82 | B | D5 | Due diligence (45) |

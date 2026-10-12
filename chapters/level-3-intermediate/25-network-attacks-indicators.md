@@ -78,24 +78,24 @@ DNS translates names to IP addresses (Chapter 6). If attackers corrupt that, the
 
 | Attack | What happens | Defense |
 |---|---|---|
-| **DNS poisoning / cache poisoning** | Fake records are inserted into a DNS server's **cache**, so users asking for `bank.com` get the **attacker's IP** | **DNSSEC** (signed DNS answers), patched DNS servers |
+| **DNS poisoning / cache poisoning** | Fake records are inserted into a DNS server's **cache**, so users asking for `bank.example` get the **attacker's IP** | **DNSSEC** (signed DNS answers), patched DNS servers |
 | **DNS spoofing (local)** | Changing a victim's **hosts file** or local DNS settings to point names at the attacker | Endpoint protection, file integrity monitoring |
 | **Domain hijacking** | Attacker takes over the **domain registration** (e.g., phishes the registrar account) and changes where the domain points | MFA and **registrar lock** on the domain account |
-| **DNS tunneling** | Hiding data or commands **inside DNS queries** to **sneak data out** or talk to C2 through firewalls that allow DNS | DNS monitoring, DNS filtering, look for unusually long/random subdomains |
+| **DNS tunneling** | Hiding data or commands **inside DNS queries** to **sneak data out** or talk to C2 (command-and-control: the attacker's server that sends malware its orders) through firewalls that allow DNS | DNS monitoring, DNS filtering, look for unusually long/random subdomains |
 | **DNS amplification** | DDoS using open DNS resolvers (see Part 1) | Close open resolvers, rate limiting |
 
 ## 🖼️ Figure 25.2 — DNS Cache Poisoning
 
 ```
-   NORMAL:   💻 "Where is bank.com?" ──► 📒 DNS cache: bank.com = 198.51.100.10 ──► 🏦 real bank
+   NORMAL:   💻 "Where is bank.example?" ──► 📒 DNS cache: bank.example = 198.51.100.10 ──► 🏦 real bank
 
-   POISONED: 🦹 injects a fake record into the cache:  bank.com = 203.0.113.66
-             💻 "Where is bank.com?" ──► 📒 DNS cache: bank.com = 203.0.113.66 ──► 🎭 fake bank site
-                                                                                    (steals logins)
+   POISONED: 🦹 injects a fake record into the cache:  bank.example = 203.0.113.66
+             💻 "Where is bank.example?" ──► 📒 DNS cache: bank.example = 203.0.113.66 ──► 🎭 fake bank site
+                                                                                            (steals logins)
    The user typed the RIGHT address and still ended up on the WRONG site.
 ```
 
-> 🔍 **DNS tunneling clue:** queries like `aGVsbG8gd29ybGQ.x7k2.evil-example.net`: long, random-looking subdomains, very frequent, often to one strange domain. That's data being smuggled out in **Base64** (Chapter 3).
+> 🔍 **DNS tunneling clue:** queries like `aGVsbG8gd29ybGQ.x7k2.evil.example`: long, random-looking subdomains, very frequent, often to one strange domain. That's data being smuggled out in **Base64** (Chapter 3).
 
 ---
 
@@ -154,8 +154,8 @@ An **on-path attack** (formerly "man-in-the-middle," MITM) puts the attacker **b
 ### SSL Stripping (Downgrade Example)
 
 ```
-   👩 browser ── http://bank.com ──► 🦹 ── https://bank.com ──► 🏦
-            ◄── plain HTTP page ────     ◄── encrypted page ────
+   👩 browser ── http://bank.example ──► 🦹 ── https://bank.example ──► 🏦
+            ◄── plain HTTP page ────────     ◄── encrypted page ────────
    The attacker talks HTTPS to the bank but plain HTTP to the victim,
    so the victim's password crosses the attacker's machine unencrypted.
    Defense: HSTS (the browser refuses to use plain HTTP for that site).
